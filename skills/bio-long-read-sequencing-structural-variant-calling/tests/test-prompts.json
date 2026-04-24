@@ -1,0 +1,17 @@
+{
+  "skill": "bio-long-read-sequencing-structural-variant-calling",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Design a long-read structural-variant calling plan and explain what evidence you need before interpreting breakpoints."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Tell me how long-read SV analysis changes if the reference build or sample context is unclear."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for long-read structural-variant calling before the user treats the result as final."
+    }
+  ]
+}

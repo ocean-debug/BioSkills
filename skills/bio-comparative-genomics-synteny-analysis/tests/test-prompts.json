@@ -1,0 +1,17 @@
+{
+  "skill": "bio-comparative-genomics-synteny-analysis",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a synteny analysis and explain what assembly quality and orthology checks you need before interpreting rearrangements."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Tell me how you would present syntenic-block results without confusing technical fragmentation with biology."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for synteny analysis before the user treats the result as final."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "skill": "bio-sequence-io-fastq-quality",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a FASTQ-quality inspection and explain what findings should stop downstream analysis before trimming or alignment."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize the main FASTQ-level issues that indicate corrupted or unusable read files."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for fastq quality inspection before the user treats the result as final."
+    }
+  ]
+}

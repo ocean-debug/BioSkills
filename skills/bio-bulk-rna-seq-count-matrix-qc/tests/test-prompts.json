@@ -1,0 +1,13 @@
+{
+  "skill": "bio-bulk-rna-seq-count-matrix-qc",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Check whether this bulk RNA-seq count matrix is ready for differential expression."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Use sample metadata and counts to identify outliers or metadata mismatches before modeling."
+    }
+  ]
+}

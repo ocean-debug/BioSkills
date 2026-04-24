@@ -1,0 +1,17 @@
+{
+  "skill": "bio-reporting-notebook-reports",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Explain how you would create a notebook-based report that stays reproducible instead of becoming a manually edited artifact."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Tell me what parameterization and execution checks matter most for a Jupyter analysis report."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for notebook-based analysis reports before the user treats the result as final."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "skill": "bio-spatial-transcriptomics-multiomics",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a spatial multi-omics analysis and explain how you would prevent spot-level data from being over-interpreted as single-cell biology."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Tell me how you would keep image, coordinate, and auxiliary-omic context visible in a spatial co-analysis report."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for spatial multi-omics interpretation before the user treats the result as final."
+    }
+  ]
+}

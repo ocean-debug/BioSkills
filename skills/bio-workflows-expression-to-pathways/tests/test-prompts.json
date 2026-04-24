@@ -1,0 +1,13 @@
+{
+  "skill": "bio-workflows-expression-to-pathways",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a workflow that starts from differential-expression results and ends in pathway interpretation."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Adapt the workflow when the user has ranked genes but no thresholded DEG list."
+    }
+  ]
+}

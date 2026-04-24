@@ -1,0 +1,117 @@
+[
+  {
+    "id": "bio-systems-biology-differential-networks",
+    "title": "Differential network analysis",
+    "skill_type": "atomic",
+    "domain": "systems-biology",
+    "task": "differential-networks",
+    "summary": "Compare biological networks between conditions and identify rewired relationships with explicit construction and interpretation assumptions.",
+    "tags": ["systems-biology", "differential networks", "co-expression", "rewiring"],
+    "trigger_keywords": ["differential networks", "network rewiring", "DiffCorr", "co-expression rewiring"],
+    "related_skills": [
+      "bio-pathway-analysis-gsea",
+      "bio-multiomics-integration",
+      "bio-workflows-bio-orchestrator"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan a differential-network analysis and explain how you would keep network-construction assumptions visible in the final interpretation.",
+      "Summarize the QC gates that must pass before a rewired network edge should be treated as biologically meaningful."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/gene-regulatory-networks/differential-networks/SKILL.md"],
+    "match_aliases": ["differential-networks", "differential networks", "network rewiring", "DiffCorr", "co-expression rewiring"],
+    "source_roots": ["gene-regulatory-networks/differential-networks"]
+  },
+  {
+    "id": "bio-reference-resources-reference-panels",
+    "title": "Reference panel preparation",
+    "skill_type": "atomic",
+    "domain": "reference-resources",
+    "task": "reference-panels",
+    "summary": "Select, prepare, and document reference panels for phasing or imputation with explicit ancestry and build compatibility.",
+    "tags": ["reference-resources", "reference panels", "imputation", "phasing"],
+    "trigger_keywords": ["reference panels", "imputation panel", "phasing panel", "TOPMed", "HRC"],
+    "related_skills": [
+      "bio-population-genetics-population-structure",
+      "bio-population-genetics-gwas-prs",
+      "bio-workflows-reference-and-cohort-access"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Explain how you would choose and prepare a reference panel for imputation without hiding ancestry or build mismatches.",
+      "Tell me what must be documented before a reference panel can be treated as ready for phasing or imputation."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/phasing-imputation/reference-panels/SKILL.md"],
+    "match_aliases": ["reference-panels", "reference panels", "imputation panel", "phasing panel", "TOPMed", "HRC"],
+    "source_roots": ["phasing-imputation/reference-panels"]
+  },
+  {
+    "id": "bio-reference-resources-public-dataset-query",
+    "title": "Public dataset SQL access",
+    "skill_type": "atomic",
+    "domain": "reference-resources",
+    "task": "public-dataset-query",
+    "summary": "Query public datasets with read-only SQL and explicit schema, cost, and provenance safeguards.",
+    "tags": ["reference-resources", "public datasets", "SQL", "BigQuery"],
+    "trigger_keywords": ["public dataset query", "BigQuery public data", "read-only SQL", "genomics SQL"],
+    "related_skills": [
+      "bio-literature-research-public-data-discovery",
+      "bio-reference-resources-cohort-variable-discovery",
+      "bio-workflows-reference-and-cohort-access"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan a read-only public-dataset SQL step and explain how you would keep schema assumptions, cost, and provenance explicit.",
+      "Summarize the checks you would run before treating a public-dataset query result as analysis-ready."
+    ],
+    "canonical_of_extra": ["ClawBio/ClawBio:ClawBio-main/skills/bigquery-public/SKILL.md"],
+    "match_aliases": ["bigquery-public", "public dataset query", "BigQuery public data", "read-only SQL", "genomics SQL"],
+    "source_roots": ["bigquery-public"]
+  },
+  {
+    "id": "bio-reference-resources-cohort-variable-discovery",
+    "title": "Cohort variable discovery",
+    "skill_type": "atomic",
+    "domain": "reference-resources",
+    "task": "cohort-variable-discovery",
+    "summary": "Discover cohort variables and field candidates for a research question without losing dataset-specific context and metadata.",
+    "tags": ["reference-resources", "cohort access", "UK Biobank", "variable discovery"],
+    "trigger_keywords": ["UK Biobank variables", "cohort variable discovery", "UKB navigator", "find cohort fields"],
+    "related_skills": [
+      "bio-reference-resources-public-dataset-query",
+      "bio-literature-research-public-data-discovery",
+      "bio-workflows-reference-and-cohort-access"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Explain how you would discover cohort variables for a research question and still keep field-level provenance and scope clear.",
+      "Tell me what makes a cohort-variable shortlist good enough for downstream analysis planning."
+    ],
+    "canonical_of_extra": ["ClawBio/ClawBio:ClawBio-main/skills/ukb-navigator/SKILL.md"],
+    "match_aliases": ["ukb-navigator", "UK Biobank variables", "cohort variable discovery", "UKB navigator", "find cohort fields"],
+    "source_roots": ["ukb-navigator"]
+  },
+  {
+    "id": "bio-workflows-reference-and-cohort-access",
+    "title": "Reference and cohort access workflow",
+    "skill_type": "workflow",
+    "domain": "reference-resources",
+    "task": "workflow",
+    "summary": "Coordinate reference-panel selection, cohort-field discovery, and public-dataset access into a reusable resource-preparation workflow.",
+    "tags": ["workflow", "reference-resources", "cohort access", "resource preparation"],
+    "trigger_keywords": ["reference resource workflow", "cohort access workflow", "resource preparation workflow"],
+    "related_skills": [],
+    "depends_on": [
+      "bio-reference-resources-reference-panels",
+      "bio-reference-resources-public-dataset-query",
+      "bio-reference-resources-cohort-variable-discovery"
+    ],
+    "test_prompts": [
+      "Outline a workflow that starts from a research question and ends with reference resources, cohort fields, or public-data access choices that downstream analysis can actually reuse.",
+      "Adapt a resource-access workflow for a project that needs both imputation panel preparation and UK Biobank variable discovery."
+    ],
+    "canonical_of_extra": [],
+    "match_aliases": ["reference resource workflow", "cohort access workflow", "resource preparation workflow"],
+    "source_roots": []
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "skill": "bio-variant-calling-small-variant-calling",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Outline a small-variant calling strategy from aligned reads and explain what assumptions must be fixed first."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Tell me how germline and somatic variant-calling plans diverge before filtering."
+    }
+  ]
+}

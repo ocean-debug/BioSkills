@@ -1,0 +1,13 @@
+{
+  "skill": "bio-workflows-reference-and-cohort-access",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Outline a workflow that starts from a research question and ends with reference resources, cohort fields, or public-data access choices that downstream analysis can actually reuse."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Adapt a resource-access workflow for a project that needs both imputation panel preparation and UK Biobank variable discovery."
+    }
+  ]
+}

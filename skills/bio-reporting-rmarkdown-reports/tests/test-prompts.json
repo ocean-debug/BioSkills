@@ -1,0 +1,17 @@
+{
+  "skill": "bio-reporting-rmarkdown-reports",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan an R Markdown reporting step and explain how you would keep the report reproducible across render environments."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize the main choices that affect whether an R Markdown report is ready for sharing or publication."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for r markdown analysis reports before the user treats the result as final."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "skill": "bio-workflows-analysis-reporting",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Outline an analysis-reporting workflow that starts from finished results and ends with export-ready figures and reproducible documents."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Adapt a reporting workflow for an omics project that needs QC aggregation, DE summary, heatmaps, and final figure export."
+    }
+  ]
+}

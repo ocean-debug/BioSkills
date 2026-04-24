@@ -1,0 +1,13 @@
+{
+  "skill": "bio-chip-seq-differential-binding",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Design a differential-binding analysis for ChIP-seq with two conditions and biological replicates."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Explain how you would construct a stable binding matrix before statistical testing."
+    }
+  ]
+}

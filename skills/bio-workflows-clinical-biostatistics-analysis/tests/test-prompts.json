@@ -1,0 +1,13 @@
+{
+  "skill": "bio-workflows-clinical-biostatistics-analysis",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Outline a clinical biostatistics workflow from analysis-ready data preparation to subgroup interpretation."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Adapt a clinical-analysis workflow for a dataset that starts as SDTM domains and ends with model-based endpoint reporting."
+    }
+  ]
+}

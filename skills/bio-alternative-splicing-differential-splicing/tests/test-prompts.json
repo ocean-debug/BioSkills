@@ -1,0 +1,17 @@
+{
+  "skill": "bio-alternative-splicing-differential-splicing",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Design a differential splicing analysis and explain what evidence path you would use for BAM versus abundance inputs."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize the QC gates that must pass before reporting splicing changes as biology."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for differential splicing analysis before the user treats the result as final."
+    }
+  ]
+}

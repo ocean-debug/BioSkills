@@ -1,0 +1,17 @@
+{
+  "skill": "bio-comparative-genomics-ancestral-reconstruction",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Design an ancestral-reconstruction analysis and explain what phylogenetic and model assumptions must be explicit before interpretation."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize how you would communicate uncertainty in reconstructed ancestral states."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for ancestral-sequence reconstruction before the user treats the result as final."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "skill": "bio-workflows-scrnaseq-pipeline",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a complete single-cell RNA-seq workflow and highlight where QC should stop the pipeline."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Adapt the workflow when the goal is atlas building rather than condition-level DE."
+    }
+  ]
+}

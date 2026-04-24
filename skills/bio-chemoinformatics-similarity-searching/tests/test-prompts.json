@@ -1,0 +1,17 @@
+{
+  "skill": "bio-chemoinformatics-similarity-searching",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a molecular similarity search and explain how fingerprint choice changes the meaning of the hits."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize what you would report so analog-search results remain reproducible and interpretable."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for molecular similarity searching before the user treats the result as final."
+    }
+  ]
+}

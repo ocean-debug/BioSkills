@@ -1,0 +1,17 @@
+{
+  "skill": "bio-clinical-biostatistics-categorical-tests",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a categorical-test analysis and explain when Fisher exact or chi-square is more defensible."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize what you would report alongside a categorical p-value so the clinical interpretation stays meaningful."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for categorical clinical tests before the user treats the result as final."
+    }
+  ]
+}

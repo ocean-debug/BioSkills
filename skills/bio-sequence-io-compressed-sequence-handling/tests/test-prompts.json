@@ -1,0 +1,17 @@
+{
+  "skill": "bio-sequence-io-compressed-sequence-handling",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Explain how you would handle compressed sequence files while preserving integrity and compatibility with downstream tools."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Tell me what checks you would run before and after decompressing or recompressing large sequence files."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for compressed sequence-file handling before the user treats the result as final."
+    }
+  ]
+}

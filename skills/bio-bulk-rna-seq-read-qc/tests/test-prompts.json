@@ -1,0 +1,13 @@
+{
+  "skill": "bio-bulk-rna-seq-read-qc",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Review these bulk RNA-seq FASTQ quality reports and tell me whether any sample should be trimmed or excluded."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize the key pass/fail findings from a multi-sample RNA-seq QC run before quantification."
+    }
+  ]
+}

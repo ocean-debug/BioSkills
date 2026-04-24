@@ -1,0 +1,17 @@
+{
+  "skill": "bio-metagenomics-taxonomic-profiling",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Choose a metagenomic taxonomic profiling path and explain what database and resolution assumptions you need to lock down."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize the QC and contamination checks that should gate microbiome profiling results."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for metagenomic taxonomic profiling before the user treats the result as final."
+    }
+  ]
+}

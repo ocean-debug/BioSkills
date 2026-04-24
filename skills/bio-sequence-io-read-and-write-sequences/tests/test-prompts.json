@@ -1,0 +1,17 @@
+{
+  "skill": "bio-sequence-io-read-and-write-sequences",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a safe sequence-read and write step and explain what must be preserved so downstream tools still accept the output."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Tell me how you would rewrite FASTA or FASTQ records without silently breaking headers or ordering."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for sequence read and write operations before the user treats the result as final."
+    }
+  ]
+}

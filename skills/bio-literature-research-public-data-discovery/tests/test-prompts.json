@@ -1,0 +1,17 @@
+{
+  "skill": "bio-literature-research-public-data-discovery",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a public-data discovery task and explain what metadata checks you would make before recommending a dataset for reuse."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize how you would search for omics datasets relevant to a biological question without confusing assay type or cohort context."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for public-data discovery before the user treats the result as final."
+    }
+  ]
+}

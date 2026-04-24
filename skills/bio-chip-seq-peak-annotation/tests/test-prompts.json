@@ -1,0 +1,13 @@
+{
+  "skill": "bio-chip-seq-peak-annotation",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Annotate ChIP-seq peaks to nearby genes and explain how genome-build mismatches would break the result."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Tell me which annotation choices materially change the biological interpretation of ChIP peaks."
+    }
+  ]
+}

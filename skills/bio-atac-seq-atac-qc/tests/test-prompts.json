@@ -1,0 +1,13 @@
+{
+  "skill": "bio-atac-seq-atac-qc",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Interpret ATAC-seq QC metrics and decide whether these libraries should proceed to peak calling."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize TSS enrichment, FRiP, and fragment periodicity findings for an ATAC project."
+    }
+  ]
+}

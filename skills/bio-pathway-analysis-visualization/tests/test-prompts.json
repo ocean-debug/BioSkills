@@ -1,0 +1,13 @@
+{
+  "skill": "bio-pathway-analysis-visualization",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Design a pathway-visualization set for an RNA-seq project that includes ORA and GSEA results."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Explain how to visualize enrichment without hiding thresholds or directionality."
+    }
+  ]
+}

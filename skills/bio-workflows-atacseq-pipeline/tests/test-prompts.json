@@ -1,0 +1,13 @@
+{
+  "skill": "bio-workflows-atacseq-pipeline",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Outline a complete ATAC-seq workflow with explicit QC gates and downstream branching."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Adapt an ATAC-seq workflow for a project that stops after peak calling instead of differential analysis."
+    }
+  ]
+}

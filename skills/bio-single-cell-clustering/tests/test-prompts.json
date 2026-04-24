@@ -1,0 +1,13 @@
+{
+  "skill": "bio-single-cell-clustering",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan clustering for an integrated single-cell dataset and explain how you would choose resolution."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize what cluster diagnostics should be reviewed before labeling cell states."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "skill": "bio-workflows-chipseq-pipeline",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a ChIP-seq workflow for a transcription-factor study with input controls and replicates."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Adapt the ChIP workflow for a broad histone mark and keep the stage gates explicit."
+    }
+  ]
+}

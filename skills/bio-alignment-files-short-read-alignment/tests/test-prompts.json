@@ -1,0 +1,17 @@
+{
+  "skill": "bio-alignment-files-short-read-alignment",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a DNA short-read alignment step and explain what metadata must be fixed before execution."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Tell me how you would hand off aligned reads so indexing and BAM QC can run safely next."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for dna short-read alignment before the user treats the result as final."
+    }
+  ]
+}

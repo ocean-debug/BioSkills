@@ -1,0 +1,4761 @@
+{
+  "version": "1.0.0",
+  "generated_by": "scripts/generate_catalog.py",
+  "generated_at": "2026-04-23T17:08:56+00:00",
+  "skill_count": 157,
+  "skills": [
+    {
+      "name": "bio-alignment-files-alignment-indexing",
+      "description": "Build and validate alignment-file indexes so BAM and CRAM inputs remain random-access ready for downstream analysis.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "alignment-files",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "alignment-files",
+        "indexing",
+        "BAI",
+        "CSI"
+      ],
+      "trigger_keywords": [
+        "alignment indexing",
+        "BAI",
+        "CSI",
+        "index BAM"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-alignment-files-bam-statistics",
+      "description": "Summarize BAM-level alignment statistics that gate downstream coverage, variant, or transcriptome analysis.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "alignment-files",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "alignment-files",
+        "BAM",
+        "statistics",
+        "QC"
+      ],
+      "trigger_keywords": [
+        "BAM statistics",
+        "flagstat",
+        "alignment QC",
+        "BAM QC"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-alignment-files-sam-bam-basics",
+      "description": "Inspect, explain, and convert core alignment-file formats without losing sort, header, or tag information needed downstream.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "alignment-files",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "alignment-files",
+        "SAM",
+        "BAM",
+        "CRAM"
+      ],
+      "trigger_keywords": [
+        "SAM basics",
+        "BAM basics",
+        "CRAM basics",
+        "alignment file inspection"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-alignment-files-short-read-alignment",
+      "description": "Align DNA short reads reproducibly with explicit reference, pairing, and output-sorting assumptions.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "alignment-files",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "alignment-files",
+        "alignment",
+        "BWA",
+        "short reads"
+      ],
+      "trigger_keywords": [
+        "BWA alignment",
+        "short-read alignment",
+        "DNA alignment",
+        "bwa-mem2"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-alternative-splicing-differential-splicing",
+      "description": "Detect and interpret differential alternative splicing using explicit event support, delta PSI, and replicate-aware reasoning.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "alternative-splicing",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "alternative-splicing",
+        "splicing",
+        "delta PSI",
+        "rMATS"
+      ],
+      "trigger_keywords": [
+        "differential splicing",
+        "delta PSI",
+        "rMATS",
+        "SUPPA2"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-atac-seq-atac-qc",
+      "description": "Review ATAC-seq quality metrics and determine whether a library is suitable for peak-level downstream analysis.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "atac-seq",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "ATAC-seq",
+        "qc",
+        "TSS enrichment",
+        "FRiP"
+      ],
+      "trigger_keywords": [
+        "ATAC QC",
+        "TSS enrichment",
+        "FRiP",
+        "fragment periodicity"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-atac-seq-differential-accessibility",
+      "description": "Compare chromatin accessibility across groups using a consistent peak universe and replicate-aware modeling.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "atac-seq",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-atac-seq-peak-calling"
+      ],
+      "tags": [
+        "ATAC-seq",
+        "differential accessibility",
+        "consensus peaks",
+        "contrast"
+      ],
+      "trigger_keywords": [
+        "differential accessibility",
+        "consensus peaks",
+        "ATAC contrast",
+        "accessible regions"
+      ],
+      "chaining_partners": [
+        "bio-atac-seq-peak-calling"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-atac-seq-motif-analysis",
+      "description": "Interpret regulatory motif content from ATAC-seq peaks with an explicit background strategy and assay-aware caveats.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "atac-seq",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-atac-seq-peak-calling"
+      ],
+      "tags": [
+        "ATAC-seq",
+        "motif",
+        "regulatory analysis",
+        "TF binding"
+      ],
+      "trigger_keywords": [
+        "motif enrichment",
+        "ATAC motif",
+        "TF motifs",
+        "regulatory motifs"
+      ],
+      "chaining_partners": [
+        "bio-atac-seq-peak-calling"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-atac-seq-peak-calling",
+      "description": "Call ATAC-seq peaks with explicit control of genome build, sequencing mode, and ATAC-specific caller parameters.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "atac-seq",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-atac-seq-atac-qc"
+      ],
+      "tags": [
+        "ATAC-seq",
+        "peak calling",
+        "MACS3",
+        "open chromatin"
+      ],
+      "trigger_keywords": [
+        "ATAC peak calling",
+        "MACS3",
+        "open chromatin peaks",
+        "summits"
+      ],
+      "chaining_partners": [
+        "bio-atac-seq-atac-qc"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-bulk-rna-seq-batch-correction",
+      "description": "Handle batch effects in bulk RNA-seq while preserving the biological factor of interest.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "bulk-rna-seq",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-bulk-rna-seq-count-matrix-qc"
+      ],
+      "tags": [
+        "rna-seq",
+        "batch",
+        "combat",
+        "design"
+      ],
+      "trigger_keywords": [
+        "batch correction",
+        "ComBat",
+        "remove batch effect",
+        "confounding"
+      ],
+      "chaining_partners": [
+        "bio-bulk-rna-seq-count-matrix-qc"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-bulk-rna-seq-count-matrix-qc",
+      "description": "Inspect count-matrix quality, replicate concordance, and sample-level outliers before differential testing.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "bulk-rna-seq",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-bulk-rna-seq-quantification"
+      ],
+      "tags": [
+        "rna-seq",
+        "qc",
+        "counts",
+        "pca"
+      ],
+      "trigger_keywords": [
+        "count matrix QC",
+        "library size",
+        "PCA",
+        "replicate concordance"
+      ],
+      "chaining_partners": [
+        "bio-bulk-rna-seq-quantification"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-bulk-rna-seq-differential-expression",
+      "description": "Perform contrast-aware differential expression for bulk RNA-seq with explicit design validation and QC-aware reporting.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "bulk-rna-seq",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-bulk-rna-seq-count-matrix-qc"
+      ],
+      "tags": [
+        "rna-seq",
+        "differential expression",
+        "DESeq2",
+        "bulk"
+      ],
+      "trigger_keywords": [
+        "DESeq2",
+        "bulk differential expression",
+        "contrast",
+        "log2 fold change"
+      ],
+      "chaining_partners": [
+        "bio-bulk-rna-seq-count-matrix-qc"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-bulk-rna-seq-quantification",
+      "description": "Quantify bulk RNA-seq expression with a reproducible path from trimmed reads to gene- or transcript-level abundance.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "bulk-rna-seq",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-bulk-rna-seq-read-qc"
+      ],
+      "tags": [
+        "rna-seq",
+        "quantification",
+        "salmon",
+        "featureCounts"
+      ],
+      "trigger_keywords": [
+        "rna quantification",
+        "salmon",
+        "featureCounts",
+        "tximport"
+      ],
+      "chaining_partners": [
+        "bio-bulk-rna-seq-read-qc"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-bulk-rna-seq-read-qc",
+      "description": "Assess FASTQ-level quality, adapter burden, and sample readiness before bulk RNA-seq quantification.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "bulk-rna-seq",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "rna-seq",
+        "qc",
+        "fastq",
+        "bulk"
+      ],
+      "trigger_keywords": [
+        "bulk RNA QC",
+        "fastq qc",
+        "adapter trimming",
+        "read quality"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-bulk-rna-seq-visualization",
+      "description": "Generate interpretable RNA-seq differential-expression plots that preserve thresholds, directions, and provenance.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "bulk-rna-seq",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-bulk-rna-seq-differential-expression"
+      ],
+      "tags": [
+        "rna-seq",
+        "visualization",
+        "volcano",
+        "heatmap"
+      ],
+      "trigger_keywords": [
+        "volcano plot",
+        "MA plot",
+        "RNA-seq heatmap",
+        "DE visualization"
+      ],
+      "chaining_partners": [
+        "bio-bulk-rna-seq-differential-expression"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-chemoinformatics-molecular-descriptors",
+      "description": "Compute molecular descriptors and fingerprints from standardized compounds for screening, ranking, or modeling tasks.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "chemoinformatics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "chemoinformatics",
+        "molecular descriptors",
+        "fingerprints",
+        "RDKit"
+      ],
+      "trigger_keywords": [
+        "molecular descriptors",
+        "fingerprints",
+        "RDKit descriptors",
+        "ECFP"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-chemoinformatics-similarity-searching",
+      "description": "Search compound libraries by molecular similarity with explicit representation choice and hit-threshold logic.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "chemoinformatics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "chemoinformatics",
+        "similarity search",
+        "Tanimoto",
+        "analogs"
+      ],
+      "trigger_keywords": [
+        "similarity search",
+        "Tanimoto",
+        "analog search",
+        "chemical clustering"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-chemoinformatics-substructure-search",
+      "description": "Search compound collections for SMARTS and scaffold matches with explicit query-pattern assumptions.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "chemoinformatics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "chemoinformatics",
+        "substructure",
+        "SMARTS",
+        "scaffold"
+      ],
+      "trigger_keywords": [
+        "substructure search",
+        "SMARTS",
+        "scaffold search",
+        "chemical motif"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-chip-seq-chip-qc",
+      "description": "Review ChIP-seq assay quality, control adequacy, and replicate consistency before peak interpretation.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "chip-seq",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "ChIP-seq",
+        "qc",
+        "FRiP",
+        "cross-correlation"
+      ],
+      "trigger_keywords": [
+        "ChIP QC",
+        "FRiP",
+        "NSC",
+        "RSC",
+        "control quality"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-chip-seq-differential-binding",
+      "description": "Compare ChIP-seq occupancy across groups using a stable region universe and replicate-aware contrasts.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "chip-seq",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-chip-seq-peak-calling"
+      ],
+      "tags": [
+        "ChIP-seq",
+        "differential binding",
+        "contrast",
+        "region counts"
+      ],
+      "trigger_keywords": [
+        "differential binding",
+        "occupancy analysis",
+        "DiffBind",
+        "ChIP contrast"
+      ],
+      "chaining_partners": [
+        "bio-chip-seq-peak-calling"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-chip-seq-peak-annotation",
+      "description": "Annotate ChIP-seq peaks against genes and genomic features while keeping coordinate and build provenance explicit.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "chip-seq",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-chip-seq-peak-calling"
+      ],
+      "tags": [
+        "ChIP-seq",
+        "annotation",
+        "genomic features",
+        "promoters"
+      ],
+      "trigger_keywords": [
+        "peak annotation",
+        "nearest gene",
+        "promoter annotation",
+        "genomic feature"
+      ],
+      "chaining_partners": [
+        "bio-chip-seq-peak-calling"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-chip-seq-peak-calling",
+      "description": "Call ChIP-seq peaks with explicit control handling and mark-aware narrow or broad parameter choices.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "chip-seq",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-chip-seq-chip-qc"
+      ],
+      "tags": [
+        "ChIP-seq",
+        "peak calling",
+        "MACS3",
+        "broad peaks"
+      ],
+      "trigger_keywords": [
+        "ChIP peak calling",
+        "broad peaks",
+        "MACS3",
+        "input control"
+      ],
+      "chaining_partners": [
+        "bio-chip-seq-chip-qc"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-clinical-biostatistics-categorical-tests",
+      "description": "Run categorical association tests with sparse-data awareness and clinically interpretable contingency reporting.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "clinical-biostatistics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "clinical-biostatistics",
+        "categorical tests",
+        "Fisher",
+        "chi-square"
+      ],
+      "trigger_keywords": [
+        "categorical tests",
+        "Fisher exact",
+        "chi-square",
+        "CMH test"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-clinical-biostatistics-cdisc-data-handling",
+      "description": "Prepare CDISC-style clinical data so domains, joins, and analysis populations remain explicit and reproducible.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "clinical-biostatistics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "clinical-biostatistics",
+        "CDISC",
+        "SDTM",
+        "clinical data"
+      ],
+      "trigger_keywords": [
+        "CDISC",
+        "SDTM",
+        "clinical data handling",
+        "USUBJID joins"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-clinical-biostatistics-effect-measures",
+      "description": "Compute and interpret clinical effect measures with explicit denominator, reference-group, and interval-estimation choices.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "clinical-biostatistics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "clinical-biostatistics",
+        "effect size",
+        "odds ratio",
+        "risk ratio"
+      ],
+      "trigger_keywords": [
+        "effect measures",
+        "odds ratio",
+        "risk ratio",
+        "NNT"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-clinical-biostatistics-logistic-regression",
+      "description": "Fit clinical logistic-regression models with explicit endpoint coding, adjustment strategy, and rare-event safeguards.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "clinical-biostatistics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "clinical-biostatistics",
+        "logistic regression",
+        "odds ratio",
+        "clinical modeling"
+      ],
+      "trigger_keywords": [
+        "logistic regression",
+        "binary endpoint model",
+        "clinical regression",
+        "rare events"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-clinical-biostatistics-subgroup-analysis",
+      "description": "Evaluate subgroup effects with explicit interaction logic, multiplicity caveats, and cohort-size awareness.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "clinical-biostatistics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "clinical-biostatistics",
+        "subgroup analysis",
+        "interaction",
+        "heterogeneity"
+      ],
+      "trigger_keywords": [
+        "subgroup analysis",
+        "interaction test",
+        "heterogeneity",
+        "forest plot"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-comparative-genomics-ancestral-reconstruction",
+      "description": "Reconstruct ancestral states or sequences with explicit model, node, and uncertainty handling.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "comparative-genomics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "comparative genomics",
+        "ancestral reconstruction",
+        "evolution",
+        "phylogeny"
+      ],
+      "trigger_keywords": [
+        "ancestral reconstruction",
+        "ancestral sequence",
+        "ancestral states",
+        "protein resurrection"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-comparative-genomics-hgt-detection",
+      "description": "Detect candidate horizontal gene-transfer events with explicit contamination, phylogenetic, and composition-aware checks.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "comparative-genomics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "comparative genomics",
+        "HGT",
+        "horizontal transfer",
+        "evolution"
+      ],
+      "trigger_keywords": [
+        "HGT detection",
+        "horizontal gene transfer",
+        "phylogenetic discordance",
+        "gene transfer"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-comparative-genomics-positive-selection",
+      "description": "Test for positive-selection signals with explicit alignment, model, and phylogenetic-context requirements.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "comparative-genomics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "comparative genomics",
+        "positive selection",
+        "evolution",
+        "models"
+      ],
+      "trigger_keywords": [
+        "positive selection",
+        "selection scans",
+        "dN/dS",
+        "adaptive evolution"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-comparative-genomics-synteny-analysis",
+      "description": "Analyze syntenic blocks and genome collinearity with explicit assembly and orthology assumptions.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "comparative-genomics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "comparative genomics",
+        "synteny",
+        "genome structure",
+        "collinearity"
+      ],
+      "trigger_keywords": [
+        "synteny analysis",
+        "collinearity",
+        "syntenic blocks",
+        "genome rearrangements"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-crispr-screens-editing-outcome-analysis",
+      "description": "Analyze CRISPR editing outcomes with explicit amplicon, alignment, and modality-aware assumptions.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "crispr-screens",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "CRISPR",
+        "editing outcomes",
+        "amplicons",
+        "base editing"
+      ],
+      "trigger_keywords": [
+        "editing outcome analysis",
+        "CRISPResso",
+        "base editing analysis",
+        "indel spectrum"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-crispr-screens-gene-level-scoring",
+      "description": "Aggregate guide-level evidence into gene-level screen scores with explicit model and concordance assumptions.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "crispr-screens",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-crispr-screens-hit-calling"
+      ],
+      "tags": [
+        "CRISPR",
+        "gene-level scoring",
+        "guides",
+        "JACKS"
+      ],
+      "trigger_keywords": [
+        "gene-level scoring",
+        "JACKS",
+        "guide aggregation",
+        "gene screen scores"
+      ],
+      "chaining_partners": [
+        "bio-crispr-screens-hit-calling"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-crispr-screens-hit-calling",
+      "description": "Call CRISPR screen hits with explicit control, replicate, and scoring assumptions.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "crispr-screens",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-crispr-screens-screen-qc"
+      ],
+      "tags": [
+        "CRISPR",
+        "hit calling",
+        "screen hits",
+        "guides"
+      ],
+      "trigger_keywords": [
+        "CRISPR hit calling",
+        "screen hits",
+        "guide ranking",
+        "screen scoring"
+      ],
+      "chaining_partners": [
+        "bio-crispr-screens-screen-qc"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-crispr-screens-library-design",
+      "description": "Plan CRISPR library design with explicit modality, control, and sequence-constraint assumptions.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "crispr-screens",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "CRISPR",
+        "library design",
+        "guides",
+        "screen design"
+      ],
+      "trigger_keywords": [
+        "CRISPR library design",
+        "guide library",
+        "screen design",
+        "guide controls"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-crispr-screens-screen-qc",
+      "description": "Review CRISPR-screen library representation, control behavior, and replicate stability before scoring hits.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "crispr-screens",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "CRISPR",
+        "screen QC",
+        "guides",
+        "controls"
+      ],
+      "trigger_keywords": [
+        "CRISPR screen QC",
+        "guide coverage",
+        "screen controls",
+        "library representation"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-experimental-design-batch-design",
+      "description": "Design batch structure and sample assignment so technical variation does not alias the main biological contrast.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "experimental-design",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "experimental-design",
+        "batch design",
+        "blocking",
+        "study design"
+      ],
+      "trigger_keywords": [
+        "batch design",
+        "blocking",
+        "batch assignment",
+        "study balance"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-experimental-design-multiple-testing",
+      "description": "Choose and apply multiple-testing correction with explicit hypothesis-family boundaries and reporting rules.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "experimental-design",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "experimental-design",
+        "multiple testing",
+        "FDR",
+        "q-value"
+      ],
+      "trigger_keywords": [
+        "multiple testing",
+        "FDR",
+        "q-value",
+        "Bonferroni"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-genome-intervals-coverage-analysis",
+      "description": "Compute and interpret genomic coverage across intervals with explicit target definitions and build-aware semantics.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "genome-intervals",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "genome-intervals",
+        "coverage",
+        "BED",
+        "depth"
+      ],
+      "trigger_keywords": [
+        "coverage analysis",
+        "BED coverage",
+        "genomic depth",
+        "target coverage"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-genome-intervals-interval-arithmetic",
+      "description": "Apply overlap, subtract, merge, and related interval operations while preserving coordinate and strandedness semantics.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "genome-intervals",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "genome-intervals",
+        "BED",
+        "interval arithmetic",
+        "overlap"
+      ],
+      "trigger_keywords": [
+        "interval arithmetic",
+        "BED intersect",
+        "merge intervals",
+        "genomic overlaps"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-genome-intervals-proximity-operations",
+      "description": "Assign nearby genomic features with explicit window and nearest-feature logic rather than implicit assumptions.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "genome-intervals",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "genome-intervals",
+        "proximity",
+        "nearest gene",
+        "window"
+      ],
+      "trigger_keywords": [
+        "proximity operations",
+        "nearest gene",
+        "window BED",
+        "closest feature"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-hi-c-analysis-compartment-analysis",
+      "description": "Infer and compare chromatin compartments from Hi-C data with explicit sign, resolution, and normalization assumptions.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "hi-c-analysis",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-hi-c-analysis-hic-data-io"
+      ],
+      "tags": [
+        "Hi-C",
+        "compartments",
+        "A/B compartments",
+        "chromatin"
+      ],
+      "trigger_keywords": [
+        "compartment analysis",
+        "A/B compartments",
+        "Hi-C eigenvectors",
+        "compartment switch"
+      ],
+      "chaining_partners": [
+        "bio-hi-c-analysis-hic-data-io"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-hi-c-analysis-differential-contact",
+      "description": "Compare Hi-C contact structure across groups with explicit resolution, normalization, and matched-sample assumptions.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "hi-c-analysis",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-hi-c-analysis-hic-data-io"
+      ],
+      "tags": [
+        "Hi-C",
+        "differential contacts",
+        "comparison",
+        "contact matrices"
+      ],
+      "trigger_keywords": [
+        "differential contacts",
+        "Hi-C comparison",
+        "contact differences",
+        "matrix comparison"
+      ],
+      "chaining_partners": [
+        "bio-hi-c-analysis-hic-data-io"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-hi-c-analysis-hic-data-io",
+      "description": "Prepare Hi-C matrices and related assets for downstream structural analysis with explicit resolution and normalization provenance.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "hi-c-analysis",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "Hi-C",
+        "data IO",
+        "matrices",
+        "cooler"
+      ],
+      "trigger_keywords": [
+        "Hi-C IO",
+        "cool file",
+        "contact matrix import",
+        "Hi-C matrix preparation"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-hi-c-analysis-loop-calling",
+      "description": "Call chromatin loops from Hi-C matrices with explicit support-evidence, resolution, and sparsity assumptions.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "hi-c-analysis",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-hi-c-analysis-hic-data-io"
+      ],
+      "tags": [
+        "Hi-C",
+        "loops",
+        "loop calling",
+        "chromatin interactions"
+      ],
+      "trigger_keywords": [
+        "loop calling",
+        "chromatin loops",
+        "Hi-C loops",
+        "interaction peaks"
+      ],
+      "chaining_partners": [
+        "bio-hi-c-analysis-hic-data-io"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-hi-c-analysis-tad-detection",
+      "description": "Detect topologically associating domains from Hi-C matrices with explicit resolution and stability caveats.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "hi-c-analysis",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-hi-c-analysis-hic-data-io"
+      ],
+      "tags": [
+        "Hi-C",
+        "TADs",
+        "domains",
+        "chromatin structure"
+      ],
+      "trigger_keywords": [
+        "TAD detection",
+        "domain calling",
+        "Hi-C domains",
+        "TAD boundaries"
+      ],
+      "chaining_partners": [
+        "bio-hi-c-analysis-hic-data-io"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-hi-c-analysis-visualization",
+      "description": "Render Hi-C matrices and structural results in a way that preserves resolution, normalization, and feature provenance.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "hi-c-analysis",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-hi-c-analysis-hic-data-io"
+      ],
+      "tags": [
+        "Hi-C",
+        "visualization",
+        "heatmaps",
+        "chromatin"
+      ],
+      "trigger_keywords": [
+        "Hi-C visualization",
+        "contact heatmap",
+        "matrix heatmap",
+        "chromatin structure plots"
+      ],
+      "chaining_partners": [
+        "bio-hi-c-analysis-hic-data-io"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-literature-research-biomedical-semantic-search",
+      "description": "Run semantic search over biomedical concepts or evidence while keeping topical drift and provenance visible.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "literature-research",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "literature",
+        "semantic search",
+        "biomedical concepts",
+        "evidence retrieval"
+      ],
+      "trigger_keywords": [
+        "biomedical semantic search",
+        "semantic paper search",
+        "concept retrieval",
+        "evidence retrieval"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-literature-research-literature-synthesis",
+      "description": "Synthesize literature findings around a focused biomedical question while preserving disagreement and evidence strength.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "literature-research",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-literature-research-pubmed-search-and-fetch"
+      ],
+      "tags": [
+        "literature",
+        "synthesis",
+        "papers",
+        "evidence"
+      ],
+      "trigger_keywords": [
+        "literature synthesis",
+        "paper synthesis",
+        "evidence summary",
+        "study synthesis"
+      ],
+      "chaining_partners": [
+        "bio-literature-research-pubmed-search-and-fetch"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-literature-research-omics-evidence-mapping",
+      "description": "Map omics findings to literature and knowledge-graph evidence with explicit provenance and confidence boundaries.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "literature-research",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "literature",
+        "omics",
+        "evidence mapping",
+        "knowledge graph"
+      ],
+      "trigger_keywords": [
+        "omics evidence mapping",
+        "target evidence",
+        "knowledge graph",
+        "evidence links"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-literature-research-protocol-discovery",
+      "description": "Discover wet-lab or computational protocols relevant to a biomedical question while keeping reuse boundaries explicit.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "literature-research",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "literature",
+        "protocols",
+        "methods",
+        "experimental design"
+      ],
+      "trigger_keywords": [
+        "protocol discovery",
+        "protocols.io",
+        "method search",
+        "experimental protocol"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-literature-research-public-data-discovery",
+      "description": "Discover public omics datasets and study metadata that can support a biomedical question or reanalysis project.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "literature-research",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "literature",
+        "public data",
+        "SRA",
+        "datasets"
+      ],
+      "trigger_keywords": [
+        "public data discovery",
+        "SRA search",
+        "omics datasets",
+        "study accession search"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-literature-research-pubmed-search-and-fetch",
+      "description": "Search and fetch biomedical literature with explicit query scope, provenance, and evidence-target alignment.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "literature-research",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "literature",
+        "PubMed",
+        "papers",
+        "biomedical search"
+      ],
+      "trigger_keywords": [
+        "PubMed search",
+        "paper fetch",
+        "biomedical literature",
+        "paper retrieval"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-literature-research-sequence-database-search",
+      "description": "Search sequence databases and link identifiers with explicit query scope, hit confidence, and interpretation limits.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "literature-research",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "literature",
+        "BLAST",
+        "Entrez",
+        "sequence databases"
+      ],
+      "trigger_keywords": [
+        "BLAST search",
+        "sequence database",
+        "Entrez link",
+        "sequence similarity search"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-long-read-sequencing-basecalling",
+      "description": "Plan platform-aware long-read basecalling with explicit chemistry, accuracy, and demultiplexing assumptions.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "long-read-sequencing",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "long-read",
+        "basecalling",
+        "ONT",
+        "raw signal"
+      ],
+      "trigger_keywords": [
+        "basecalling",
+        "ONT guppy",
+        "Dorado",
+        "raw signal to FASTQ"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-long-read-sequencing-consensus-polishing",
+      "description": "Polish long-read contigs or draft assemblies with explicit rounds, support evidence, and validation checkpoints.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "long-read-sequencing",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-long-read-sequencing-long-read-qc"
+      ],
+      "tags": [
+        "long-read",
+        "polishing",
+        "assembly",
+        "consensus"
+      ],
+      "trigger_keywords": [
+        "Medaka polishing",
+        "assembly polishing",
+        "consensus polishing",
+        "long-read polishing"
+      ],
+      "chaining_partners": [
+        "bio-long-read-sequencing-long-read-qc"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-long-read-sequencing-isoseq-analysis",
+      "description": "Analyze long-read transcript data for isoform discovery, classification, and downstream expression-ready summaries.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "long-read-sequencing",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-long-read-sequencing-long-read-qc"
+      ],
+      "tags": [
+        "long-read",
+        "isoform",
+        "Iso-Seq",
+        "transcriptomics"
+      ],
+      "trigger_keywords": [
+        "Iso-Seq analysis",
+        "long-read isoforms",
+        "full-length transcripts",
+        "isoform discovery"
+      ],
+      "chaining_partners": [
+        "bio-long-read-sequencing-long-read-qc"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-long-read-sequencing-long-read-qc",
+      "description": "Assess long-read run quality, read-length structure, and downstream readiness before polishing, isoform, or variant analysis.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "long-read-sequencing",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "long-read",
+        "qc",
+        "nanopore",
+        "pacbio"
+      ],
+      "trigger_keywords": [
+        "long-read QC",
+        "nanopore QC",
+        "PacBio QC",
+        "read length distribution"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-long-read-sequencing-structural-variant-calling",
+      "description": "Call structural variants from long reads with explicit breakpoint support, reference provenance, and assay-aware caveats.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "long-read-sequencing",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-long-read-sequencing-long-read-qc"
+      ],
+      "tags": [
+        "long-read",
+        "structural variants",
+        "SV",
+        "breakpoints"
+      ],
+      "trigger_keywords": [
+        "long-read SV",
+        "structural variant calling",
+        "breakpoint analysis",
+        "SV caller"
+      ],
+      "chaining_partners": [
+        "bio-long-read-sequencing-long-read-qc"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-machine-learning-model-validation",
+      "description": "Validate biomedical predictive models with leakage-aware splits and explicit performance-gating rules.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "machine-learning",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "machine-learning",
+        "model validation",
+        "cross-validation",
+        "biomarker models"
+      ],
+      "trigger_keywords": [
+        "model validation",
+        "nested cross-validation",
+        "data leakage",
+        "biomedical classifier"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-machine-learning-prediction-explanation",
+      "description": "Explain biomedical model predictions with attribution methods that stay grounded in validated model behavior.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "machine-learning",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "machine-learning",
+        "prediction explanation",
+        "SHAP",
+        "LIME"
+      ],
+      "trigger_keywords": [
+        "prediction explanation",
+        "SHAP",
+        "LIME",
+        "feature attribution"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-metagenomics-abundance-estimation",
+      "description": "Estimate feature or taxon abundance for metagenomic cohorts with explicit normalization and compositional-analysis caveats.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "metagenomics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-metagenomics-taxonomic-profiling"
+      ],
+      "tags": [
+        "metagenomics",
+        "abundance",
+        "microbiome",
+        "normalization"
+      ],
+      "trigger_keywords": [
+        "metagenomic abundance",
+        "feature abundance",
+        "relative abundance",
+        "microbiome normalization"
+      ],
+      "chaining_partners": [
+        "bio-metagenomics-taxonomic-profiling"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-metagenomics-amr-detection",
+      "description": "Detect antimicrobial-resistance features from metagenomic data with explicit database and support-evidence provenance.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "metagenomics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "metagenomics",
+        "AMR",
+        "resistance",
+        "microbiome"
+      ],
+      "trigger_keywords": [
+        "AMR detection",
+        "antimicrobial resistance",
+        "resistance genes",
+        "metagenomic AMR"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-metagenomics-metagenome-assembly",
+      "description": "Assemble metagenomic reads into contigs with explicit resource, contamination, and downstream-use assumptions.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "metagenomics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "metagenomics",
+        "assembly",
+        "contigs",
+        "microbial genomes"
+      ],
+      "trigger_keywords": [
+        "metagenome assembly",
+        "contig assembly",
+        "microbial contigs",
+        "assembly from metagenomic reads"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-metagenomics-strain-tracking",
+      "description": "Track strain-level relatedness or persistence in metagenomic cohorts with explicit sample-comparability assumptions.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "metagenomics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-metagenomics-taxonomic-profiling"
+      ],
+      "tags": [
+        "metagenomics",
+        "strain",
+        "tracking",
+        "microbiome"
+      ],
+      "trigger_keywords": [
+        "strain tracking",
+        "strain persistence",
+        "within-host strain",
+        "microbial strain comparison"
+      ],
+      "chaining_partners": [
+        "bio-metagenomics-taxonomic-profiling"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-metagenomics-taxonomic-profiling",
+      "description": "Profile microbial community composition with explicit database, resolution, and confidence-threshold provenance.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "metagenomics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "metagenomics",
+        "taxonomy",
+        "microbiome",
+        "profiling"
+      ],
+      "trigger_keywords": [
+        "taxonomic profiling",
+        "Kraken",
+        "MetaPhlAn",
+        "microbiome composition"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-methylation-bismark-alignment",
+      "description": "Prepare bisulfite-aware alignment outputs that are valid inputs for methylation extraction and DMR analysis.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "methylation",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "methylation",
+        "alignment",
+        "Bismark",
+        "bisulfite"
+      ],
+      "trigger_keywords": [
+        "Bismark alignment",
+        "bisulfite alignment",
+        "WGBS alignment",
+        "methylation mapping"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-methylation-calling",
+      "description": "Extract and summarize methylation calls with explicit coverage thresholds and protocol-aware caveats.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "methylation",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-methylation-bismark-alignment"
+      ],
+      "tags": [
+        "methylation",
+        "calling",
+        "CpG",
+        "WGBS"
+      ],
+      "trigger_keywords": [
+        "methylation calling",
+        "CpG calls",
+        "Bismark extraction",
+        "cytosine report"
+      ],
+      "chaining_partners": [
+        "bio-methylation-bismark-alignment"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-methylation-dmr-detection",
+      "description": "Detect differential methylation regions with explicit replicate handling, coverage thresholds, and region-level reporting.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "methylation",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-methylation-qc"
+      ],
+      "tags": [
+        "methylation",
+        "DMR",
+        "differential methylation",
+        "regions"
+      ],
+      "trigger_keywords": [
+        "DMR",
+        "differential methylation",
+        "methylKit",
+        "region testing"
+      ],
+      "chaining_partners": [
+        "bio-methylation-qc"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-methylation-qc",
+      "description": "Review methylation-specific QC such as conversion efficiency, M-bias, and coverage before downstream comparisons.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "methylation",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-methylation-calling"
+      ],
+      "tags": [
+        "methylation",
+        "qc",
+        "M-bias",
+        "coverage"
+      ],
+      "trigger_keywords": [
+        "M-bias",
+        "bisulfite conversion",
+        "methylation QC",
+        "coverage QC"
+      ],
+      "chaining_partners": [
+        "bio-methylation-calling"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-multiomics-data-harmonization",
+      "description": "Harmonize identifiers, metadata, and modality-ready inputs before multi-omic integration or reporting.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "multiomics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "multiomics",
+        "harmonization",
+        "integration",
+        "metadata"
+      ],
+      "trigger_keywords": [
+        "data harmonization",
+        "multi-omics harmonization",
+        "identifier mapping",
+        "modality alignment"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-multiomics-integration",
+      "description": "Integrate multiple omics modalities with explicit shared-structure assumptions and modality-balance checks.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "multiomics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-multiomics-data-harmonization"
+      ],
+      "tags": [
+        "multiomics",
+        "integration",
+        "latent factors",
+        "cross-modal"
+      ],
+      "trigger_keywords": [
+        "multi-omics integration",
+        "mixOmics",
+        "cross-modal integration",
+        "joint embedding"
+      ],
+      "chaining_partners": [
+        "bio-multiomics-data-harmonization"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-pathway-analysis-go-enrichment",
+      "description": "Run GO over-representation analysis with explicit background-universe and identifier-handling decisions.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "pathway-analysis",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "pathway",
+        "GO",
+        "enrichment",
+        "ORA"
+      ],
+      "trigger_keywords": [
+        "GO enrichment",
+        "gene ontology",
+        "ORA",
+        "background universe"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-pathway-analysis-gsea",
+      "description": "Perform ranked-list enrichment with explicit metric choice, directional interpretation, and leading-edge handling.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "pathway-analysis",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "pathway",
+        "GSEA",
+        "ranked list",
+        "enrichment"
+      ],
+      "trigger_keywords": [
+        "GSEA",
+        "ranked enrichment",
+        "preranked",
+        "leading edge"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-pathway-analysis-reactome-enrichment",
+      "description": "Run Reactome-focused enrichment while preserving pathway hierarchy and mechanistic context.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "pathway-analysis",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "pathway",
+        "Reactome",
+        "enrichment",
+        "mechanism"
+      ],
+      "trigger_keywords": [
+        "Reactome enrichment",
+        "mechanistic pathways",
+        "Reactome",
+        "pathway hierarchy"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-pathway-analysis-visualization",
+      "description": "Turn enrichment outputs into pathway figures that preserve direction, magnitude, and evidence context.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "pathway-analysis",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-pathway-analysis-go-enrichment",
+        "bio-pathway-analysis-gsea"
+      ],
+      "tags": [
+        "pathway",
+        "visualization",
+        "enrichment plots",
+        "networks"
+      ],
+      "trigger_keywords": [
+        "pathway plot",
+        "enrichment visualization",
+        "pathway network",
+        "GSEA plot"
+      ],
+      "chaining_partners": [
+        "bio-pathway-analysis-go-enrichment",
+        "bio-pathway-analysis-gsea"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-phylogenetics-divergence-dating",
+      "description": "Estimate divergence timing with explicit calibration, temporal-signal, and uncertainty assumptions.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "phylogenetics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-phylogenetics-tree-inference"
+      ],
+      "tags": [
+        "phylogenetics",
+        "dating",
+        "divergence",
+        "calibration"
+      ],
+      "trigger_keywords": [
+        "divergence dating",
+        "phylogenetic dating",
+        "time tree",
+        "calibration points"
+      ],
+      "chaining_partners": [
+        "bio-phylogenetics-tree-inference"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-phylogenetics-tree-inference",
+      "description": "Infer phylogenetic trees with explicit alignment, model, rooting, and branch-support assumptions.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "phylogenetics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "phylogenetics",
+        "trees",
+        "evolution",
+        "topology"
+      ],
+      "trigger_keywords": [
+        "tree inference",
+        "phylogenetic tree",
+        "species tree",
+        "topology inference"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-population-genetics-archaic-introgression",
+      "description": "Detect and summarize archaic-introgressed segments with explicit reference-panel and ancestry-context assumptions.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "population-genetics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-population-genetics-population-structure"
+      ],
+      "tags": [
+        "population genetics",
+        "introgression",
+        "ancestry",
+        "segments"
+      ],
+      "trigger_keywords": [
+        "archaic introgression",
+        "Neanderthal DNA",
+        "Denisovan ancestry",
+        "introgressed segments"
+      ],
+      "chaining_partners": [
+        "bio-population-genetics-population-structure"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-population-genetics-association-testing",
+      "description": "Run cohort-aware association testing with explicit phenotype, covariate, and ancestry-adjustment assumptions.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "population-genetics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-population-genetics-population-structure"
+      ],
+      "tags": [
+        "population genetics",
+        "association",
+        "GWAS",
+        "covariates"
+      ],
+      "trigger_keywords": [
+        "association testing",
+        "GWAS analysis",
+        "population association",
+        "genetic association"
+      ],
+      "chaining_partners": [
+        "bio-population-genetics-population-structure"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-population-genetics-fine-mapping",
+      "description": "Perform locus-level fine mapping with explicit LD-reference and credible-set assumptions.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "population-genetics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-population-genetics-association-testing"
+      ],
+      "tags": [
+        "population genetics",
+        "fine mapping",
+        "credible sets",
+        "LD"
+      ],
+      "trigger_keywords": [
+        "fine mapping",
+        "credible set",
+        "causal variants",
+        "LD reference"
+      ],
+      "chaining_partners": [
+        "bio-population-genetics-association-testing"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-population-genetics-gwas-prs",
+      "description": "Translate association summary statistics into polygenic-risk-score workflows with explicit ancestry and calibration caveats.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "population-genetics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-population-genetics-association-testing"
+      ],
+      "tags": [
+        "population genetics",
+        "PRS",
+        "GWAS",
+        "risk score"
+      ],
+      "trigger_keywords": [
+        "GWAS to PRS",
+        "polygenic risk score",
+        "PRS construction",
+        "genetic risk score"
+      ],
+      "chaining_partners": [
+        "bio-population-genetics-association-testing"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-population-genetics-mendelian-randomisation",
+      "description": "Run Mendelian-randomisation analyses with explicit instrument, harmonization, and sensitivity-analysis assumptions.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "population-genetics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-population-genetics-association-testing"
+      ],
+      "tags": [
+        "population genetics",
+        "Mendelian randomisation",
+        "causal inference",
+        "instruments"
+      ],
+      "trigger_keywords": [
+        "Mendelian randomisation",
+        "MR analysis",
+        "genetic instruments",
+        "causal inference"
+      ],
+      "chaining_partners": [
+        "bio-population-genetics-association-testing"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-population-genetics-population-structure",
+      "description": "Characterize cohort structure and ancestry-related variation before association or comparative interpretation.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "population-genetics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "population genetics",
+        "structure",
+        "ancestry",
+        "PCA"
+      ],
+      "trigger_keywords": [
+        "population structure",
+        "ancestry PCA",
+        "cohort structure",
+        "genetic PCs"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-proteomics-affinity-proteomics",
+      "description": "Analyze affinity-based proteomics panels with explicit assay-unit interpretation and platform-specific limitations.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "proteomics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "proteomics",
+        "affinity proteomics",
+        "Olink",
+        "SomaScan"
+      ],
+      "trigger_keywords": [
+        "affinity proteomics",
+        "Olink",
+        "SomaScan",
+        "NPX"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-proteomics-differential-abundance",
+      "description": "Perform replicate-aware differential-abundance analysis for proteomics data with explicit normalization and missingness caveats.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "proteomics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-proteomics-proteomics-qc",
+        "bio-proteomics-quantification"
+      ],
+      "tags": [
+        "proteomics",
+        "differential abundance",
+        "protein changes",
+        "statistics"
+      ],
+      "trigger_keywords": [
+        "differential abundance",
+        "proteomics differential",
+        "protein changes",
+        "mass-spec differential"
+      ],
+      "chaining_partners": [
+        "bio-proteomics-proteomics-qc",
+        "bio-proteomics-quantification"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-proteomics-peptide-identification",
+      "description": "Identify peptides with explicit search-space, FDR, and modification assumptions that stay visible downstream.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "proteomics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "proteomics",
+        "peptides",
+        "identification",
+        "search"
+      ],
+      "trigger_keywords": [
+        "peptide identification",
+        "database search",
+        "PSM",
+        "search FDR"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-proteomics-proteomics-qc",
+      "description": "Review proteomics assay quality, missingness, and replicate consistency before quantitative interpretation.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "proteomics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "proteomics",
+        "qc",
+        "mass spectrometry",
+        "replicates"
+      ],
+      "trigger_keywords": [
+        "proteomics QC",
+        "mass-spec QC",
+        "missingness",
+        "protein intensity QC"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-proteomics-quantification",
+      "description": "Quantify proteins with explicit normalization, rollup, and missing-value handling decisions.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "proteomics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-proteomics-peptide-identification"
+      ],
+      "tags": [
+        "proteomics",
+        "quantification",
+        "protein abundance",
+        "normalization"
+      ],
+      "trigger_keywords": [
+        "proteomics quantification",
+        "protein quantification",
+        "label-free quant",
+        "protein abundance"
+      ],
+      "chaining_partners": [
+        "bio-proteomics-peptide-identification"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-reference-resources-cohort-variable-discovery",
+      "description": "Discover cohort variables and field candidates for a research question without losing dataset-specific context and metadata.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "reference-resources",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "reference-resources",
+        "cohort access",
+        "UK Biobank",
+        "variable discovery"
+      ],
+      "trigger_keywords": [
+        "UK Biobank variables",
+        "cohort variable discovery",
+        "UKB navigator",
+        "find cohort fields"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-reference-resources-public-dataset-query",
+      "description": "Query public datasets with read-only SQL and explicit schema, cost, and provenance safeguards.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "reference-resources",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "reference-resources",
+        "public datasets",
+        "SQL",
+        "BigQuery"
+      ],
+      "trigger_keywords": [
+        "public dataset query",
+        "BigQuery public data",
+        "read-only SQL",
+        "genomics SQL"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-reference-resources-reference-panels",
+      "description": "Select, prepare, and document reference panels for phasing or imputation with explicit ancestry and build compatibility.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "reference-resources",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "reference-resources",
+        "reference panels",
+        "imputation",
+        "phasing"
+      ],
+      "trigger_keywords": [
+        "reference panels",
+        "imputation panel",
+        "phasing panel",
+        "TOPMed",
+        "HRC"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-reporting-circos-plots",
+      "description": "Create circular genome plots only when the structure of the data justifies a circos-style view.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "reporting",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "reporting",
+        "circos",
+        "genome visualization",
+        "circular plots"
+      ],
+      "trigger_keywords": [
+        "Circos",
+        "circular genome plot",
+        "pyCircos",
+        "circular visualization"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-reporting-differential-expression-summary",
+      "description": "Summarize pre-computed differential-expression results into ranked findings, biological themes, and downstream-ready interpretation notes.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "reporting",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "reporting",
+        "differential expression",
+        "summary",
+        "interpretation"
+      ],
+      "trigger_keywords": [
+        "DE summary",
+        "differential expression summary",
+        "top DE genes",
+        "interpret DE"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-reporting-figure-export",
+      "description": "Export scientific figures with correct sizing, format, resolution, and typography for the target deliverable.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "reporting",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "reporting",
+        "figure export",
+        "SVG",
+        "PDF"
+      ],
+      "trigger_keywords": [
+        "figure export",
+        "publication figure",
+        "SVG export",
+        "PDF figure"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-reporting-heatmaps-and-clustering",
+      "description": "Build clustered heatmaps with explicit normalization, annotation, and distance or linkage assumptions.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "reporting",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "reporting",
+        "heatmap",
+        "clustering",
+        "ComplexHeatmap"
+      ],
+      "trigger_keywords": [
+        "heatmap",
+        "clustering heatmap",
+        "ComplexHeatmap",
+        "pheatmap"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-reporting-multi-sample-qc-reporting",
+      "description": "Aggregate sample-level QC outputs into a coherent report that keeps metric comparability and outlier logic explicit.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "reporting",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "reporting",
+        "QC",
+        "MultiQC",
+        "aggregation"
+      ],
+      "trigger_keywords": [
+        "MultiQC",
+        "aggregate QC",
+        "QC report",
+        "multi-sample QC"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-reporting-multipanel-figures",
+      "description": "Assemble multiple plots into consistent scientific figures with controlled layout, legend, and label behavior.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "reporting",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "reporting",
+        "multipanel",
+        "figure assembly",
+        "patchwork"
+      ],
+      "trigger_keywords": [
+        "multipanel figures",
+        "patchwork",
+        "cowplot",
+        "figure assembly"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-reporting-notebook-reports",
+      "description": "Build parameterized notebook reports that stay executable, shareable, and tied to the underlying analysis inputs.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "reporting",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "reporting",
+        "Jupyter",
+        "notebooks",
+        "reproducibility"
+      ],
+      "trigger_keywords": [
+        "Jupyter reports",
+        "analysis notebook",
+        "papermill report",
+        "notebook reporting"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-reporting-rmarkdown-reports",
+      "description": "Render R Markdown reports that preserve code, figures, and narrative linkage to the source analysis.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "reporting",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "reporting",
+        "R Markdown",
+        "reports",
+        "reproducibility"
+      ],
+      "trigger_keywords": [
+        "R Markdown report",
+        "Rmd reporting",
+        "parameterized report",
+        "render report"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-reporting-statistical-graphics",
+      "description": "Create publication-quality statistical graphics with readable scales, defensible encodings, and accessible color choices.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "reporting",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "reporting",
+        "graphics",
+        "ggplot2",
+        "color palettes"
+      ],
+      "trigger_keywords": [
+        "ggplot2",
+        "statistical graphics",
+        "scientific plotting",
+        "colorblind palette"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-ribo-seq-orf-detection",
+      "description": "Detect translated ORFs from ribosome-profiling data with explicit frame support and annotation-aware caveats.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "ribo-seq",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-ribo-seq-riboseq-preprocessing"
+      ],
+      "tags": [
+        "ribo-seq",
+        "ORFs",
+        "translation",
+        "coding regions"
+      ],
+      "trigger_keywords": [
+        "ORF detection",
+        "translated ORFs",
+        "Ribo-seq ORFs",
+        "novel translation"
+      ],
+      "chaining_partners": [
+        "bio-ribo-seq-riboseq-preprocessing"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-ribo-seq-riboseq-preprocessing",
+      "description": "Preprocess ribosome-profiling data with explicit read-structure, frame, and annotation-aware assumptions.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "ribo-seq",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "ribo-seq",
+        "preprocessing",
+        "ribosome profiling",
+        "translation"
+      ],
+      "trigger_keywords": [
+        "Ribo-seq preprocessing",
+        "ribosome profiling prep",
+        "translation preprocessing",
+        "Ribo-seq QC"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-ribo-seq-ribosome-stalling",
+      "description": "Analyze ribosome-stalling or pausing signals with explicit positional, protocol, and artifact-aware context.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "ribo-seq",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-ribo-seq-riboseq-preprocessing"
+      ],
+      "tags": [
+        "ribo-seq",
+        "ribosome stalling",
+        "pausing",
+        "translation"
+      ],
+      "trigger_keywords": [
+        "ribosome stalling",
+        "pausing analysis",
+        "stalling sites",
+        "translation pauses"
+      ],
+      "chaining_partners": [
+        "bio-ribo-seq-riboseq-preprocessing"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-ribo-seq-translation-efficiency",
+      "description": "Estimate translation efficiency using paired RNA and Ribo measurements with explicit model and comparability assumptions.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "ribo-seq",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-ribo-seq-riboseq-preprocessing"
+      ],
+      "tags": [
+        "ribo-seq",
+        "translation efficiency",
+        "RNA integration",
+        "ribosome profiling"
+      ],
+      "trigger_keywords": [
+        "translation efficiency",
+        "Ribo plus RNA",
+        "translational control",
+        "TE analysis"
+      ],
+      "chaining_partners": [
+        "bio-ribo-seq-riboseq-preprocessing"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-sequence-io-batch-processing",
+      "description": "Process batches of sequence files with deterministic selection rules and reproducible output layout.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "sequence-io",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "sequence-io",
+        "batch processing",
+        "files",
+        "automation"
+      ],
+      "trigger_keywords": [
+        "batch process FASTQ",
+        "batch sequence files",
+        "bulk file handling",
+        "sequence automation"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-sequence-io-compressed-sequence-handling",
+      "description": "Handle compressed sequence files without breaking integrity, ordering, or downstream compatibility.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "sequence-io",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "sequence-io",
+        "compressed files",
+        "gzip",
+        "FASTQ"
+      ],
+      "trigger_keywords": [
+        "compressed FASTQ",
+        "gzip FASTA",
+        "decompress sequences",
+        "compressed sequence files"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-sequence-io-fastq-quality",
+      "description": "Inspect FASTQ-level quality structure before downstream trimming, alignment, or quantification.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "sequence-io",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "sequence-io",
+        "FASTQ",
+        "quality",
+        "sequencing"
+      ],
+      "trigger_keywords": [
+        "FASTQ quality",
+        "read quality",
+        "FASTQ sanity check",
+        "sequence QC"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-sequence-io-format-conversion",
+      "description": "Convert sequence-related file formats with explicit information-loss and downstream-consumer awareness.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "sequence-io",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "sequence-io",
+        "format conversion",
+        "FASTA",
+        "FASTQ"
+      ],
+      "trigger_keywords": [
+        "format conversion",
+        "FASTA to FASTQ",
+        "file conversion",
+        "sequence conversion"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-sequence-io-paired-end-validation",
+      "description": "Validate paired-end sequencing files so mate structure, naming, and counts stay consistent before alignment.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "sequence-io",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "sequence-io",
+        "paired-end",
+        "mates",
+        "FASTQ"
+      ],
+      "trigger_keywords": [
+        "paired-end validation",
+        "mate pairs",
+        "R1 R2 validation",
+        "paired FASTQ"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-sequence-io-read-and-write-sequences",
+      "description": "Read and write sequence records safely while preserving headers, ordering, and downstream compatibility.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "sequence-io",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "sequence-io",
+        "FASTA",
+        "FASTQ",
+        "records"
+      ],
+      "trigger_keywords": [
+        "read sequences",
+        "write sequences",
+        "FASTA IO",
+        "FASTQ IO"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-sequence-io-sequence-filtering",
+      "description": "Filter sequence records reproducibly using explicit biological or technical rules.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "sequence-io",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "sequence-io",
+        "filtering",
+        "FASTA",
+        "FASTQ"
+      ],
+      "trigger_keywords": [
+        "sequence filtering",
+        "filter FASTQ",
+        "filter FASTA",
+        "record filtering"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-sequence-io-sequence-statistics",
+      "description": "Summarize sequence-file statistics that inform data integrity and downstream analysis planning.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "sequence-io",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "sequence-io",
+        "statistics",
+        "FASTA",
+        "FASTQ"
+      ],
+      "trigger_keywords": [
+        "sequence statistics",
+        "FASTA stats",
+        "FASTQ stats",
+        "record metrics"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-single-cell-batch-integration",
+      "description": "Integrate single-cell datasets while preserving biological structure and avoiding over-correction.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "single-cell",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-single-cell-preprocessing"
+      ],
+      "tags": [
+        "single-cell",
+        "integration",
+        "batch",
+        "harmonization"
+      ],
+      "trigger_keywords": [
+        "single-cell integration",
+        "batch correction",
+        "Harmony",
+        "Seurat integration"
+      ],
+      "chaining_partners": [
+        "bio-single-cell-preprocessing"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-single-cell-cell-annotation",
+      "description": "Assign cell identities with explicit evidence, uncertainty, and reference-awareness.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "single-cell",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-single-cell-clustering"
+      ],
+      "tags": [
+        "single-cell",
+        "annotation",
+        "cell type",
+        "reference mapping"
+      ],
+      "trigger_keywords": [
+        "cell annotation",
+        "label transfer",
+        "cell types",
+        "marker genes"
+      ],
+      "chaining_partners": [
+        "bio-single-cell-clustering"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-single-cell-clustering",
+      "description": "Cluster single-cell data with interpretable resolution choices and cluster-stability checks.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "single-cell",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-single-cell-batch-integration"
+      ],
+      "tags": [
+        "single-cell",
+        "clustering",
+        "UMAP",
+        "resolution"
+      ],
+      "trigger_keywords": [
+        "single-cell clustering",
+        "UMAP",
+        "Leiden",
+        "resolution"
+      ],
+      "chaining_partners": [
+        "bio-single-cell-batch-integration"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-single-cell-differential-expression",
+      "description": "Perform single-cell differential testing with attention to donor structure, pseudo-bulk options, and cluster context.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "single-cell",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-single-cell-cell-annotation"
+      ],
+      "tags": [
+        "single-cell",
+        "differential expression",
+        "pseudo-bulk",
+        "markers"
+      ],
+      "trigger_keywords": [
+        "single-cell DE",
+        "pseudo-bulk",
+        "marker testing",
+        "cluster DE"
+      ],
+      "chaining_partners": [
+        "bio-single-cell-cell-annotation"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-single-cell-preprocessing",
+      "description": "Preprocess single-cell data with explicit thresholds for cells, features, mitochondrial burden, and doublets.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "single-cell",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "single-cell",
+        "preprocessing",
+        "qc",
+        "filtering"
+      ],
+      "trigger_keywords": [
+        "single-cell preprocessing",
+        "mitochondrial fraction",
+        "doublets",
+        "cell filtering"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-single-cell-trajectory-inference",
+      "description": "Infer single-cell trajectories only when the data support a biologically defensible progression structure.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "single-cell",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-single-cell-clustering"
+      ],
+      "tags": [
+        "single-cell",
+        "trajectory",
+        "pseudotime",
+        "lineage"
+      ],
+      "trigger_keywords": [
+        "trajectory inference",
+        "pseudotime",
+        "lineage",
+        "Monocle"
+      ],
+      "chaining_partners": [
+        "bio-single-cell-clustering"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-spatial-transcriptomics-multiomics",
+      "description": "Interpret spatial-transcriptomics together with linked modalities while keeping resolution and image-context caveats explicit.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "spatial-transcriptomics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-spatial-transcriptomics-preprocessing"
+      ],
+      "tags": [
+        "spatial transcriptomics",
+        "multiomics",
+        "coordinates",
+        "images"
+      ],
+      "trigger_keywords": [
+        "spatial multiomics",
+        "spatial co-analysis",
+        "spatial plus omics",
+        "image-linked omics"
+      ],
+      "chaining_partners": [
+        "bio-spatial-transcriptomics-preprocessing"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-spatial-transcriptomics-preprocessing",
+      "description": "Prepare spatial-transcriptomics inputs with explicit coordinate, image, and spot-level QC provenance.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "spatial-transcriptomics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "spatial transcriptomics",
+        "preprocessing",
+        "coordinates",
+        "spots"
+      ],
+      "trigger_keywords": [
+        "spatial preprocessing",
+        "Visium preprocessing",
+        "spatial QC",
+        "spot filtering"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-systems-biology-differential-networks",
+      "description": "Compare biological networks between conditions and identify rewired relationships with explicit construction and interpretation assumptions.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "systems-biology",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "systems-biology",
+        "differential networks",
+        "co-expression",
+        "rewiring"
+      ],
+      "trigger_keywords": [
+        "differential networks",
+        "network rewiring",
+        "DiffCorr",
+        "co-expression rewiring"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-variant-calling-clinical-interpretation",
+      "description": "Interpret annotated variants for reporting with explicit evidence boundaries and audience-aware caveats.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "variant-calling",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-variant-calling-variant-annotation"
+      ],
+      "tags": [
+        "variants",
+        "clinical",
+        "interpretation",
+        "ACMG"
+      ],
+      "trigger_keywords": [
+        "clinical variant interpretation",
+        "ACMG",
+        "pathogenicity",
+        "reporting"
+      ],
+      "chaining_partners": [
+        "bio-variant-calling-variant-annotation"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-variant-calling-copy-number-analysis",
+      "description": "Run copy-number analysis with explicit segmentation, baseline, and sample-context assumptions.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "variant-calling",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "variants",
+        "copy number",
+        "CNV",
+        "segmentation"
+      ],
+      "trigger_keywords": [
+        "copy-number analysis",
+        "CNV analysis",
+        "segmentation",
+        "CNVkit"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-variant-calling-copy-number-visualization",
+      "description": "Visualize copy-number events while preserving segmentation, scale, and threshold provenance.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "variant-calling",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-variant-calling-copy-number-analysis"
+      ],
+      "tags": [
+        "variants",
+        "copy number",
+        "visualization",
+        "CNV"
+      ],
+      "trigger_keywords": [
+        "copy-number visualization",
+        "CNV plots",
+        "copy-number heatmap",
+        "segment plot"
+      ],
+      "chaining_partners": [
+        "bio-variant-calling-copy-number-analysis"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-variant-calling-hla-typing",
+      "description": "Call and summarize HLA alleles with explicit assay, resolution, and ambiguity handling.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "variant-calling",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "variants",
+        "HLA",
+        "typing",
+        "immunogenetics"
+      ],
+      "trigger_keywords": [
+        "HLA typing",
+        "immunogenetics",
+        "HLA alleles",
+        "HLA calls"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-variant-calling-small-variant-calling",
+      "description": "Prepare and assess germline or somatic small-variant calling with explicit caller assumptions and QC gates.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "variant-calling",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "variants",
+        "SNV",
+        "indel",
+        "calling"
+      ],
+      "trigger_keywords": [
+        "small variant calling",
+        "SNV",
+        "indel",
+        "DeepVariant",
+        "GATK"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-variant-calling-structural-variant-calling",
+      "description": "Assess structural-variant detection with explicit breakpoint support, SV class expectations, and QC limits.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "variant-calling",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [],
+      "tags": [
+        "variants",
+        "SV",
+        "breakpoints",
+        "structural variants"
+      ],
+      "trigger_keywords": [
+        "structural variants",
+        "SV calling",
+        "breakpoints",
+        "long-read SV"
+      ],
+      "chaining_partners": [],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-variant-calling-variant-annotation",
+      "description": "Annotate variants with consequence, frequency, pathogenicity, and evidence-source provenance.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "variant-calling",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-variant-calling-variant-filtering"
+      ],
+      "tags": [
+        "variants",
+        "annotation",
+        "ClinVar",
+        "population frequency"
+      ],
+      "trigger_keywords": [
+        "variant annotation",
+        "ClinVar",
+        "gnomAD",
+        "effect prediction"
+      ],
+      "chaining_partners": [
+        "bio-variant-calling-variant-filtering"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-variant-calling-variant-filtering",
+      "description": "Filter small variants with explicit thresholds, provenance, and protection against over-aggressive exclusion.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "atomic",
+      "domain": "variant-calling",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-variant-calling-small-variant-calling"
+      ],
+      "tags": [
+        "variants",
+        "filtering",
+        "depth",
+        "quality"
+      ],
+      "trigger_keywords": [
+        "variant filtering",
+        "allele balance",
+        "quality filters",
+        "hard filtering"
+      ],
+      "chaining_partners": [
+        "bio-variant-calling-small-variant-calling"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-workflows-alignment-qc-and-coverage",
+      "description": "Coordinate short-read alignment, indexing, BAM QC, and coverage handoff into an analysis-ready alignment workflow.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "workflow",
+      "domain": "alignment-files",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-alignment-files-short-read-alignment",
+        "bio-alignment-files-sam-bam-basics",
+        "bio-alignment-files-alignment-indexing",
+        "bio-alignment-files-bam-statistics",
+        "bio-genome-intervals-coverage-analysis"
+      ],
+      "tags": [
+        "workflow",
+        "alignment-files",
+        "BAM",
+        "coverage"
+      ],
+      "trigger_keywords": [
+        "alignment workflow",
+        "BAM QC workflow",
+        "coverage workflow",
+        "alignment to coverage"
+      ],
+      "chaining_partners": [
+        "bio-alignment-files-short-read-alignment",
+        "bio-alignment-files-sam-bam-basics",
+        "bio-alignment-files-alignment-indexing",
+        "bio-alignment-files-bam-statistics",
+        "bio-genome-intervals-coverage-analysis"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-workflows-analysis-reporting",
+      "description": "Coordinate QC aggregation, result summarization, figure creation, and reproducible report packaging into one reporting workflow.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "workflow",
+      "domain": "reporting",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-reporting-differential-expression-summary",
+        "bio-reporting-multi-sample-qc-reporting",
+        "bio-reporting-notebook-reports",
+        "bio-reporting-rmarkdown-reports",
+        "bio-reporting-statistical-graphics",
+        "bio-reporting-heatmaps-and-clustering",
+        "bio-reporting-multipanel-figures",
+        "bio-reporting-circos-plots",
+        "bio-reporting-figure-export"
+      ],
+      "tags": [
+        "workflow",
+        "reporting",
+        "figures",
+        "reports"
+      ],
+      "trigger_keywords": [
+        "analysis reporting workflow",
+        "reporting pipeline",
+        "figure and report workflow",
+        "omics reporting workflow"
+      ],
+      "chaining_partners": [
+        "bio-reporting-differential-expression-summary",
+        "bio-reporting-multi-sample-qc-reporting",
+        "bio-reporting-notebook-reports",
+        "bio-reporting-rmarkdown-reports",
+        "bio-reporting-statistical-graphics",
+        "bio-reporting-heatmaps-and-clustering",
+        "bio-reporting-multipanel-figures",
+        "bio-reporting-circos-plots",
+        "bio-reporting-figure-export"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-workflows-atacseq-pipeline",
+      "description": "Coordinate ATAC-seq analysis from QC and peak calling through differential accessibility and motif interpretation.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "workflow",
+      "domain": "atac-seq",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-atac-seq-atac-qc",
+        "bio-atac-seq-peak-calling",
+        "bio-atac-seq-differential-accessibility",
+        "bio-atac-seq-motif-analysis"
+      ],
+      "tags": [
+        "workflow",
+        "ATAC-seq",
+        "pipeline",
+        "chromatin accessibility"
+      ],
+      "trigger_keywords": [
+        "ATAC workflow",
+        "ATAC pipeline",
+        "chromatin accessibility workflow",
+        "ATAC end to end"
+      ],
+      "chaining_partners": [
+        "bio-atac-seq-atac-qc",
+        "bio-atac-seq-peak-calling",
+        "bio-atac-seq-differential-accessibility",
+        "bio-atac-seq-motif-analysis"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-workflows-bio-orchestrator",
+      "description": "Orchestrate multi-stage bioinformatics analysis across canonical skills while preserving handoff artifacts and QC gates.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "workflow",
+      "domain": "workflow-orchestration",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-workflows-rnaseq-to-de",
+        "bio-workflows-atacseq-pipeline",
+        "bio-workflows-chipseq-pipeline",
+        "bio-workflows-fastq-to-variants",
+        "bio-workflows-scrnaseq-pipeline",
+        "bio-workflows-methylation-pipeline",
+        "bio-workflows-expression-to-pathways"
+      ],
+      "tags": [
+        "workflow",
+        "orchestrator",
+        "bioinformatics",
+        "multi-stage"
+      ],
+      "trigger_keywords": [
+        "bio orchestrator",
+        "analysis orchestrator",
+        "multi-stage workflow",
+        "skill routing"
+      ],
+      "chaining_partners": [
+        "bio-workflows-rnaseq-to-de",
+        "bio-workflows-atacseq-pipeline",
+        "bio-workflows-chipseq-pipeline",
+        "bio-workflows-fastq-to-variants",
+        "bio-workflows-scrnaseq-pipeline",
+        "bio-workflows-methylation-pipeline",
+        "bio-workflows-expression-to-pathways"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-workflows-biomedical-model-evaluation",
+      "description": "Coordinate validation and explanation of biomedical predictive models without collapsing generalization and attribution into one step.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "workflow",
+      "domain": "machine-learning",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-machine-learning-model-validation",
+        "bio-machine-learning-prediction-explanation"
+      ],
+      "tags": [
+        "workflow",
+        "machine-learning",
+        "validation",
+        "explanation"
+      ],
+      "trigger_keywords": [
+        "model evaluation workflow",
+        "biomedical ML workflow",
+        "validation and SHAP workflow"
+      ],
+      "chaining_partners": [
+        "bio-machine-learning-model-validation",
+        "bio-machine-learning-prediction-explanation"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-workflows-chemoinformatics-screening",
+      "description": "Coordinate descriptor generation, similarity search, and substructure filtering into one reproducible chemoinformatics workflow.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "workflow",
+      "domain": "chemoinformatics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-chemoinformatics-molecular-descriptors",
+        "bio-chemoinformatics-similarity-searching",
+        "bio-chemoinformatics-substructure-search"
+      ],
+      "tags": [
+        "workflow",
+        "chemoinformatics",
+        "screening",
+        "molecules"
+      ],
+      "trigger_keywords": [
+        "chemoinformatics workflow",
+        "compound screening workflow",
+        "similarity and SMARTS workflow"
+      ],
+      "chaining_partners": [
+        "bio-chemoinformatics-molecular-descriptors",
+        "bio-chemoinformatics-similarity-searching",
+        "bio-chemoinformatics-substructure-search"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-workflows-chipseq-pipeline",
+      "description": "Coordinate ChIP-seq analysis from assay QC and peak calling through annotation and differential binding.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "workflow",
+      "domain": "chip-seq",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-chip-seq-chip-qc",
+        "bio-chip-seq-peak-calling",
+        "bio-chip-seq-peak-annotation",
+        "bio-chip-seq-differential-binding"
+      ],
+      "tags": [
+        "workflow",
+        "ChIP-seq",
+        "pipeline",
+        "chromatin"
+      ],
+      "trigger_keywords": [
+        "ChIP workflow",
+        "ChIP pipeline",
+        "TF ChIP workflow",
+        "histone ChIP workflow"
+      ],
+      "chaining_partners": [
+        "bio-chip-seq-chip-qc",
+        "bio-chip-seq-peak-calling",
+        "bio-chip-seq-peak-annotation",
+        "bio-chip-seq-differential-binding"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-workflows-clinical-biostatistics-analysis",
+      "description": "Coordinate CDISC preparation, categorical testing, effect estimation, regression, and subgroup review in one clinical-analysis workflow.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "workflow",
+      "domain": "clinical-biostatistics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-clinical-biostatistics-cdisc-data-handling",
+        "bio-clinical-biostatistics-categorical-tests",
+        "bio-clinical-biostatistics-effect-measures",
+        "bio-clinical-biostatistics-logistic-regression",
+        "bio-clinical-biostatistics-subgroup-analysis"
+      ],
+      "tags": [
+        "workflow",
+        "clinical-biostatistics",
+        "clinical trials",
+        "statistics"
+      ],
+      "trigger_keywords": [
+        "clinical statistics workflow",
+        "biostatistics workflow",
+        "clinical analysis pipeline",
+        "trial analysis workflow"
+      ],
+      "chaining_partners": [
+        "bio-clinical-biostatistics-cdisc-data-handling",
+        "bio-clinical-biostatistics-categorical-tests",
+        "bio-clinical-biostatistics-effect-measures",
+        "bio-clinical-biostatistics-logistic-regression",
+        "bio-clinical-biostatistics-subgroup-analysis"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-workflows-comparative-genomics",
+      "description": "Coordinate comparative-genomics analyses across selection, synteny, ancestral reconstruction, and transfer-candidate review.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "workflow",
+      "domain": "comparative-genomics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-comparative-genomics-hgt-detection",
+        "bio-comparative-genomics-positive-selection",
+        "bio-comparative-genomics-synteny-analysis",
+        "bio-comparative-genomics-ancestral-reconstruction"
+      ],
+      "tags": [
+        "workflow",
+        "comparative genomics",
+        "evolution",
+        "cross-species"
+      ],
+      "trigger_keywords": [
+        "comparative-genomics workflow",
+        "comparative pipeline",
+        "cross-species workflow",
+        "evolutionary genomics workflow"
+      ],
+      "chaining_partners": [
+        "bio-comparative-genomics-hgt-detection",
+        "bio-comparative-genomics-positive-selection",
+        "bio-comparative-genomics-synteny-analysis",
+        "bio-comparative-genomics-ancestral-reconstruction"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-workflows-crispr-screen-pipeline",
+      "description": "Coordinate CRISPR screen design, QC, editing-outcome review, hit calling, and gene-level scoring.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "workflow",
+      "domain": "crispr-screens",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-crispr-screens-screen-qc",
+        "bio-crispr-screens-library-design",
+        "bio-crispr-screens-editing-outcome-analysis",
+        "bio-crispr-screens-hit-calling",
+        "bio-crispr-screens-gene-level-scoring"
+      ],
+      "tags": [
+        "workflow",
+        "CRISPR",
+        "screens",
+        "pipeline"
+      ],
+      "trigger_keywords": [
+        "CRISPR screen workflow",
+        "screen pipeline",
+        "pooled screen workflow",
+        "CRISPR end to end"
+      ],
+      "chaining_partners": [
+        "bio-crispr-screens-screen-qc",
+        "bio-crispr-screens-library-design",
+        "bio-crispr-screens-editing-outcome-analysis",
+        "bio-crispr-screens-hit-calling",
+        "bio-crispr-screens-gene-level-scoring"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-workflows-expression-to-pathways",
+      "description": "Coordinate the handoff from expression or region-level differential results into enrichment, visualization, and biological interpretation.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "workflow",
+      "domain": "pathway-analysis",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-pathway-analysis-go-enrichment",
+        "bio-pathway-analysis-gsea",
+        "bio-pathway-analysis-reactome-enrichment",
+        "bio-pathway-analysis-visualization"
+      ],
+      "tags": [
+        "workflow",
+        "pathway",
+        "enrichment",
+        "interpretation"
+      ],
+      "trigger_keywords": [
+        "expression to pathways",
+        "DE to enrichment",
+        "pathway workflow",
+        "functional interpretation"
+      ],
+      "chaining_partners": [
+        "bio-pathway-analysis-go-enrichment",
+        "bio-pathway-analysis-gsea",
+        "bio-pathway-analysis-reactome-enrichment",
+        "bio-pathway-analysis-visualization"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-workflows-fastq-to-variants",
+      "description": "Coordinate the variant-analysis path from raw sequencing data through calls, filters, annotation, and handoff-ready results.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "workflow",
+      "domain": "variant-calling",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-variant-calling-small-variant-calling",
+        "bio-variant-calling-variant-filtering",
+        "bio-variant-calling-variant-annotation",
+        "bio-variant-calling-structural-variant-calling"
+      ],
+      "tags": [
+        "workflow",
+        "variants",
+        "pipeline",
+        "VCF"
+      ],
+      "trigger_keywords": [
+        "FASTQ to VCF",
+        "variant pipeline",
+        "variant workflow",
+        "end-to-end variant analysis"
+      ],
+      "chaining_partners": [
+        "bio-variant-calling-small-variant-calling",
+        "bio-variant-calling-variant-filtering",
+        "bio-variant-calling-variant-annotation",
+        "bio-variant-calling-structural-variant-calling"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-workflows-hic-pipeline",
+      "description": "Coordinate Hi-C data preparation, structural feature calling, visualization, and differential-contact interpretation.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "workflow",
+      "domain": "hi-c-analysis",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-hi-c-analysis-hic-data-io",
+        "bio-hi-c-analysis-compartment-analysis",
+        "bio-hi-c-analysis-tad-detection",
+        "bio-hi-c-analysis-loop-calling",
+        "bio-hi-c-analysis-differential-contact",
+        "bio-hi-c-analysis-visualization"
+      ],
+      "tags": [
+        "workflow",
+        "Hi-C",
+        "chromatin structure",
+        "pipeline"
+      ],
+      "trigger_keywords": [
+        "Hi-C workflow",
+        "chromatin interaction pipeline",
+        "Hi-C pipeline",
+        "Hi-C end to end"
+      ],
+      "chaining_partners": [
+        "bio-hi-c-analysis-hic-data-io",
+        "bio-hi-c-analysis-compartment-analysis",
+        "bio-hi-c-analysis-tad-detection",
+        "bio-hi-c-analysis-loop-calling",
+        "bio-hi-c-analysis-differential-contact",
+        "bio-hi-c-analysis-visualization"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-workflows-literature-to-hypothesis",
+      "description": "Coordinate literature retrieval, protocol discovery, evidence mapping, and public-data discovery into a focused biomedical research briefing.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "workflow",
+      "domain": "literature-research",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-literature-research-pubmed-search-and-fetch",
+        "bio-literature-research-literature-synthesis",
+        "bio-literature-research-protocol-discovery",
+        "bio-literature-research-omics-evidence-mapping",
+        "bio-literature-research-sequence-database-search",
+        "bio-literature-research-public-data-discovery",
+        "bio-literature-research-biomedical-semantic-search"
+      ],
+      "tags": [
+        "workflow",
+        "literature",
+        "hypothesis generation",
+        "evidence"
+      ],
+      "trigger_keywords": [
+        "literature workflow",
+        "hypothesis workflow",
+        "research briefing workflow",
+        "evidence synthesis workflow"
+      ],
+      "chaining_partners": [
+        "bio-literature-research-pubmed-search-and-fetch",
+        "bio-literature-research-literature-synthesis",
+        "bio-literature-research-protocol-discovery",
+        "bio-literature-research-omics-evidence-mapping",
+        "bio-literature-research-sequence-database-search",
+        "bio-literature-research-public-data-discovery",
+        "bio-literature-research-biomedical-semantic-search"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-workflows-long-read-pipeline",
+      "description": "Coordinate long-read sequencing analysis from basecalling or QC through polishing, isoform analysis, or structural-variant discovery.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "workflow",
+      "domain": "long-read-sequencing",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-long-read-sequencing-long-read-qc",
+        "bio-long-read-sequencing-basecalling",
+        "bio-long-read-sequencing-isoseq-analysis",
+        "bio-long-read-sequencing-structural-variant-calling",
+        "bio-long-read-sequencing-consensus-polishing"
+      ],
+      "tags": [
+        "workflow",
+        "long-read",
+        "pipeline",
+        "ONT"
+      ],
+      "trigger_keywords": [
+        "long-read workflow",
+        "ONT pipeline",
+        "PacBio pipeline",
+        "long-read end to end"
+      ],
+      "chaining_partners": [
+        "bio-long-read-sequencing-long-read-qc",
+        "bio-long-read-sequencing-basecalling",
+        "bio-long-read-sequencing-isoseq-analysis",
+        "bio-long-read-sequencing-structural-variant-calling",
+        "bio-long-read-sequencing-consensus-polishing"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-workflows-metagenomics-pipeline",
+      "description": "Coordinate metagenomics analysis from taxonomic profiling or assembly through abundance, AMR, and strain-level interpretation.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "workflow",
+      "domain": "metagenomics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-metagenomics-taxonomic-profiling",
+        "bio-metagenomics-abundance-estimation",
+        "bio-metagenomics-amr-detection",
+        "bio-metagenomics-strain-tracking",
+        "bio-metagenomics-metagenome-assembly"
+      ],
+      "tags": [
+        "workflow",
+        "metagenomics",
+        "microbiome",
+        "pipeline"
+      ],
+      "trigger_keywords": [
+        "metagenomics workflow",
+        "microbiome pipeline",
+        "metagenomic analysis pipeline",
+        "end-to-end metagenomics"
+      ],
+      "chaining_partners": [
+        "bio-metagenomics-taxonomic-profiling",
+        "bio-metagenomics-abundance-estimation",
+        "bio-metagenomics-amr-detection",
+        "bio-metagenomics-strain-tracking",
+        "bio-metagenomics-metagenome-assembly"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-workflows-methylation-pipeline",
+      "description": "Coordinate methylation analysis from alignment and call extraction through QC and DMR detection.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "workflow",
+      "domain": "methylation",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-methylation-bismark-alignment",
+        "bio-methylation-calling",
+        "bio-methylation-qc",
+        "bio-methylation-dmr-detection"
+      ],
+      "tags": [
+        "workflow",
+        "methylation",
+        "pipeline",
+        "WGBS"
+      ],
+      "trigger_keywords": [
+        "methylation workflow",
+        "WGBS pipeline",
+        "bisulfite workflow",
+        "DMR pipeline"
+      ],
+      "chaining_partners": [
+        "bio-methylation-bismark-alignment",
+        "bio-methylation-calling",
+        "bio-methylation-qc",
+        "bio-methylation-dmr-detection"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-workflows-multiomics-integration",
+      "description": "Coordinate data harmonization, multi-omic integration, and spatially linked interpretation across modalities.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "workflow",
+      "domain": "multiomics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-multiomics-data-harmonization",
+        "bio-multiomics-integration",
+        "bio-spatial-transcriptomics-preprocessing",
+        "bio-spatial-transcriptomics-multiomics"
+      ],
+      "tags": [
+        "workflow",
+        "multiomics",
+        "integration",
+        "spatial"
+      ],
+      "trigger_keywords": [
+        "multi-omics workflow",
+        "integration workflow",
+        "cross-modal pipeline",
+        "spatial multiomics workflow"
+      ],
+      "chaining_partners": [
+        "bio-multiomics-data-harmonization",
+        "bio-multiomics-integration",
+        "bio-spatial-transcriptomics-preprocessing",
+        "bio-spatial-transcriptomics-multiomics"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-workflows-phylogenomics",
+      "description": "Coordinate phylogenetic tree inference, divergence dating, and related comparative-evolution interpretation with explicit uncertainty gates.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "workflow",
+      "domain": "phylogenetics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-phylogenetics-tree-inference",
+        "bio-phylogenetics-divergence-dating",
+        "bio-population-genetics-archaic-introgression"
+      ],
+      "tags": [
+        "workflow",
+        "phylogenomics",
+        "phylogenetics",
+        "evolution"
+      ],
+      "trigger_keywords": [
+        "phylogenomics workflow",
+        "phylogenetics pipeline",
+        "evolutionary workflow",
+        "tree plus dating workflow"
+      ],
+      "chaining_partners": [
+        "bio-phylogenetics-tree-inference",
+        "bio-phylogenetics-divergence-dating",
+        "bio-population-genetics-archaic-introgression"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-workflows-popgen-association",
+      "description": "Coordinate cohort structure, association, PRS, fine-mapping, and Mendelian-randomisation tasks in one population-genetics workflow.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "workflow",
+      "domain": "population-genetics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-population-genetics-population-structure",
+        "bio-population-genetics-association-testing",
+        "bio-population-genetics-gwas-prs",
+        "bio-population-genetics-fine-mapping",
+        "bio-population-genetics-mendelian-randomisation"
+      ],
+      "tags": [
+        "workflow",
+        "population genetics",
+        "association",
+        "GWAS"
+      ],
+      "trigger_keywords": [
+        "population-genetics workflow",
+        "GWAS pipeline",
+        "association workflow",
+        "PRS workflow"
+      ],
+      "chaining_partners": [
+        "bio-population-genetics-population-structure",
+        "bio-population-genetics-association-testing",
+        "bio-population-genetics-gwas-prs",
+        "bio-population-genetics-fine-mapping",
+        "bio-population-genetics-mendelian-randomisation"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-workflows-proteomics-differential",
+      "description": "Coordinate proteomics analysis from peptide identification or panel QC through quantification and differential abundance.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "workflow",
+      "domain": "proteomics",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-proteomics-proteomics-qc",
+        "bio-proteomics-peptide-identification",
+        "bio-proteomics-quantification",
+        "bio-proteomics-differential-abundance",
+        "bio-proteomics-affinity-proteomics"
+      ],
+      "tags": [
+        "workflow",
+        "proteomics",
+        "differential abundance",
+        "pipeline"
+      ],
+      "trigger_keywords": [
+        "proteomics workflow",
+        "protein differential workflow",
+        "mass-spec pipeline",
+        "proteomics end to end"
+      ],
+      "chaining_partners": [
+        "bio-proteomics-proteomics-qc",
+        "bio-proteomics-peptide-identification",
+        "bio-proteomics-quantification",
+        "bio-proteomics-differential-abundance",
+        "bio-proteomics-affinity-proteomics"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-workflows-reference-and-cohort-access",
+      "description": "Coordinate reference-panel selection, cohort-field discovery, and public-dataset access into a reusable resource-preparation workflow.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "workflow",
+      "domain": "reference-resources",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-reference-resources-reference-panels",
+        "bio-reference-resources-public-dataset-query",
+        "bio-reference-resources-cohort-variable-discovery"
+      ],
+      "tags": [
+        "workflow",
+        "reference-resources",
+        "cohort access",
+        "resource preparation"
+      ],
+      "trigger_keywords": [
+        "reference resource workflow",
+        "cohort access workflow",
+        "resource preparation workflow"
+      ],
+      "chaining_partners": [
+        "bio-reference-resources-reference-panels",
+        "bio-reference-resources-public-dataset-query",
+        "bio-reference-resources-cohort-variable-discovery"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-workflows-riboseq-pipeline",
+      "description": "Coordinate ribosome-profiling preprocessing, translation-efficiency analysis, ORF discovery, and stalling interpretation.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "workflow",
+      "domain": "ribo-seq",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-ribo-seq-riboseq-preprocessing",
+        "bio-ribo-seq-translation-efficiency",
+        "bio-ribo-seq-orf-detection",
+        "bio-ribo-seq-ribosome-stalling"
+      ],
+      "tags": [
+        "workflow",
+        "ribo-seq",
+        "translation",
+        "ribosome profiling"
+      ],
+      "trigger_keywords": [
+        "Ribo-seq workflow",
+        "ribosome profiling pipeline",
+        "translation analysis workflow",
+        "Ribo end to end"
+      ],
+      "chaining_partners": [
+        "bio-ribo-seq-riboseq-preprocessing",
+        "bio-ribo-seq-translation-efficiency",
+        "bio-ribo-seq-orf-detection",
+        "bio-ribo-seq-ribosome-stalling"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-workflows-rnaseq-to-de",
+      "description": "Coordinate the full bulk RNA-seq path from raw reads or quantification outputs to differential-expression results.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "workflow",
+      "domain": "bulk-rna-seq",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-bulk-rna-seq-read-qc",
+        "bio-bulk-rna-seq-quantification",
+        "bio-bulk-rna-seq-count-matrix-qc",
+        "bio-bulk-rna-seq-differential-expression",
+        "bio-bulk-rna-seq-visualization"
+      ],
+      "tags": [
+        "workflow",
+        "rna-seq",
+        "differential expression",
+        "pipeline"
+      ],
+      "trigger_keywords": [
+        "RNA-seq workflow",
+        "FASTQ to DE",
+        "bulk pipeline",
+        "expression workflow"
+      ],
+      "chaining_partners": [
+        "bio-bulk-rna-seq-read-qc",
+        "bio-bulk-rna-seq-quantification",
+        "bio-bulk-rna-seq-count-matrix-qc",
+        "bio-bulk-rna-seq-differential-expression",
+        "bio-bulk-rna-seq-visualization"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-workflows-scrnaseq-pipeline",
+      "description": "Coordinate single-cell RNA-seq analysis from preprocessing through integration, clustering, annotation, and downstream interpretation.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "workflow",
+      "domain": "single-cell",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-single-cell-preprocessing",
+        "bio-single-cell-batch-integration",
+        "bio-single-cell-clustering",
+        "bio-single-cell-cell-annotation",
+        "bio-single-cell-differential-expression"
+      ],
+      "tags": [
+        "workflow",
+        "single-cell",
+        "pipeline",
+        "scRNA-seq"
+      ],
+      "trigger_keywords": [
+        "single-cell workflow",
+        "scRNA-seq pipeline",
+        "single-cell end to end",
+        "cell atlas workflow"
+      ],
+      "chaining_partners": [
+        "bio-single-cell-preprocessing",
+        "bio-single-cell-batch-integration",
+        "bio-single-cell-clustering",
+        "bio-single-cell-cell-annotation",
+        "bio-single-cell-differential-expression"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-workflows-sequence-io-preparation",
+      "description": "Coordinate sequence-file inspection, validation, conversion, filtering, and batch-safe preparation before downstream omics analysis.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "workflow",
+      "domain": "sequence-io",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-sequence-io-read-and-write-sequences",
+        "bio-sequence-io-format-conversion",
+        "bio-sequence-io-compressed-sequence-handling",
+        "bio-sequence-io-fastq-quality",
+        "bio-sequence-io-paired-end-validation",
+        "bio-sequence-io-sequence-filtering",
+        "bio-sequence-io-sequence-statistics",
+        "bio-sequence-io-batch-processing"
+      ],
+      "tags": [
+        "workflow",
+        "sequence-io",
+        "FASTQ",
+        "FASTA"
+      ],
+      "trigger_keywords": [
+        "sequence prep workflow",
+        "FASTQ preparation workflow",
+        "sequence file pipeline",
+        "file preparation for omics"
+      ],
+      "chaining_partners": [
+        "bio-sequence-io-read-and-write-sequences",
+        "bio-sequence-io-format-conversion",
+        "bio-sequence-io-compressed-sequence-handling",
+        "bio-sequence-io-fastq-quality",
+        "bio-sequence-io-paired-end-validation",
+        "bio-sequence-io-sequence-filtering",
+        "bio-sequence-io-sequence-statistics",
+        "bio-sequence-io-batch-processing"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    },
+    {
+      "name": "bio-workflows-variant-to-report",
+      "description": "Coordinate variant filtering, annotation, and reporting-oriented interpretation into a traceable reporting workflow.",
+      "version": "0.1.0",
+      "status": "seed",
+      "skill_type": "workflow",
+      "domain": "variant-calling",
+      "has_script": false,
+      "has_tests": true,
+      "has_demo": false,
+      "demo_command": "",
+      "dependencies": [
+        "bio-variant-calling-variant-filtering",
+        "bio-variant-calling-variant-annotation",
+        "bio-variant-calling-clinical-interpretation"
+      ],
+      "tags": [
+        "workflow",
+        "variants",
+        "reporting",
+        "clinical"
+      ],
+      "trigger_keywords": [
+        "variant to report",
+        "variant reporting workflow",
+        "clinical variant workflow",
+        "annotated VCF to report"
+      ],
+      "chaining_partners": [
+        "bio-variant-calling-variant-filtering",
+        "bio-variant-calling-variant-annotation",
+        "bio-variant-calling-clinical-interpretation"
+      ],
+      "homepage": "https://github.com/ocean-debug/BioSkills"
+    }
+  ]
+}

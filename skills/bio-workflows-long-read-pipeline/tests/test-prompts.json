@@ -1,0 +1,13 @@
+{
+  "skill": "bio-workflows-long-read-pipeline",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Outline an end-to-end long-read workflow and show how you would branch between polishing, isoform analysis, and SV calling."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Adapt a long-read workflow when the project starts from basecalled FASTQ rather than raw signal files."
+    }
+  ]
+}

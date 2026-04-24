@@ -1,0 +1,13 @@
+{
+  "skill": "bio-single-cell-differential-expression",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan single-cell differential expression between conditions while respecting donor structure."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Explain when pseudo-bulk is preferable to cell-level DE for single-cell RNA-seq."
+    }
+  ]
+}

@@ -1,0 +1,787 @@
+[
+  {
+    "id": "bio-alignment-files-sam-bam-basics",
+    "title": "SAM BAM and CRAM basics",
+    "skill_type": "atomic",
+    "domain": "alignment-files",
+    "task": "sam-bam-basics",
+    "summary": "Inspect, explain, and convert core alignment-file formats without losing sort, header, or tag information needed downstream.",
+    "tags": ["alignment-files", "SAM", "BAM", "CRAM"],
+    "trigger_keywords": ["SAM basics", "BAM basics", "CRAM basics", "alignment file inspection"],
+    "related_skills": [
+      "bio-alignment-files-alignment-indexing",
+      "bio-alignment-files-bam-statistics",
+      "bio-workflows-alignment-qc-and-coverage"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Explain how you would inspect and convert SAM, BAM, or CRAM files without breaking downstream compatibility.",
+      "Summarize the minimum checks you would run before trusting an alignment file for later QC or coverage work."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/alignment-files/sam-bam-basics/SKILL.md"],
+    "match_aliases": ["sam-bam-basics", "SAM basics", "BAM basics", "CRAM basics"],
+    "source_roots": ["alignment-files/sam-bam-basics"]
+  },
+  {
+    "id": "bio-alignment-files-alignment-indexing",
+    "title": "Alignment indexing",
+    "skill_type": "atomic",
+    "domain": "alignment-files",
+    "task": "alignment-indexing",
+    "summary": "Build and validate alignment-file indexes so BAM and CRAM inputs remain random-access ready for downstream analysis.",
+    "tags": ["alignment-files", "indexing", "BAI", "CSI"],
+    "trigger_keywords": ["alignment indexing", "BAI", "CSI", "index BAM"],
+    "related_skills": [
+      "bio-alignment-files-sam-bam-basics",
+      "bio-alignment-files-bam-statistics",
+      "bio-workflows-alignment-qc-and-coverage"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan an alignment-indexing step and explain when BAI, CSI, or CRAI matters for downstream access.",
+      "Tell me what you would verify before and after indexing a BAM or CRAM file."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/alignment-files/alignment-indexing/SKILL.md"],
+    "match_aliases": ["alignment-indexing", "index BAM", "BAI", "CSI"],
+    "source_roots": ["alignment-files/alignment-indexing"]
+  },
+  {
+    "id": "bio-alignment-files-bam-statistics",
+    "title": "BAM statistics and alignment QC",
+    "skill_type": "atomic",
+    "domain": "alignment-files",
+    "task": "bam-statistics",
+    "summary": "Summarize BAM-level alignment statistics that gate downstream coverage, variant, or transcriptome analysis.",
+    "tags": ["alignment-files", "BAM", "statistics", "QC"],
+    "trigger_keywords": ["BAM statistics", "flagstat", "alignment QC", "BAM QC"],
+    "related_skills": [
+      "bio-alignment-files-alignment-indexing",
+      "bio-genome-intervals-coverage-analysis",
+      "bio-workflows-alignment-qc-and-coverage"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Summarize how you would use BAM statistics to decide whether an alignment is ready for downstream analysis.",
+      "Explain which BAM-level metrics matter most before interpreting coverage or variant results."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/alignment-files/bam-statistics/SKILL.md"],
+    "match_aliases": ["bam-statistics", "BAM statistics", "flagstat", "alignment QC"],
+    "source_roots": ["alignment-files/bam-statistics"]
+  },
+  {
+    "id": "bio-alignment-files-short-read-alignment",
+    "title": "DNA short-read alignment",
+    "skill_type": "atomic",
+    "domain": "alignment-files",
+    "task": "short-read-alignment",
+    "summary": "Align DNA short reads reproducibly with explicit reference, pairing, and output-sorting assumptions.",
+    "tags": ["alignment-files", "alignment", "BWA", "short reads"],
+    "trigger_keywords": ["BWA alignment", "short-read alignment", "DNA alignment", "bwa-mem2"],
+    "related_skills": [
+      "bio-alignment-files-sam-bam-basics",
+      "bio-alignment-files-alignment-indexing",
+      "bio-workflows-alignment-qc-and-coverage"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan a DNA short-read alignment step and explain what metadata must be fixed before execution.",
+      "Tell me how you would hand off aligned reads so indexing and BAM QC can run safely next."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/read-alignment/bwa-alignment/SKILL.md"],
+    "match_aliases": ["bwa-alignment", "BWA alignment", "short-read alignment", "bwa-mem2"],
+    "source_roots": ["read-alignment/bwa-alignment"]
+  },
+  {
+    "id": "bio-workflows-alignment-qc-and-coverage",
+    "title": "Alignment QC and coverage workflow",
+    "skill_type": "workflow",
+    "domain": "alignment-files",
+    "task": "workflow",
+    "summary": "Coordinate short-read alignment, indexing, BAM QC, and coverage handoff into an analysis-ready alignment workflow.",
+    "tags": ["workflow", "alignment-files", "BAM", "coverage"],
+    "trigger_keywords": ["alignment workflow", "BAM QC workflow", "coverage workflow", "alignment to coverage"],
+    "related_skills": [],
+    "depends_on": [
+      "bio-alignment-files-short-read-alignment",
+      "bio-alignment-files-sam-bam-basics",
+      "bio-alignment-files-alignment-indexing",
+      "bio-alignment-files-bam-statistics",
+      "bio-genome-intervals-coverage-analysis"
+    ],
+    "test_prompts": [
+      "Outline an alignment-to-coverage workflow and show where sort, index, and BAM QC should stop downstream analysis.",
+      "Adapt an alignment QC workflow for a project that starts from FASTQ and ends at interval-level coverage summaries."
+    ],
+    "canonical_of_extra": [],
+    "match_aliases": ["alignment workflow", "BAM QC workflow", "alignment to coverage"],
+    "source_roots": []
+  },
+  {
+    "id": "bio-genome-intervals-coverage-analysis",
+    "title": "Genome-interval coverage analysis",
+    "skill_type": "atomic",
+    "domain": "genome-intervals",
+    "task": "coverage-analysis",
+    "summary": "Compute and interpret genomic coverage across intervals with explicit target definitions and build-aware semantics.",
+    "tags": ["genome-intervals", "coverage", "BED", "depth"],
+    "trigger_keywords": ["coverage analysis", "BED coverage", "genomic depth", "target coverage"],
+    "related_skills": [
+      "bio-alignment-files-bam-statistics",
+      "bio-genome-intervals-interval-arithmetic",
+      "bio-workflows-alignment-qc-and-coverage"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Explain how you would run interval-level coverage analysis and keep the target definition explicit.",
+      "Summarize the checks that matter before treating coverage summaries as biologically meaningful."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/genome-intervals/coverage-analysis/SKILL.md"],
+    "match_aliases": ["coverage-analysis", "coverage analysis", "BED coverage", "target coverage"],
+    "source_roots": ["genome-intervals/coverage-analysis"]
+  },
+  {
+    "id": "bio-genome-intervals-interval-arithmetic",
+    "title": "Genome-interval arithmetic",
+    "skill_type": "atomic",
+    "domain": "genome-intervals",
+    "task": "interval-arithmetic",
+    "summary": "Apply overlap, subtract, merge, and related interval operations while preserving coordinate and strandedness semantics.",
+    "tags": ["genome-intervals", "BED", "interval arithmetic", "overlap"],
+    "trigger_keywords": ["interval arithmetic", "BED intersect", "merge intervals", "genomic overlaps"],
+    "related_skills": [
+      "bio-genome-intervals-proximity-operations",
+      "bio-genome-intervals-coverage-analysis"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan an interval-arithmetic step and explain what coordinate assumptions must be stated before using the result.",
+      "Tell me how you would keep overlap or merge operations from silently changing the biological meaning of the intervals."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/genome-intervals/interval-arithmetic/SKILL.md"],
+    "match_aliases": ["interval-arithmetic", "interval arithmetic", "BED intersect", "merge intervals"],
+    "source_roots": ["genome-intervals/interval-arithmetic"]
+  },
+  {
+    "id": "bio-genome-intervals-proximity-operations",
+    "title": "Genome-interval proximity operations",
+    "skill_type": "atomic",
+    "domain": "genome-intervals",
+    "task": "proximity-operations",
+    "summary": "Assign nearby genomic features with explicit window and nearest-feature logic rather than implicit assumptions.",
+    "tags": ["genome-intervals", "proximity", "nearest gene", "window"],
+    "trigger_keywords": ["proximity operations", "nearest gene", "window BED", "closest feature"],
+    "related_skills": [
+      "bio-genome-intervals-interval-arithmetic",
+      "bio-genome-intervals-coverage-analysis"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Explain how you would assign nearby genomic features without over-claiming from simple distance alone.",
+      "Summarize the main choices behind nearest-feature or window-based genomic proximity operations."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/genome-intervals/proximity-operations/SKILL.md"],
+    "match_aliases": ["proximity-operations", "proximity operations", "nearest gene", "closest feature"],
+    "source_roots": ["genome-intervals/proximity-operations"]
+  },
+  {
+    "id": "bio-alternative-splicing-differential-splicing",
+    "title": "Differential splicing analysis",
+    "skill_type": "atomic",
+    "domain": "alternative-splicing",
+    "task": "differential-splicing",
+    "summary": "Detect and interpret differential alternative splicing using explicit event support, delta PSI, and replicate-aware reasoning.",
+    "tags": ["alternative-splicing", "splicing", "delta PSI", "rMATS"],
+    "trigger_keywords": ["differential splicing", "delta PSI", "rMATS", "SUPPA2"],
+    "related_skills": [
+      "bio-bulk-rna-seq-quantification",
+      "bio-workflows-rnaseq-to-de"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Design a differential splicing analysis and explain what evidence path you would use for BAM versus abundance inputs.",
+      "Summarize the QC gates that must pass before reporting splicing changes as biology."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/alternative-splicing/differential-splicing/SKILL.md"],
+    "match_aliases": ["differential-splicing", "differential splicing", "delta PSI", "rMATS", "SUPPA2"],
+    "source_roots": ["alternative-splicing/differential-splicing"]
+  },
+  {
+    "id": "bio-clinical-biostatistics-cdisc-data-handling",
+    "title": "CDISC clinical-data handling",
+    "skill_type": "atomic",
+    "domain": "clinical-biostatistics",
+    "task": "cdisc-data-handling",
+    "summary": "Prepare CDISC-style clinical data so domains, joins, and analysis populations remain explicit and reproducible.",
+    "tags": ["clinical-biostatistics", "CDISC", "SDTM", "clinical data"],
+    "trigger_keywords": ["CDISC", "SDTM", "clinical data handling", "USUBJID joins"],
+    "related_skills": [
+      "bio-clinical-biostatistics-categorical-tests",
+      "bio-clinical-biostatistics-logistic-regression",
+      "bio-workflows-clinical-biostatistics-analysis"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Explain how you would prepare CDISC SDTM domains for downstream clinical analysis without losing provenance.",
+      "Tell me what checks you would run before trusting joined CDISC tables for effect estimation."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/clinical-biostatistics/cdisc-data-handling/SKILL.md"],
+    "match_aliases": ["cdisc-data-handling", "CDISC", "SDTM", "clinical data handling"],
+    "source_roots": ["clinical-biostatistics/cdisc-data-handling"]
+  },
+  {
+    "id": "bio-clinical-biostatistics-categorical-tests",
+    "title": "Categorical clinical tests",
+    "skill_type": "atomic",
+    "domain": "clinical-biostatistics",
+    "task": "categorical-tests",
+    "summary": "Run categorical association tests with sparse-data awareness and clinically interpretable contingency reporting.",
+    "tags": ["clinical-biostatistics", "categorical tests", "Fisher", "chi-square"],
+    "trigger_keywords": ["categorical tests", "Fisher exact", "chi-square", "CMH test"],
+    "related_skills": [
+      "bio-clinical-biostatistics-effect-measures",
+      "bio-clinical-biostatistics-subgroup-analysis",
+      "bio-workflows-clinical-biostatistics-analysis"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan a categorical-test analysis and explain when Fisher exact or chi-square is more defensible.",
+      "Summarize what you would report alongside a categorical p-value so the clinical interpretation stays meaningful."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/clinical-biostatistics/categorical-tests/SKILL.md"],
+    "match_aliases": ["categorical-tests", "categorical tests", "Fisher exact", "chi-square", "CMH test"],
+    "source_roots": ["clinical-biostatistics/categorical-tests"]
+  },
+  {
+    "id": "bio-clinical-biostatistics-effect-measures",
+    "title": "Clinical effect measures",
+    "skill_type": "atomic",
+    "domain": "clinical-biostatistics",
+    "task": "effect-measures",
+    "summary": "Compute and interpret clinical effect measures with explicit denominator, reference-group, and interval-estimation choices.",
+    "tags": ["clinical-biostatistics", "effect size", "odds ratio", "risk ratio"],
+    "trigger_keywords": ["effect measures", "odds ratio", "risk ratio", "NNT"],
+    "related_skills": [
+      "bio-clinical-biostatistics-categorical-tests",
+      "bio-clinical-biostatistics-logistic-regression",
+      "bio-workflows-clinical-biostatistics-analysis"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Explain how you would choose between odds ratio, risk ratio, and related effect measures for a clinical endpoint.",
+      "Tell me what must be explicit before interpreting treatment effect measures across clinical groups."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/clinical-biostatistics/effect-measures/SKILL.md"],
+    "match_aliases": ["effect-measures", "effect measures", "odds ratio", "risk ratio", "NNT"],
+    "source_roots": ["clinical-biostatistics/effect-measures"]
+  },
+  {
+    "id": "bio-clinical-biostatistics-logistic-regression",
+    "title": "Clinical logistic regression",
+    "skill_type": "atomic",
+    "domain": "clinical-biostatistics",
+    "task": "logistic-regression",
+    "summary": "Fit clinical logistic-regression models with explicit endpoint coding, adjustment strategy, and rare-event safeguards.",
+    "tags": ["clinical-biostatistics", "logistic regression", "odds ratio", "clinical modeling"],
+    "trigger_keywords": ["logistic regression", "binary endpoint model", "clinical regression", "rare events"],
+    "related_skills": [
+      "bio-clinical-biostatistics-effect-measures",
+      "bio-clinical-biostatistics-subgroup-analysis",
+      "bio-workflows-clinical-biostatistics-analysis"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan a clinical logistic-regression analysis and explain what must be declared before the odds ratios are interpretable.",
+      "Summarize the failure modes that make a clinical logistic-regression result untrustworthy."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/clinical-biostatistics/logistic-regression/SKILL.md"],
+    "match_aliases": ["logistic-regression", "logistic regression", "binary endpoint model", "clinical regression"],
+    "source_roots": ["clinical-biostatistics/logistic-regression"]
+  },
+  {
+    "id": "bio-clinical-biostatistics-subgroup-analysis",
+    "title": "Clinical subgroup analysis",
+    "skill_type": "atomic",
+    "domain": "clinical-biostatistics",
+    "task": "subgroup-analysis",
+    "summary": "Evaluate subgroup effects with explicit interaction logic, multiplicity caveats, and cohort-size awareness.",
+    "tags": ["clinical-biostatistics", "subgroup analysis", "interaction", "heterogeneity"],
+    "trigger_keywords": ["subgroup analysis", "interaction test", "heterogeneity", "forest plot"],
+    "related_skills": [
+      "bio-clinical-biostatistics-effect-measures",
+      "bio-experimental-design-multiple-testing",
+      "bio-workflows-clinical-biostatistics-analysis"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Explain how you would run and report subgroup analysis without turning exploratory slices into confirmatory claims.",
+      "Tell me what would make a subgroup result too unstable to emphasize in a clinical summary."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/clinical-biostatistics/subgroup-analysis/SKILL.md"],
+    "match_aliases": ["subgroup-analysis", "subgroup analysis", "interaction test", "heterogeneity"],
+    "source_roots": ["clinical-biostatistics/subgroup-analysis"]
+  },
+  {
+    "id": "bio-workflows-clinical-biostatistics-analysis",
+    "title": "Clinical biostatistics workflow",
+    "skill_type": "workflow",
+    "domain": "clinical-biostatistics",
+    "task": "workflow",
+    "summary": "Coordinate CDISC preparation, categorical testing, effect estimation, regression, and subgroup review in one clinical-analysis workflow.",
+    "tags": ["workflow", "clinical-biostatistics", "clinical trials", "statistics"],
+    "trigger_keywords": ["clinical statistics workflow", "biostatistics workflow", "clinical analysis pipeline", "trial analysis workflow"],
+    "related_skills": [],
+    "depends_on": [
+      "bio-clinical-biostatistics-cdisc-data-handling",
+      "bio-clinical-biostatistics-categorical-tests",
+      "bio-clinical-biostatistics-effect-measures",
+      "bio-clinical-biostatistics-logistic-regression",
+      "bio-clinical-biostatistics-subgroup-analysis"
+    ],
+    "test_prompts": [
+      "Outline a clinical biostatistics workflow from analysis-ready data preparation to subgroup interpretation.",
+      "Adapt a clinical-analysis workflow for a dataset that starts as SDTM domains and ends with model-based endpoint reporting."
+    ],
+    "canonical_of_extra": [],
+    "match_aliases": ["clinical statistics workflow", "biostatistics workflow", "trial analysis workflow"],
+    "source_roots": []
+  },
+  {
+    "id": "bio-experimental-design-batch-design",
+    "title": "Batch-aware study design",
+    "skill_type": "atomic",
+    "domain": "experimental-design",
+    "task": "batch-design",
+    "summary": "Design batch structure and sample assignment so technical variation does not alias the main biological contrast.",
+    "tags": ["experimental-design", "batch design", "blocking", "study design"],
+    "trigger_keywords": ["batch design", "blocking", "batch assignment", "study balance"],
+    "related_skills": [
+      "bio-experimental-design-multiple-testing",
+      "bio-workflows-clinical-biostatistics-analysis"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan a batch-aware study design and explain how you would keep biology from being confounded with technical structure.",
+      "Summarize the checks you would run before approving a multi-batch experimental layout."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/experimental-design/batch-design/SKILL.md"],
+    "match_aliases": ["batch-design", "batch design", "blocking", "study balance"],
+    "source_roots": ["experimental-design/batch-design"]
+  },
+  {
+    "id": "bio-experimental-design-multiple-testing",
+    "title": "Multiple-testing control",
+    "skill_type": "atomic",
+    "domain": "experimental-design",
+    "task": "multiple-testing",
+    "summary": "Choose and apply multiple-testing correction with explicit hypothesis-family boundaries and reporting rules.",
+    "tags": ["experimental-design", "multiple testing", "FDR", "q-value"],
+    "trigger_keywords": ["multiple testing", "FDR", "q-value", "Bonferroni"],
+    "related_skills": [
+      "bio-experimental-design-batch-design",
+      "bio-clinical-biostatistics-subgroup-analysis",
+      "bio-bulk-rna-seq-differential-expression"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Explain how you would define the hypothesis family before applying FDR or family-wise correction.",
+      "Tell me how you would keep multiple-testing control explicit across a large omics result table."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/experimental-design/multiple-testing/SKILL.md"],
+    "match_aliases": ["multiple-testing", "multiple testing", "FDR", "q-value", "Bonferroni"],
+    "source_roots": ["experimental-design/multiple-testing"]
+  },
+  {
+    "id": "bio-machine-learning-model-validation",
+    "title": "Biomedical model validation",
+    "skill_type": "atomic",
+    "domain": "machine-learning",
+    "task": "model-validation",
+    "summary": "Validate biomedical predictive models with leakage-aware splits and explicit performance-gating rules.",
+    "tags": ["machine-learning", "model validation", "cross-validation", "biomarker models"],
+    "trigger_keywords": ["model validation", "nested cross-validation", "data leakage", "biomedical classifier"],
+    "related_skills": [
+      "bio-machine-learning-prediction-explanation",
+      "bio-workflows-biomedical-model-evaluation"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan a biomedical model-validation strategy and explain how you would prevent leakage during tuning and evaluation.",
+      "Summarize the main conditions under which a cross-validation result should not be trusted."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/machine-learning/model-validation/SKILL.md"],
+    "match_aliases": ["model-validation", "model validation", "nested cross-validation", "data leakage"],
+    "source_roots": ["machine-learning/model-validation"]
+  },
+  {
+    "id": "bio-machine-learning-prediction-explanation",
+    "title": "Biomedical prediction explanation",
+    "skill_type": "atomic",
+    "domain": "machine-learning",
+    "task": "prediction-explanation",
+    "summary": "Explain biomedical model predictions with attribution methods that stay grounded in validated model behavior.",
+    "tags": ["machine-learning", "prediction explanation", "SHAP", "LIME"],
+    "trigger_keywords": ["prediction explanation", "SHAP", "LIME", "feature attribution"],
+    "related_skills": [
+      "bio-machine-learning-model-validation",
+      "bio-workflows-biomedical-model-evaluation"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Explain how you would interpret biomedical model predictions with SHAP or LIME without overstating causality.",
+      "Tell me what validation context you would require before trusting feature-attribution outputs."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/machine-learning/prediction-explanation/SKILL.md"],
+    "match_aliases": ["prediction-explanation", "prediction explanation", "SHAP", "LIME", "feature attribution"],
+    "source_roots": ["machine-learning/prediction-explanation"]
+  },
+  {
+    "id": "bio-workflows-biomedical-model-evaluation",
+    "title": "Biomedical model-evaluation workflow",
+    "skill_type": "workflow",
+    "domain": "machine-learning",
+    "task": "workflow",
+    "summary": "Coordinate validation and explanation of biomedical predictive models without collapsing generalization and attribution into one step.",
+    "tags": ["workflow", "machine-learning", "validation", "explanation"],
+    "trigger_keywords": ["model evaluation workflow", "biomedical ML workflow", "validation and SHAP workflow"],
+    "related_skills": [],
+    "depends_on": [
+      "bio-machine-learning-model-validation",
+      "bio-machine-learning-prediction-explanation"
+    ],
+    "test_prompts": [
+      "Outline a biomedical model-evaluation workflow that validates first and explains only after performance is defensible.",
+      "Adapt a predictive-model workflow for an omics biomarker project that needs both leakage-aware validation and feature attribution."
+    ],
+    "canonical_of_extra": [],
+    "match_aliases": ["model evaluation workflow", "biomedical ML workflow", "validation and SHAP workflow"],
+    "source_roots": []
+  },
+  {
+    "id": "bio-reporting-differential-expression-summary",
+    "title": "Differential-expression result summary",
+    "skill_type": "atomic",
+    "domain": "reporting",
+    "task": "differential-expression-summary",
+    "summary": "Summarize pre-computed differential-expression results into ranked findings, biological themes, and downstream-ready interpretation notes.",
+    "tags": ["reporting", "differential expression", "summary", "interpretation"],
+    "trigger_keywords": ["DE summary", "differential expression summary", "top DE genes", "interpret DE"],
+    "related_skills": [
+      "bio-workflows-rnaseq-to-de",
+      "bio-workflows-analysis-reporting",
+      "bio-pathway-analysis-go-enrichment"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Explain how you would summarize a finished differential-expression table without re-running upstream statistics.",
+      "Tell me what must be present in a DE result table before you trust a narrative summary of the top findings."
+    ],
+    "canonical_of_extra": ["ClawBio/ClawBio:ClawBio-main/skills/de-summary/SKILL.md"],
+    "match_aliases": ["de-summary", "DE summary", "differential expression summary", "interpret DE"],
+    "source_roots": ["de-summary"]
+  },
+  {
+    "id": "bio-reporting-multi-sample-qc-reporting",
+    "title": "Multi-sample QC reporting",
+    "skill_type": "atomic",
+    "domain": "reporting",
+    "task": "multi-sample-qc-reporting",
+    "summary": "Aggregate sample-level QC outputs into a coherent report that keeps metric comparability and outlier logic explicit.",
+    "tags": ["reporting", "QC", "MultiQC", "aggregation"],
+    "trigger_keywords": ["MultiQC", "aggregate QC", "QC report", "multi-sample QC"],
+    "related_skills": [
+      "bio-bulk-rna-seq-read-qc",
+      "bio-alignment-files-bam-statistics",
+      "bio-workflows-analysis-reporting"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan a multi-sample QC reporting step and explain how you would keep incompatible metrics from being mixed together.",
+      "Summarize the main signals that should appear in an aggregate QC report before downstream analysis continues."
+    ],
+    "canonical_of_extra": ["ClawBio/ClawBio:ClawBio-main/skills/multiqc-reporter/SKILL.md"],
+    "match_aliases": ["multiqc-reporter", "MultiQC", "aggregate QC", "QC report", "multi-sample QC"],
+    "source_roots": ["multiqc-reporter"]
+  },
+  {
+    "id": "bio-reporting-notebook-reports",
+    "title": "Notebook-based analysis reports",
+    "skill_type": "atomic",
+    "domain": "reporting",
+    "task": "notebook-reports",
+    "summary": "Build parameterized notebook reports that stay executable, shareable, and tied to the underlying analysis inputs.",
+    "tags": ["reporting", "Jupyter", "notebooks", "reproducibility"],
+    "trigger_keywords": ["Jupyter reports", "analysis notebook", "papermill report", "notebook reporting"],
+    "related_skills": [
+      "bio-reporting-rmarkdown-reports",
+      "bio-workflows-analysis-reporting"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Explain how you would create a notebook-based report that stays reproducible instead of becoming a manually edited artifact.",
+      "Tell me what parameterization and execution checks matter most for a Jupyter analysis report."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/reporting/jupyter-reports/SKILL.md"],
+    "match_aliases": ["jupyter-reports", "Jupyter reports", "analysis notebook", "papermill report"],
+    "source_roots": ["reporting/jupyter-reports"]
+  },
+  {
+    "id": "bio-reporting-rmarkdown-reports",
+    "title": "R Markdown analysis reports",
+    "skill_type": "atomic",
+    "domain": "reporting",
+    "task": "rmarkdown-reports",
+    "summary": "Render R Markdown reports that preserve code, figures, and narrative linkage to the source analysis.",
+    "tags": ["reporting", "R Markdown", "reports", "reproducibility"],
+    "trigger_keywords": ["R Markdown report", "Rmd reporting", "parameterized report", "render report"],
+    "related_skills": [
+      "bio-reporting-notebook-reports",
+      "bio-workflows-analysis-reporting"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan an R Markdown reporting step and explain how you would keep the report reproducible across render environments.",
+      "Summarize the main choices that affect whether an R Markdown report is ready for sharing or publication."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/reporting/rmarkdown-reports/SKILL.md"],
+    "match_aliases": ["rmarkdown-reports", "R Markdown report", "Rmd reporting", "parameterized report"],
+    "source_roots": ["reporting/rmarkdown-reports"]
+  },
+  {
+    "id": "bio-reporting-statistical-graphics",
+    "title": "Statistical graphics and palette design",
+    "skill_type": "atomic",
+    "domain": "reporting",
+    "task": "statistical-graphics",
+    "summary": "Create publication-quality statistical graphics with readable scales, defensible encodings, and accessible color choices.",
+    "tags": ["reporting", "graphics", "ggplot2", "color palettes"],
+    "trigger_keywords": ["ggplot2", "statistical graphics", "scientific plotting", "colorblind palette"],
+    "related_skills": [
+      "bio-reporting-heatmaps-and-clustering",
+      "bio-reporting-multipanel-figures",
+      "bio-reporting-figure-export"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Explain how you would design a statistical figure that is both publication-ready and quantitatively honest.",
+      "Tell me how you would choose palettes and plot structure so a scientific graphic stays readable and accessible."
+    ],
+    "canonical_of_extra": [
+      "GPTomics/bioSkills:bioSkills-main/data-visualization/ggplot2-fundamentals/SKILL.md",
+      "GPTomics/bioSkills:bioSkills-main/data-visualization/color-palettes/SKILL.md"
+    ],
+    "match_aliases": ["ggplot2-fundamentals", "ggplot2", "statistical graphics", "color-palettes", "colorblind palette"],
+    "source_roots": ["data-visualization/ggplot2-fundamentals", "data-visualization/color-palettes"]
+  },
+  {
+    "id": "bio-reporting-heatmaps-and-clustering",
+    "title": "Heatmaps and clustering visualization",
+    "skill_type": "atomic",
+    "domain": "reporting",
+    "task": "heatmaps-and-clustering",
+    "summary": "Build clustered heatmaps with explicit normalization, annotation, and distance or linkage assumptions.",
+    "tags": ["reporting", "heatmap", "clustering", "ComplexHeatmap"],
+    "trigger_keywords": ["heatmap", "clustering heatmap", "ComplexHeatmap", "pheatmap"],
+    "related_skills": [
+      "bio-reporting-statistical-graphics",
+      "bio-reporting-multipanel-figures",
+      "bio-workflows-analysis-reporting"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan a clustered heatmap and explain what normalization and annotation choices must be explicit before interpretation.",
+      "Summarize the main reasons a heatmap can look convincing while still being analytically misleading."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/data-visualization/heatmaps-clustering/SKILL.md"],
+    "match_aliases": ["heatmaps-clustering", "heatmap", "clustering heatmap", "ComplexHeatmap", "pheatmap"],
+    "source_roots": ["data-visualization/heatmaps-clustering"]
+  },
+  {
+    "id": "bio-reporting-multipanel-figures",
+    "title": "Multipanel figure assembly",
+    "skill_type": "atomic",
+    "domain": "reporting",
+    "task": "multipanel-figures",
+    "summary": "Assemble multiple plots into consistent scientific figures with controlled layout, legend, and label behavior.",
+    "tags": ["reporting", "multipanel", "figure assembly", "patchwork"],
+    "trigger_keywords": ["multipanel figures", "patchwork", "cowplot", "figure assembly"],
+    "related_skills": [
+      "bio-reporting-statistical-graphics",
+      "bio-reporting-figure-export",
+      "bio-workflows-analysis-reporting"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Explain how you would combine multiple plots into one figure without hiding inconsistent scales or styling.",
+      "Tell me what checks are needed before exporting a multi-panel scientific figure."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/data-visualization/multipanel-figures/SKILL.md"],
+    "match_aliases": ["multipanel-figures", "multipanel figures", "patchwork", "cowplot", "figure assembly"],
+    "source_roots": ["data-visualization/multipanel-figures"]
+  },
+  {
+    "id": "bio-reporting-circos-plots",
+    "title": "Circular genome plots",
+    "skill_type": "atomic",
+    "domain": "reporting",
+    "task": "circos-plots",
+    "summary": "Create circular genome plots only when the structure of the data justifies a circos-style view.",
+    "tags": ["reporting", "circos", "genome visualization", "circular plots"],
+    "trigger_keywords": ["Circos", "circular genome plot", "pyCircos", "circular visualization"],
+    "related_skills": [
+      "bio-reporting-multipanel-figures",
+      "bio-reporting-figure-export",
+      "bio-workflows-analysis-reporting"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan a circular genome plot and explain what track structure makes the circos view worthwhile.",
+      "Summarize the main mistakes that make circular genome figures unreadable or misleading."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/data-visualization/circos-plots/SKILL.md"],
+    "match_aliases": ["circos-plots", "Circos", "circular genome plot", "pyCircos"],
+    "source_roots": ["data-visualization/circos-plots"]
+  },
+  {
+    "id": "bio-reporting-figure-export",
+    "title": "Figure export and delivery",
+    "skill_type": "atomic",
+    "domain": "reporting",
+    "task": "figure-export",
+    "summary": "Export scientific figures with correct sizing, format, resolution, and typography for the target deliverable.",
+    "tags": ["reporting", "figure export", "SVG", "PDF"],
+    "trigger_keywords": ["figure export", "publication figure", "SVG export", "PDF figure"],
+    "related_skills": [
+      "bio-reporting-multipanel-figures",
+      "bio-reporting-circos-plots",
+      "bio-workflows-analysis-reporting"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Explain how you would export a scientific figure for publication without clipping, font, or resolution surprises.",
+      "Tell me what format and sizing decisions matter most when a figure must work across papers and presentations."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/reporting/figure-export/SKILL.md"],
+    "match_aliases": ["figure-export", "figure export", "publication figure", "SVG export", "PDF figure"],
+    "source_roots": ["reporting/figure-export"]
+  },
+  {
+    "id": "bio-workflows-analysis-reporting",
+    "title": "Analysis reporting workflow",
+    "skill_type": "workflow",
+    "domain": "reporting",
+    "task": "workflow",
+    "summary": "Coordinate QC aggregation, result summarization, figure creation, and reproducible report packaging into one reporting workflow.",
+    "tags": ["workflow", "reporting", "figures", "reports"],
+    "trigger_keywords": ["analysis reporting workflow", "reporting pipeline", "figure and report workflow", "omics reporting workflow"],
+    "related_skills": [],
+    "depends_on": [
+      "bio-reporting-differential-expression-summary",
+      "bio-reporting-multi-sample-qc-reporting",
+      "bio-reporting-notebook-reports",
+      "bio-reporting-rmarkdown-reports",
+      "bio-reporting-statistical-graphics",
+      "bio-reporting-heatmaps-and-clustering",
+      "bio-reporting-multipanel-figures",
+      "bio-reporting-circos-plots",
+      "bio-reporting-figure-export"
+    ],
+    "test_prompts": [
+      "Outline an analysis-reporting workflow that starts from finished results and ends with export-ready figures and reproducible documents.",
+      "Adapt a reporting workflow for an omics project that needs QC aggregation, DE summary, heatmaps, and final figure export."
+    ],
+    "canonical_of_extra": [],
+    "match_aliases": ["analysis reporting workflow", "reporting pipeline", "figure and report workflow"],
+    "source_roots": []
+  },
+  {
+    "id": "bio-chemoinformatics-molecular-descriptors",
+    "title": "Molecular descriptors and fingerprints",
+    "skill_type": "atomic",
+    "domain": "chemoinformatics",
+    "task": "molecular-descriptors",
+    "summary": "Compute molecular descriptors and fingerprints from standardized compounds for screening, ranking, or modeling tasks.",
+    "tags": ["chemoinformatics", "molecular descriptors", "fingerprints", "RDKit"],
+    "trigger_keywords": ["molecular descriptors", "fingerprints", "RDKit descriptors", "ECFP"],
+    "related_skills": [
+      "bio-chemoinformatics-similarity-searching",
+      "bio-workflows-chemoinformatics-screening"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Explain how you would standardize compounds before computing descriptors or fingerprints for downstream use.",
+      "Tell me what descriptor choices matter most when the output will feed chemical screening or machine learning."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/chemoinformatics/molecular-descriptors/SKILL.md"],
+    "match_aliases": ["molecular-descriptors", "molecular descriptors", "fingerprints", "RDKit descriptors", "ECFP"],
+    "source_roots": ["chemoinformatics/molecular-descriptors"]
+  },
+  {
+    "id": "bio-chemoinformatics-similarity-searching",
+    "title": "Molecular similarity searching",
+    "skill_type": "atomic",
+    "domain": "chemoinformatics",
+    "task": "similarity-searching",
+    "summary": "Search compound libraries by molecular similarity with explicit representation choice and hit-threshold logic.",
+    "tags": ["chemoinformatics", "similarity search", "Tanimoto", "analogs"],
+    "trigger_keywords": ["similarity search", "Tanimoto", "analog search", "chemical clustering"],
+    "related_skills": [
+      "bio-chemoinformatics-molecular-descriptors",
+      "bio-chemoinformatics-substructure-search",
+      "bio-workflows-chemoinformatics-screening"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan a molecular similarity search and explain how fingerprint choice changes the meaning of the hits.",
+      "Summarize what you would report so analog-search results remain reproducible and interpretable."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/chemoinformatics/similarity-searching/SKILL.md"],
+    "match_aliases": ["similarity-searching", "similarity search", "Tanimoto", "analog search", "chemical clustering"],
+    "source_roots": ["chemoinformatics/similarity-searching"]
+  },
+  {
+    "id": "bio-chemoinformatics-substructure-search",
+    "title": "Molecular substructure search",
+    "skill_type": "atomic",
+    "domain": "chemoinformatics",
+    "task": "substructure-search",
+    "summary": "Search compound collections for SMARTS and scaffold matches with explicit query-pattern assumptions.",
+    "tags": ["chemoinformatics", "substructure", "SMARTS", "scaffold"],
+    "trigger_keywords": ["substructure search", "SMARTS", "scaffold search", "chemical motif"],
+    "related_skills": [
+      "bio-chemoinformatics-molecular-descriptors",
+      "bio-chemoinformatics-similarity-searching",
+      "bio-workflows-chemoinformatics-screening"
+    ],
+    "depends_on": [],
+    "test_prompts": [
+      "Explain how you would run a substructure search without making the SMARTS query too broad or too brittle.",
+      "Tell me what validation checks matter before trusting scaffold-level filtering results."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/chemoinformatics/substructure-search/SKILL.md"],
+    "match_aliases": ["substructure-search", "substructure search", "SMARTS", "scaffold search", "chemical motif"],
+    "source_roots": ["chemoinformatics/substructure-search"]
+  },
+  {
+    "id": "bio-workflows-chemoinformatics-screening",
+    "title": "Chemoinformatics screening workflow",
+    "skill_type": "workflow",
+    "domain": "chemoinformatics",
+    "task": "workflow",
+    "summary": "Coordinate descriptor generation, similarity search, and substructure filtering into one reproducible chemoinformatics workflow.",
+    "tags": ["workflow", "chemoinformatics", "screening", "molecules"],
+    "trigger_keywords": ["chemoinformatics workflow", "compound screening workflow", "similarity and SMARTS workflow"],
+    "related_skills": [],
+    "depends_on": [
+      "bio-chemoinformatics-molecular-descriptors",
+      "bio-chemoinformatics-similarity-searching",
+      "bio-chemoinformatics-substructure-search"
+    ],
+    "test_prompts": [
+      "Outline a chemoinformatics workflow that standardizes molecules, computes features, and then performs similarity and substructure screening.",
+      "Adapt a compound-screening workflow for a project that starts from SMILES and ends with a shortlist of interpretable hits."
+    ],
+    "canonical_of_extra": [],
+    "match_aliases": ["chemoinformatics workflow", "compound screening workflow", "similarity and SMARTS workflow"],
+    "source_roots": []
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "skill": "bio-reference-resources-reference-panels",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Explain how you would choose and prepare a reference panel for imputation without hiding ancestry or build mismatches."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Tell me what must be documented before a reference panel can be treated as ready for phasing or imputation."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for reference panel preparation before the user treats the result as final."
+    }
+  ]
+}

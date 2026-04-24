@@ -1,0 +1,13 @@
+{
+  "skill": "bio-single-cell-batch-integration",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Choose an integration strategy for multi-batch single-cell RNA-seq and explain the over-correction risk."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Tell me how you would verify that single-cell batch integration preserved the biology of interest."
+    }
+  ]
+}

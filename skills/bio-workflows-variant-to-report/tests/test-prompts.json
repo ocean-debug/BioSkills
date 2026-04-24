@@ -1,0 +1,13 @@
+{
+  "skill": "bio-workflows-variant-to-report",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a workflow from filtered variants to a reporting-ready interpretation package."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Explain how the reporting workflow should change when the audience is research-only rather than clinical."
+    }
+  ]
+}

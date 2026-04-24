@@ -1,0 +1,17 @@
+{
+  "skill": "bio-hi-c-analysis-hic-data-io",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a Hi-C data-preparation stage and explain what matrix, resolution, and normalization metadata must be preserved for downstream analysis."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize the compatibility checks you would perform before handing Hi-C matrices to structural-analysis skills."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for hi-c data io before the user treats the result as final."
+    }
+  ]
+}

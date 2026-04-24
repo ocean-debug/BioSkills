@@ -1,0 +1,17 @@
+{
+  "skill": "bio-hi-c-analysis-compartment-analysis",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Design a Hi-C compartment-analysis stage and explain how you would keep sign and annotation choices traceable."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Tell me what matrix or resolution problems would make compartment calls too unstable to interpret."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for hi-c compartment analysis before the user treats the result as final."
+    }
+  ]
+}

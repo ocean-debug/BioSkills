@@ -1,0 +1,13 @@
+{
+  "skill": "bio-single-cell-cell-annotation",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Explain how you would annotate clusters in a single-cell dataset without overstating confidence."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "I have marker genes and a reference atlas. Plan a cell-annotation workflow that keeps ambiguity visible."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "skill": "bio-sequence-io-batch-processing",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a batch-processing step for many sequence files and explain how you would avoid mixing or skipping samples."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize the safeguards needed before applying one sequence-file transformation across a whole directory tree."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for sequence batch processing before the user treats the result as final."
+    }
+  ]
+}

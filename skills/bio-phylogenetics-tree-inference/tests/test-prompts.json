@@ -1,0 +1,17 @@
+{
+  "skill": "bio-phylogenetics-tree-inference",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Design a tree-inference analysis and explain what model, rooting, and support assumptions must be stated before interpretation."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Tell me how you would summarize uncertainty when a phylogenetic topology is only weakly supported."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for phylogenetic tree inference before the user treats the result as final."
+    }
+  ]
+}

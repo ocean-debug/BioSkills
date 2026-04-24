@@ -1,0 +1,17 @@
+{
+  "skill": "bio-population-genetics-archaic-introgression",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan an archaic-introgression analysis and explain what references and cohort context are required before interpreting segments."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize the main ways introgression inference can be confounded by ancestry structure or reference mismatch."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for archaic introgression analysis before the user treats the result as final."
+    }
+  ]
+}

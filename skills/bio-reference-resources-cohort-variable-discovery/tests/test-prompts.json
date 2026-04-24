@@ -1,0 +1,17 @@
+{
+  "skill": "bio-reference-resources-cohort-variable-discovery",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Explain how you would discover cohort variables for a research question and still keep field-level provenance and scope clear."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Tell me what makes a cohort-variable shortlist good enough for downstream analysis planning."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for cohort variable discovery before the user treats the result as final."
+    }
+  ]
+}

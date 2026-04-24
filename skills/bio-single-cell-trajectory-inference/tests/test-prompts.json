@@ -1,0 +1,13 @@
+{
+  "skill": "bio-single-cell-trajectory-inference",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Assess whether this single-cell project is suitable for trajectory inference before suggesting pseudotime."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Describe a careful trajectory-analysis path for a developmental single-cell dataset."
+    }
+  ]
+}

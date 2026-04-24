@@ -1,0 +1,17 @@
+{
+  "skill": "bio-sequence-io-format-conversion",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a sequence-format conversion and explain what information could be lost or changed for the downstream pipeline."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize how you would convert sequence files while keeping the target consumer's requirements explicit."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for sequence format conversion before the user treats the result as final."
+    }
+  ]
+}

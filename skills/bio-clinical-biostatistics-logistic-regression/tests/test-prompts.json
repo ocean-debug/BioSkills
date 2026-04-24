@@ -1,0 +1,17 @@
+{
+  "skill": "bio-clinical-biostatistics-logistic-regression",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a clinical logistic-regression analysis and explain what must be declared before the odds ratios are interpretable."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize the failure modes that make a clinical logistic-regression result untrustworthy."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for clinical logistic regression before the user treats the result as final."
+    }
+  ]
+}

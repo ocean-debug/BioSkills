@@ -1,0 +1,17 @@
+{
+  "skill": "bio-sequence-io-sequence-statistics",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Explain how you would summarize sequence statistics so they are useful for downstream planning rather than just generic file metadata."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Tell me what sequence-level metrics are most helpful before deciding on later processing steps."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for sequence statistics before the user treats the result as final."
+    }
+  ]
+}

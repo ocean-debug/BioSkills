@@ -1,0 +1,17 @@
+{
+  "skill": "bio-reporting-circos-plots",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a circular genome plot and explain what track structure makes the circos view worthwhile."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize the main mistakes that make circular genome figures unreadable or misleading."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for circular genome plots before the user treats the result as final."
+    }
+  ]
+}

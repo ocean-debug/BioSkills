@@ -1,0 +1,13 @@
+{
+  "skill": "bio-variant-calling-variant-filtering",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Design a safe variant-filtering plan and explain how each threshold changes sensitivity versus specificity."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "I need to filter a VCF for downstream clinical review without hiding plausible candidates."
+    }
+  ]
+}

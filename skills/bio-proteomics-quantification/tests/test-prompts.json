@@ -1,0 +1,17 @@
+{
+  "skill": "bio-proteomics-quantification",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a proteomics quantification stage and explain what normalization or rollup choices matter most downstream."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize how you would prepare protein-level abundance outputs for differential analysis."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for proteomics quantification before the user treats the result as final."
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "repo": "GPTomics/bioSkills",
+    "role": "primary",
+    "layout": "domain-root",
+    "license_policy": "reusable-if-explicit",
+    "default_branch": "main",
+    "license_spdx": "MIT"
+  },
+  {
+    "repo": "TongjiZhanglab/ChromSkills",
+    "role": "primary",
+    "layout": "topic-root",
+    "license_policy": "reference-only-if-no-license",
+    "default_branch": "master",
+    "license_spdx": "NONE"
+  },
+  {
+    "repo": "ClawBio/ClawBio",
+    "role": "primary",
+    "layout": "skills-dir",
+    "license_policy": "reusable-if-explicit",
+    "default_branch": "main",
+    "license_spdx": "MIT"
+  },
+  {
+    "repo": "FreedomIntelligence/OpenClaw-Medical-Skills",
+    "role": "primary",
+    "layout": "skills-dir",
+    "license_policy": "reference-only-if-no-license",
+    "default_branch": "main",
+    "license_spdx": "NONE"
+  },
+  {
+    "repo": "wu-yc/LabClaw",
+    "role": "secondary",
+    "layout": "skills-dir",
+    "license_policy": "reference-only-if-no-license",
+    "default_branch": "main",
+    "license_spdx": "NONE"
+  },
+  {
+    "repo": "xjtulyc/MedgeClaw",
+    "role": "secondary",
+    "layout": "skills-dir",
+    "license_policy": "reference-only-if-no-license",
+    "default_branch": "main",
+    "license_spdx": "NONE"
+  },
+  {
+    "repo": "Runchuan-BU/BioClaw",
+    "role": "secondary",
+    "layout": "mixed",
+    "license_policy": "reference-only-if-no-license",
+    "default_branch": "main",
+    "license_spdx": "NOASSERTION"
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "skill": "bio-workflows-fastq-to-variants",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan an end-to-end variant workflow from sequencing reads to an analysis-ready annotated VCF."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Adapt the workflow when the project needs both small variants and structural variants."
+    }
+  ]
+}

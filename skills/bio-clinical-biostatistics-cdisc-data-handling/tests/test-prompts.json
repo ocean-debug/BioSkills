@@ -1,0 +1,17 @@
+{
+  "skill": "bio-clinical-biostatistics-cdisc-data-handling",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Explain how you would prepare CDISC SDTM domains for downstream clinical analysis without losing provenance."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Tell me what checks you would run before trusting joined CDISC tables for effect estimation."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for cdisc clinical-data handling before the user treats the result as final."
+    }
+  ]
+}

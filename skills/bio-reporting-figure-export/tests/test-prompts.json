@@ -1,0 +1,17 @@
+{
+  "skill": "bio-reporting-figure-export",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Explain how you would export a scientific figure for publication without clipping, font, or resolution surprises."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Tell me what format and sizing decisions matter most when a figure must work across papers and presentations."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for figure export and delivery before the user treats the result as final."
+    }
+  ]
+}

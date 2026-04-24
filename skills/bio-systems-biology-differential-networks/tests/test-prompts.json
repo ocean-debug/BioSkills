@@ -1,0 +1,17 @@
+{
+  "skill": "bio-systems-biology-differential-networks",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a differential-network analysis and explain how you would keep network-construction assumptions visible in the final interpretation."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize the QC gates that must pass before a rewired network edge should be treated as biologically meaningful."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for differential network analysis before the user treats the result as final."
+    }
+  ]
+}

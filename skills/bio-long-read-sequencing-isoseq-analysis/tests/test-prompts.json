@@ -1,0 +1,17 @@
+{
+  "skill": "bio-long-read-sequencing-isoseq-analysis",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a long-read isoform analysis workflow and explain what annotation context you need before interpreting novel isoforms."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize the QC checkpoints that should gate transcript-level conclusions in an Iso-Seq project."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for long-read isoform analysis before the user treats the result as final."
+    }
+  ]
+}

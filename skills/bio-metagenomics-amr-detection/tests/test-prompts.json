@@ -1,0 +1,17 @@
+{
+  "skill": "bio-metagenomics-amr-detection",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a metagenomic AMR detection analysis and explain what database and support thresholds you need before reporting hits."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize the major failure modes that can make AMR calls misleading in mixed microbial samples."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for metagenomic amr detection before the user treats the result as final."
+    }
+  ]
+}

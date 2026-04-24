@@ -1,0 +1,13 @@
+{
+  "skill": "bio-workflows-biomedical-model-evaluation",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Outline a biomedical model-evaluation workflow that validates first and explains only after performance is defensible."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Adapt a predictive-model workflow for an omics biomarker project that needs both leakage-aware validation and feature attribution."
+    }
+  ]
+}

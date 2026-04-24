@@ -1,0 +1,17 @@
+{
+  "skill": "bio-reference-resources-public-dataset-query",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a read-only public-dataset SQL step and explain how you would keep schema assumptions, cost, and provenance explicit."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize the checks you would run before treating a public-dataset query result as analysis-ready."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for public dataset sql access before the user treats the result as final."
+    }
+  ]
+}

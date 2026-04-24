@@ -1,0 +1,17 @@
+{
+  "skill": "bio-genome-intervals-interval-arithmetic",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan an interval-arithmetic step and explain what coordinate assumptions must be stated before using the result."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Tell me how you would keep overlap or merge operations from silently changing the biological meaning of the intervals."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for genome-interval arithmetic before the user treats the result as final."
+    }
+  ]
+}

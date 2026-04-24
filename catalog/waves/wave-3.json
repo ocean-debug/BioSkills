@@ -1,0 +1,563 @@
+[
+  {
+    "id": "bio-sequence-io-read-and-write-sequences",
+    "title": "Sequence read and write operations",
+    "skill_type": "atomic",
+    "domain": "sequence-io",
+    "task": "read-write-sequences",
+    "summary": "Read and write sequence records safely while preserving headers, ordering, and downstream compatibility.",
+    "tags": ["sequence-io", "FASTA", "FASTQ", "records"],
+    "trigger_keywords": ["read sequences", "write sequences", "FASTA IO", "FASTQ IO"],
+    "related_skills": ["bio-sequence-io-format-conversion", "bio-workflows-sequence-io-preparation"],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan a safe sequence-read and write step and explain what must be preserved so downstream tools still accept the output.",
+      "Tell me how you would rewrite FASTA or FASTQ records without silently breaking headers or ordering."
+    ],
+    "canonical_of_extra": [
+      "GPTomics/bioSkills:bioSkills-main/sequence-io/read-sequences/SKILL.md",
+      "GPTomics/bioSkills:bioSkills-main/sequence-io/write-sequences/SKILL.md"
+    ],
+    "match_aliases": ["read-sequences", "write-sequences", "FASTA IO", "FASTQ IO"],
+    "source_roots": ["sequence-io/read-sequences", "sequence-io/write-sequences"]
+  },
+  {
+    "id": "bio-sequence-io-format-conversion",
+    "title": "Sequence format conversion",
+    "skill_type": "atomic",
+    "domain": "sequence-io",
+    "task": "format-conversion",
+    "summary": "Convert sequence-related file formats with explicit information-loss and downstream-consumer awareness.",
+    "tags": ["sequence-io", "format conversion", "FASTA", "FASTQ"],
+    "trigger_keywords": ["format conversion", "FASTA to FASTQ", "file conversion", "sequence conversion"],
+    "related_skills": ["bio-sequence-io-read-and-write-sequences", "bio-workflows-sequence-io-preparation"],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan a sequence-format conversion and explain what information could be lost or changed for the downstream pipeline.",
+      "Summarize how you would convert sequence files while keeping the target consumer's requirements explicit."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/sequence-io/format-conversion/SKILL.md"],
+    "match_aliases": ["format-conversion", "sequence conversion", "FASTA to FASTQ"],
+    "source_roots": ["sequence-io/format-conversion"]
+  },
+  {
+    "id": "bio-sequence-io-compressed-sequence-handling",
+    "title": "Compressed sequence-file handling",
+    "skill_type": "atomic",
+    "domain": "sequence-io",
+    "task": "compressed-sequences",
+    "summary": "Handle compressed sequence files without breaking integrity, ordering, or downstream compatibility.",
+    "tags": ["sequence-io", "compressed files", "gzip", "FASTQ"],
+    "trigger_keywords": ["compressed FASTQ", "gzip FASTA", "decompress sequences", "compressed sequence files"],
+    "related_skills": ["bio-sequence-io-format-conversion", "bio-workflows-sequence-io-preparation"],
+    "depends_on": [],
+    "test_prompts": [
+      "Explain how you would handle compressed sequence files while preserving integrity and compatibility with downstream tools.",
+      "Tell me what checks you would run before and after decompressing or recompressing large sequence files."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/sequence-io/compressed-files/SKILL.md"],
+    "match_aliases": ["compressed-files", "compressed sequence files", "gzip FASTQ"],
+    "source_roots": ["sequence-io/compressed-files"]
+  },
+  {
+    "id": "bio-sequence-io-fastq-quality",
+    "title": "FASTQ quality inspection",
+    "skill_type": "atomic",
+    "domain": "sequence-io",
+    "task": "fastq-quality",
+    "summary": "Inspect FASTQ-level quality structure before downstream trimming, alignment, or quantification.",
+    "tags": ["sequence-io", "FASTQ", "quality", "sequencing"],
+    "trigger_keywords": ["FASTQ quality", "read quality", "FASTQ sanity check", "sequence QC"],
+    "related_skills": ["bio-sequence-io-paired-end-validation", "bio-workflows-sequence-io-preparation"],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan a FASTQ-quality inspection and explain what findings should stop downstream analysis before trimming or alignment.",
+      "Summarize the main FASTQ-level issues that indicate corrupted or unusable read files."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/sequence-io/fastq-quality/SKILL.md"],
+    "match_aliases": ["fastq-quality", "FASTQ quality", "read quality"],
+    "source_roots": ["sequence-io/fastq-quality"]
+  },
+  {
+    "id": "bio-sequence-io-paired-end-validation",
+    "title": "Paired-end sequence validation",
+    "skill_type": "atomic",
+    "domain": "sequence-io",
+    "task": "paired-end-validation",
+    "summary": "Validate paired-end sequencing files so mate structure, naming, and counts stay consistent before alignment.",
+    "tags": ["sequence-io", "paired-end", "mates", "FASTQ"],
+    "trigger_keywords": ["paired-end validation", "mate pairs", "R1 R2 validation", "paired FASTQ"],
+    "related_skills": ["bio-sequence-io-fastq-quality", "bio-workflows-sequence-io-preparation"],
+    "depends_on": [],
+    "test_prompts": [
+      "Explain how you would validate paired-end read files before alignment and what failures would force you to stop.",
+      "Tell me how you would detect broken mate structure or sample naming mismatches in paired FASTQ inputs."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/sequence-io/paired-end-fastq/SKILL.md"],
+    "match_aliases": ["paired-end-fastq", "paired-end validation", "R1 R2 validation"],
+    "source_roots": ["sequence-io/paired-end-fastq"]
+  },
+  {
+    "id": "bio-sequence-io-sequence-filtering",
+    "title": "Sequence filtering",
+    "skill_type": "atomic",
+    "domain": "sequence-io",
+    "task": "sequence-filtering",
+    "summary": "Filter sequence records reproducibly using explicit biological or technical rules.",
+    "tags": ["sequence-io", "filtering", "FASTA", "FASTQ"],
+    "trigger_keywords": ["sequence filtering", "filter FASTQ", "filter FASTA", "record filtering"],
+    "related_skills": ["bio-sequence-io-sequence-statistics", "bio-workflows-sequence-io-preparation"],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan a sequence-filtering step and explain how you would record filtering rules so downstream analysis stays reproducible.",
+      "Summarize what makes a filtering strategy too aggressive to trust without further review."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/sequence-io/filter-sequences/SKILL.md"],
+    "match_aliases": ["filter-sequences", "sequence filtering", "filter FASTQ"],
+    "source_roots": ["sequence-io/filter-sequences"]
+  },
+  {
+    "id": "bio-sequence-io-sequence-statistics",
+    "title": "Sequence statistics",
+    "skill_type": "atomic",
+    "domain": "sequence-io",
+    "task": "sequence-statistics",
+    "summary": "Summarize sequence-file statistics that inform data integrity and downstream analysis planning.",
+    "tags": ["sequence-io", "statistics", "FASTA", "FASTQ"],
+    "trigger_keywords": ["sequence statistics", "FASTA stats", "FASTQ stats", "record metrics"],
+    "related_skills": ["bio-sequence-io-fastq-quality", "bio-workflows-sequence-io-preparation"],
+    "depends_on": [],
+    "test_prompts": [
+      "Explain how you would summarize sequence statistics so they are useful for downstream planning rather than just generic file metadata.",
+      "Tell me what sequence-level metrics are most helpful before deciding on later processing steps."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/sequence-io/sequence-statistics/SKILL.md"],
+    "match_aliases": ["sequence-statistics", "sequence statistics", "FASTQ stats"],
+    "source_roots": ["sequence-io/sequence-statistics"]
+  },
+  {
+    "id": "bio-sequence-io-batch-processing",
+    "title": "Sequence batch processing",
+    "skill_type": "atomic",
+    "domain": "sequence-io",
+    "task": "batch-processing",
+    "summary": "Process batches of sequence files with deterministic selection rules and reproducible output layout.",
+    "tags": ["sequence-io", "batch processing", "files", "automation"],
+    "trigger_keywords": ["batch process FASTQ", "batch sequence files", "bulk file handling", "sequence automation"],
+    "related_skills": ["bio-sequence-io-format-conversion", "bio-workflows-sequence-io-preparation"],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan a batch-processing step for many sequence files and explain how you would avoid mixing or skipping samples.",
+      "Summarize the safeguards needed before applying one sequence-file transformation across a whole directory tree."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/sequence-io/batch-processing/SKILL.md"],
+    "match_aliases": ["batch-processing", "batch process FASTQ", "sequence automation"],
+    "source_roots": ["sequence-io/batch-processing"]
+  },
+  {
+    "id": "bio-workflows-sequence-io-preparation",
+    "title": "Sequence file preparation workflow",
+    "skill_type": "workflow",
+    "domain": "sequence-io",
+    "task": "workflow",
+    "summary": "Coordinate sequence-file inspection, validation, conversion, filtering, and batch-safe preparation before downstream omics analysis.",
+    "tags": ["workflow", "sequence-io", "FASTQ", "FASTA"],
+    "trigger_keywords": ["sequence prep workflow", "FASTQ preparation workflow", "sequence file pipeline", "file preparation for omics"],
+    "related_skills": [],
+    "depends_on": [
+      "bio-sequence-io-read-and-write-sequences",
+      "bio-sequence-io-format-conversion",
+      "bio-sequence-io-compressed-sequence-handling",
+      "bio-sequence-io-fastq-quality",
+      "bio-sequence-io-paired-end-validation",
+      "bio-sequence-io-sequence-filtering",
+      "bio-sequence-io-sequence-statistics",
+      "bio-sequence-io-batch-processing"
+    ],
+    "test_prompts": [
+      "Outline a sequence-file preparation workflow and show where quality, pairing, filtering, and conversion checks should stop downstream analysis.",
+      "Adapt a sequence-preparation workflow for a project that starts from compressed paired-end FASTQ files and ends at an analysis-ready handoff."
+    ],
+    "canonical_of_extra": [],
+    "match_aliases": ["sequence prep workflow", "FASTQ preparation workflow", "sequence file pipeline"],
+    "source_roots": []
+  },
+  {
+    "id": "bio-ribo-seq-riboseq-preprocessing",
+    "title": "Ribo-seq preprocessing",
+    "skill_type": "atomic",
+    "domain": "ribo-seq",
+    "task": "riboseq-preprocessing",
+    "summary": "Preprocess ribosome-profiling data with explicit read-structure, frame, and annotation-aware assumptions.",
+    "tags": ["ribo-seq", "preprocessing", "ribosome profiling", "translation"],
+    "trigger_keywords": ["Ribo-seq preprocessing", "ribosome profiling prep", "translation preprocessing", "Ribo-seq QC"],
+    "related_skills": ["bio-ribo-seq-translation-efficiency", "bio-workflows-riboseq-pipeline"],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan a Ribo-seq preprocessing stage and explain what periodicity or frame-related checks must pass before downstream interpretation.",
+      "Tell me how you would prepare ribosome-profiling data without losing the information needed for translation-aware analysis."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/ribo-seq/riboseq-preprocessing/SKILL.md"],
+    "match_aliases": ["riboseq-preprocessing", "Ribo-seq preprocessing", "ribosome profiling prep"],
+    "source_roots": ["ribo-seq/riboseq-preprocessing"]
+  },
+  {
+    "id": "bio-ribo-seq-translation-efficiency",
+    "title": "Translation-efficiency analysis",
+    "skill_type": "atomic",
+    "domain": "ribo-seq",
+    "task": "translation-efficiency",
+    "summary": "Estimate translation efficiency using paired RNA and Ribo measurements with explicit model and comparability assumptions.",
+    "tags": ["ribo-seq", "translation efficiency", "RNA integration", "ribosome profiling"],
+    "trigger_keywords": ["translation efficiency", "Ribo plus RNA", "translational control", "TE analysis"],
+    "related_skills": ["bio-ribo-seq-riboseq-preprocessing", "bio-workflows-riboseq-pipeline"],
+    "depends_on": ["bio-ribo-seq-riboseq-preprocessing"],
+    "test_prompts": [
+      "Design a translation-efficiency analysis and explain what makes the RNA and Ribo inputs compatible enough for joint interpretation.",
+      "Summarize the main confounders that can make translation-efficiency estimates misleading."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/ribo-seq/translation-efficiency/SKILL.md"],
+    "match_aliases": ["translation-efficiency", "translation efficiency", "TE analysis"],
+    "source_roots": ["ribo-seq/translation-efficiency"]
+  },
+  {
+    "id": "bio-ribo-seq-orf-detection",
+    "title": "Ribo-seq ORF detection",
+    "skill_type": "atomic",
+    "domain": "ribo-seq",
+    "task": "orf-detection",
+    "summary": "Detect translated ORFs from ribosome-profiling data with explicit frame support and annotation-aware caveats.",
+    "tags": ["ribo-seq", "ORFs", "translation", "coding regions"],
+    "trigger_keywords": ["ORF detection", "translated ORFs", "Ribo-seq ORFs", "novel translation"],
+    "related_skills": ["bio-ribo-seq-ribosome-stalling", "bio-workflows-riboseq-pipeline"],
+    "depends_on": ["bio-ribo-seq-riboseq-preprocessing"],
+    "test_prompts": [
+      "Plan a Ribo-seq ORF-detection analysis and explain what evidence is needed before reporting a novel translated region.",
+      "Tell me how you would separate robust translated ORFs from weak frame-noise artifacts."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/ribo-seq/orf-detection/SKILL.md"],
+    "match_aliases": ["orf-detection", "Ribo-seq ORFs", "translated ORFs"],
+    "source_roots": ["ribo-seq/orf-detection"]
+  },
+  {
+    "id": "bio-ribo-seq-ribosome-stalling",
+    "title": "Ribosome-stalling analysis",
+    "skill_type": "atomic",
+    "domain": "ribo-seq",
+    "task": "ribosome-stalling",
+    "summary": "Analyze ribosome-stalling or pausing signals with explicit positional, protocol, and artifact-aware context.",
+    "tags": ["ribo-seq", "ribosome stalling", "pausing", "translation"],
+    "trigger_keywords": ["ribosome stalling", "pausing analysis", "stalling sites", "translation pauses"],
+    "related_skills": ["bio-ribo-seq-orf-detection", "bio-workflows-riboseq-pipeline"],
+    "depends_on": ["bio-ribo-seq-riboseq-preprocessing"],
+    "test_prompts": [
+      "Design a ribosome-stalling analysis and explain what protocol artifacts you would rule out before trusting pausing signals.",
+      "Summarize how you would interpret site-level stalling without overcalling noisy positional effects."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/ribo-seq/ribosome-stalling/SKILL.md"],
+    "match_aliases": ["ribosome-stalling", "ribosome stalling", "pausing analysis"],
+    "source_roots": ["ribo-seq/ribosome-stalling"]
+  },
+  {
+    "id": "bio-workflows-riboseq-pipeline",
+    "title": "Ribo-seq workflow",
+    "skill_type": "workflow",
+    "domain": "ribo-seq",
+    "task": "workflow",
+    "summary": "Coordinate ribosome-profiling preprocessing, translation-efficiency analysis, ORF discovery, and stalling interpretation.",
+    "tags": ["workflow", "ribo-seq", "translation", "ribosome profiling"],
+    "trigger_keywords": ["Ribo-seq workflow", "ribosome profiling pipeline", "translation analysis workflow", "Ribo end to end"],
+    "related_skills": [],
+    "depends_on": [
+      "bio-ribo-seq-riboseq-preprocessing",
+      "bio-ribo-seq-translation-efficiency",
+      "bio-ribo-seq-orf-detection",
+      "bio-ribo-seq-ribosome-stalling"
+    ],
+    "test_prompts": [
+      "Outline a Ribo-seq workflow and show where preprocessing, translation-efficiency, ORF, and stalling checkpoints should gate interpretation.",
+      "Adapt a Ribo-seq workflow for a project that only needs preprocessing plus translation-efficiency analysis and stops there."
+    ],
+    "canonical_of_extra": [],
+    "match_aliases": ["Ribo-seq workflow", "ribosome profiling pipeline", "translation workflow"],
+    "source_roots": []
+  },
+  {
+    "id": "bio-comparative-genomics-hgt-detection",
+    "title": "Horizontal gene-transfer detection",
+    "skill_type": "atomic",
+    "domain": "comparative-genomics",
+    "task": "hgt-detection",
+    "summary": "Detect candidate horizontal gene-transfer events with explicit contamination, phylogenetic, and composition-aware checks.",
+    "tags": ["comparative genomics", "HGT", "horizontal transfer", "evolution"],
+    "trigger_keywords": ["HGT detection", "horizontal gene transfer", "phylogenetic discordance", "gene transfer"],
+    "related_skills": ["bio-comparative-genomics-positive-selection", "bio-workflows-comparative-genomics"],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan an HGT-detection analysis and explain what evidence you need before reporting a horizontal transfer candidate.",
+      "Tell me how you would separate true transfer candidates from contamination or assembly artifacts."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/comparative-genomics/hgt-detection/SKILL.md"],
+    "match_aliases": ["hgt-detection", "horizontal gene transfer", "HGT detection"],
+    "source_roots": ["comparative-genomics/hgt-detection"]
+  },
+  {
+    "id": "bio-comparative-genomics-positive-selection",
+    "title": "Positive-selection analysis",
+    "skill_type": "atomic",
+    "domain": "comparative-genomics",
+    "task": "positive-selection",
+    "summary": "Test for positive-selection signals with explicit alignment, model, and phylogenetic-context requirements.",
+    "tags": ["comparative genomics", "positive selection", "evolution", "models"],
+    "trigger_keywords": ["positive selection", "selection scans", "dN/dS", "adaptive evolution"],
+    "related_skills": ["bio-comparative-genomics-ancestral-reconstruction", "bio-workflows-comparative-genomics"],
+    "depends_on": [],
+    "test_prompts": [
+      "Design a positive-selection analysis and explain what alignment and phylogenetic checks must be satisfied before trusting the result.",
+      "Summarize the main ways poor alignment or model mismatch can create misleading positive-selection signals."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/comparative-genomics/positive-selection/SKILL.md"],
+    "match_aliases": ["positive-selection", "positive selection", "dN/dS"],
+    "source_roots": ["comparative-genomics/positive-selection"]
+  },
+  {
+    "id": "bio-comparative-genomics-synteny-analysis",
+    "title": "Synteny analysis",
+    "skill_type": "atomic",
+    "domain": "comparative-genomics",
+    "task": "synteny-analysis",
+    "summary": "Analyze syntenic blocks and genome collinearity with explicit assembly and orthology assumptions.",
+    "tags": ["comparative genomics", "synteny", "genome structure", "collinearity"],
+    "trigger_keywords": ["synteny analysis", "collinearity", "syntenic blocks", "genome rearrangements"],
+    "related_skills": ["bio-comparative-genomics-hgt-detection", "bio-workflows-comparative-genomics"],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan a synteny analysis and explain what assembly quality and orthology checks you need before interpreting rearrangements.",
+      "Tell me how you would present syntenic-block results without confusing technical fragmentation with biology."
+    ],
+    "canonical_of_extra": [
+      "GPTomics/bioSkills:bioSkills-main/comparative-genomics/synteny-analysis/SKILL.md",
+      "FreedomIntelligence/OpenClaw-Medical-Skills:OpenClaw-Medical-Skills-main/skills/bio-comparative-genomics-synteny-analysis/SKILL.md"
+    ],
+    "match_aliases": ["synteny-analysis", "synteny analysis", "syntenic blocks"],
+    "source_roots": ["comparative-genomics/synteny-analysis", "bio-comparative-genomics-synteny-analysis"]
+  },
+  {
+    "id": "bio-comparative-genomics-ancestral-reconstruction",
+    "title": "Ancestral-sequence reconstruction",
+    "skill_type": "atomic",
+    "domain": "comparative-genomics",
+    "task": "ancestral-reconstruction",
+    "summary": "Reconstruct ancestral states or sequences with explicit model, node, and uncertainty handling.",
+    "tags": ["comparative genomics", "ancestral reconstruction", "evolution", "phylogeny"],
+    "trigger_keywords": ["ancestral reconstruction", "ancestral sequence", "ancestral states", "protein resurrection"],
+    "related_skills": ["bio-comparative-genomics-positive-selection", "bio-workflows-comparative-genomics"],
+    "depends_on": [],
+    "test_prompts": [
+      "Design an ancestral-reconstruction analysis and explain what phylogenetic and model assumptions must be explicit before interpretation.",
+      "Summarize how you would communicate uncertainty in reconstructed ancestral states."
+    ],
+    "canonical_of_extra": [
+      "GPTomics/bioSkills:bioSkills-main/comparative-genomics/ancestral-reconstruction/SKILL.md",
+      "FreedomIntelligence/OpenClaw-Medical-Skills:OpenClaw-Medical-Skills-main/skills/bio-comparative-genomics-ancestral-reconstruction/SKILL.md"
+    ],
+    "match_aliases": ["ancestral-reconstruction", "ancestral reconstruction", "ancestral sequence"],
+    "source_roots": ["comparative-genomics/ancestral-reconstruction", "bio-comparative-genomics-ancestral-reconstruction"]
+  },
+  {
+    "id": "bio-workflows-comparative-genomics",
+    "title": "Comparative-genomics workflow",
+    "skill_type": "workflow",
+    "domain": "comparative-genomics",
+    "task": "workflow",
+    "summary": "Coordinate comparative-genomics analyses across selection, synteny, ancestral reconstruction, and transfer-candidate review.",
+    "tags": ["workflow", "comparative genomics", "evolution", "cross-species"],
+    "trigger_keywords": ["comparative-genomics workflow", "comparative pipeline", "cross-species workflow", "evolutionary genomics workflow"],
+    "related_skills": [],
+    "depends_on": [
+      "bio-comparative-genomics-hgt-detection",
+      "bio-comparative-genomics-positive-selection",
+      "bio-comparative-genomics-synteny-analysis",
+      "bio-comparative-genomics-ancestral-reconstruction"
+    ],
+    "test_prompts": [
+      "Outline a comparative-genomics workflow and show where alignment, orthology, and topology checks should gate downstream interpretation.",
+      "Adapt a comparative-genomics workflow for a project that only needs synteny and positive-selection analysis."
+    ],
+    "canonical_of_extra": [],
+    "match_aliases": ["comparative-genomics workflow", "cross-species workflow", "comparative pipeline"],
+    "source_roots": []
+  },
+  {
+    "id": "bio-literature-research-pubmed-search-and-fetch",
+    "title": "PubMed search and fetch",
+    "skill_type": "atomic",
+    "domain": "literature-research",
+    "task": "pubmed-search",
+    "summary": "Search and fetch biomedical literature with explicit query scope, provenance, and evidence-target alignment.",
+    "tags": ["literature", "PubMed", "papers", "biomedical search"],
+    "trigger_keywords": ["PubMed search", "paper fetch", "biomedical literature", "paper retrieval"],
+    "related_skills": ["bio-literature-research-literature-synthesis", "bio-workflows-literature-to-hypothesis"],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan a PubMed search-and-fetch workflow and explain how you would keep the query focused on the biological claim the user actually cares about.",
+      "Tell me how you would retrieve biomedical papers without mixing loosely related studies into the evidence set."
+    ],
+    "canonical_of_extra": [
+      "ClawBio/ClawBio:ClawBio-main/skills/pubmed-summariser/SKILL.md",
+      "GPTomics/bioSkills:bioSkills-main/database-access/entrez-fetch/SKILL.md"
+    ],
+    "match_aliases": ["pubmed-summariser", "entrez-fetch", "PubMed search", "paper fetch"],
+    "source_roots": ["pubmed-summariser", "database-access/entrez-fetch"]
+  },
+  {
+    "id": "bio-literature-research-literature-synthesis",
+    "title": "Biomedical literature synthesis",
+    "skill_type": "atomic",
+    "domain": "literature-research",
+    "task": "literature-synthesis",
+    "summary": "Synthesize literature findings around a focused biomedical question while preserving disagreement and evidence strength.",
+    "tags": ["literature", "synthesis", "papers", "evidence"],
+    "trigger_keywords": ["literature synthesis", "paper synthesis", "evidence summary", "study synthesis"],
+    "related_skills": ["bio-literature-research-pubmed-search-and-fetch", "bio-workflows-literature-to-hypothesis"],
+    "depends_on": ["bio-literature-research-pubmed-search-and-fetch"],
+    "test_prompts": [
+      "Design a literature-synthesis approach and explain how you would keep conflicting evidence visible rather than collapsing it into one story.",
+      "Summarize how you would synthesize biomedical papers around a focused omics question without drifting into generic background text."
+    ],
+    "canonical_of_extra": ["ClawBio/ClawBio:ClawBio-main/skills/lit-synthesizer/SKILL.md"],
+    "match_aliases": ["lit-synthesizer", "literature synthesis", "evidence summary"],
+    "source_roots": ["lit-synthesizer"]
+  },
+  {
+    "id": "bio-literature-research-protocol-discovery",
+    "title": "Protocol discovery",
+    "skill_type": "atomic",
+    "domain": "literature-research",
+    "task": "protocol-discovery",
+    "summary": "Discover wet-lab or computational protocols relevant to a biomedical question while keeping reuse boundaries explicit.",
+    "tags": ["literature", "protocols", "methods", "experimental design"],
+    "trigger_keywords": ["protocol discovery", "protocols.io", "method search", "experimental protocol"],
+    "related_skills": ["bio-literature-research-pubmed-search-and-fetch", "bio-workflows-literature-to-hypothesis"],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan a protocol-discovery search and explain how you would separate reusable method leads from fully validated SOPs.",
+      "Tell me how you would look for experimental or computational protocols without overstating their fitness for a specific lab setup."
+    ],
+    "canonical_of_extra": ["ClawBio/ClawBio:ClawBio-main/skills/protocols-io/SKILL.md"],
+    "match_aliases": ["protocols-io", "protocol discovery", "method search"],
+    "source_roots": ["protocols-io"]
+  },
+  {
+    "id": "bio-literature-research-omics-evidence-mapping",
+    "title": "Omics evidence mapping",
+    "skill_type": "atomic",
+    "domain": "literature-research",
+    "task": "omics-evidence-mapping",
+    "summary": "Map omics findings to literature and knowledge-graph evidence with explicit provenance and confidence boundaries.",
+    "tags": ["literature", "omics", "evidence mapping", "knowledge graph"],
+    "trigger_keywords": ["omics evidence mapping", "target evidence", "knowledge graph", "evidence links"],
+    "related_skills": ["bio-literature-research-literature-synthesis", "bio-workflows-literature-to-hypothesis"],
+    "depends_on": [],
+    "test_prompts": [
+      "Design an omics-evidence-mapping analysis and explain how you would preserve source provenance for each evidence link.",
+      "Summarize how you would avoid turning weak associative evidence into strong mechanistic claims in an evidence map."
+    ],
+    "canonical_of_extra": [
+      "ClawBio/ClawBio:ClawBio-main/skills/omics-target-evidence-mapper/SKILL.md",
+      "ClawBio/ClawBio:ClawBio-main/skills/turingdb-graph/SKILL.md"
+    ],
+    "match_aliases": ["omics-target-evidence-mapper", "turingdb-graph", "omics evidence mapping"],
+    "source_roots": ["omics-target-evidence-mapper", "turingdb-graph"]
+  },
+  {
+    "id": "bio-literature-research-sequence-database-search",
+    "title": "Sequence-database search",
+    "skill_type": "atomic",
+    "domain": "literature-research",
+    "task": "sequence-database-search",
+    "summary": "Search sequence databases and link identifiers with explicit query scope, hit confidence, and interpretation limits.",
+    "tags": ["literature", "BLAST", "Entrez", "sequence databases"],
+    "trigger_keywords": ["BLAST search", "sequence database", "Entrez link", "sequence similarity search"],
+    "related_skills": ["bio-literature-research-pubmed-search-and-fetch", "bio-workflows-literature-to-hypothesis"],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan a sequence-database search and explain how you would separate strong from weak similarity evidence before reporting hits.",
+      "Tell me how you would connect sequence-database results back to the intended biological entity without overclaiming identity."
+    ],
+    "canonical_of_extra": [
+      "GPTomics/bioSkills:bioSkills-main/database-access/blast-searches/SKILL.md",
+      "GPTomics/bioSkills:bioSkills-main/database-access/entrez-link/SKILL.md"
+    ],
+    "match_aliases": ["blast-searches", "entrez-link", "BLAST search", "sequence database"],
+    "source_roots": ["database-access/blast-searches", "database-access/entrez-link"]
+  },
+  {
+    "id": "bio-literature-research-public-data-discovery",
+    "title": "Public-data discovery",
+    "skill_type": "atomic",
+    "domain": "literature-research",
+    "task": "public-data-discovery",
+    "summary": "Discover public omics datasets and study metadata that can support a biomedical question or reanalysis project.",
+    "tags": ["literature", "public data", "SRA", "datasets"],
+    "trigger_keywords": ["public data discovery", "SRA search", "omics datasets", "study accession search"],
+    "related_skills": ["bio-literature-research-pubmed-search-and-fetch", "bio-workflows-literature-to-hypothesis"],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan a public-data discovery task and explain what metadata checks you would make before recommending a dataset for reuse.",
+      "Summarize how you would search for omics datasets relevant to a biological question without confusing assay type or cohort context."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/database-access/sra-data/SKILL.md"],
+    "match_aliases": ["sra-data", "public data discovery", "SRA search"],
+    "source_roots": ["database-access/sra-data"]
+  },
+  {
+    "id": "bio-literature-research-biomedical-semantic-search",
+    "title": "Biomedical semantic search",
+    "skill_type": "atomic",
+    "domain": "literature-research",
+    "task": "biomedical-semantic-search",
+    "summary": "Run semantic search over biomedical concepts or evidence while keeping topical drift and provenance visible.",
+    "tags": ["literature", "semantic search", "biomedical concepts", "evidence retrieval"],
+    "trigger_keywords": ["biomedical semantic search", "semantic paper search", "concept retrieval", "evidence retrieval"],
+    "related_skills": ["bio-literature-research-literature-synthesis", "bio-workflows-literature-to-hypothesis"],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan a biomedical semantic-search task and explain how you would keep retrieval anchored to the user's actual hypothesis.",
+      "Tell me how you would detect when semantic retrieval is drifting too far away from the intended biomedical concept."
+    ],
+    "canonical_of_extra": [
+      "ClawBio/ClawBio:ClawBio-main/skills/bgpt-mcp/SKILL.md",
+      "ClawBio/ClawBio:ClawBio-main/skills/claw-semantic-sim/SKILL.md"
+    ],
+    "match_aliases": ["bgpt-mcp", "claw-semantic-sim", "biomedical semantic search"],
+    "source_roots": ["bgpt-mcp", "claw-semantic-sim"]
+  },
+  {
+    "id": "bio-workflows-literature-to-hypothesis",
+    "title": "Literature-to-hypothesis workflow",
+    "skill_type": "workflow",
+    "domain": "literature-research",
+    "task": "workflow",
+    "summary": "Coordinate literature retrieval, protocol discovery, evidence mapping, and public-data discovery into a focused biomedical research briefing.",
+    "tags": ["workflow", "literature", "hypothesis generation", "evidence"],
+    "trigger_keywords": ["literature workflow", "hypothesis workflow", "research briefing workflow", "evidence synthesis workflow"],
+    "related_skills": [],
+    "depends_on": [
+      "bio-literature-research-pubmed-search-and-fetch",
+      "bio-literature-research-literature-synthesis",
+      "bio-literature-research-protocol-discovery",
+      "bio-literature-research-omics-evidence-mapping",
+      "bio-literature-research-sequence-database-search",
+      "bio-literature-research-public-data-discovery",
+      "bio-literature-research-biomedical-semantic-search"
+    ],
+    "test_prompts": [
+      "Outline a literature-to-hypothesis workflow and show how retrieval, synthesis, protocol discovery, and public-data review should gate a final research briefing.",
+      "Adapt a literature workflow for a project that only needs evidence synthesis plus public-data discovery and does not require protocol leads."
+    ],
+    "canonical_of_extra": [],
+    "match_aliases": ["literature workflow", "hypothesis workflow", "research briefing workflow"],
+    "source_roots": []
+  }
+]

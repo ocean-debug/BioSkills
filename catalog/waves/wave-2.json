@@ -1,0 +1,1000 @@
+[
+  {
+    "id": "bio-long-read-sequencing-long-read-qc",
+    "title": "Long-read sequencing QC",
+    "skill_type": "atomic",
+    "domain": "long-read-sequencing",
+    "task": "long-read-qc",
+    "summary": "Assess long-read run quality, read-length structure, and downstream readiness before polishing, isoform, or variant analysis.",
+    "tags": ["long-read", "qc", "nanopore", "pacbio"],
+    "trigger_keywords": ["long-read QC", "nanopore QC", "PacBio QC", "read length distribution"],
+    "related_skills": ["bio-long-read-sequencing-basecalling", "bio-workflows-long-read-pipeline"],
+    "depends_on": [],
+    "test_prompts": [
+      "Review these long-read sequencing QC outputs and decide whether the run is ready for polishing or variant calling.",
+      "Summarize the QC gates that matter most before starting downstream ONT or PacBio analysis."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/long-read-sequencing/long-read-qc/SKILL.md"],
+    "match_aliases": ["long-read-qc", "long read qc"],
+    "source_roots": ["long-read-sequencing/long-read-qc"]
+  },
+  {
+    "id": "bio-long-read-sequencing-basecalling",
+    "title": "Long-read basecalling",
+    "skill_type": "atomic",
+    "domain": "long-read-sequencing",
+    "task": "basecalling",
+    "summary": "Plan platform-aware long-read basecalling with explicit chemistry, accuracy, and demultiplexing assumptions.",
+    "tags": ["long-read", "basecalling", "ONT", "raw signal"],
+    "trigger_keywords": ["basecalling", "ONT guppy", "Dorado", "raw signal to FASTQ"],
+    "related_skills": ["bio-long-read-sequencing-long-read-qc", "bio-workflows-long-read-pipeline"],
+    "depends_on": [],
+    "test_prompts": [
+      "Choose a basecalling strategy for a long-read run and explain what chemistry or platform details still matter.",
+      "Tell me how you would document a reproducible ONT basecalling stage before downstream analysis."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/long-read-sequencing/basecalling/SKILL.md"],
+    "match_aliases": ["basecalling", "long-read basecalling"],
+    "source_roots": ["long-read-sequencing/basecalling"]
+  },
+  {
+    "id": "bio-long-read-sequencing-isoseq-analysis",
+    "title": "Long-read isoform analysis",
+    "skill_type": "atomic",
+    "domain": "long-read-sequencing",
+    "task": "isoseq-analysis",
+    "summary": "Analyze long-read transcript data for isoform discovery, classification, and downstream expression-ready summaries.",
+    "tags": ["long-read", "isoform", "Iso-Seq", "transcriptomics"],
+    "trigger_keywords": ["Iso-Seq analysis", "long-read isoforms", "full-length transcripts", "isoform discovery"],
+    "related_skills": ["bio-long-read-sequencing-long-read-qc", "bio-workflows-long-read-pipeline"],
+    "depends_on": ["bio-long-read-sequencing-long-read-qc"],
+    "test_prompts": [
+      "Plan a long-read isoform analysis workflow and explain what annotation context you need before interpreting novel isoforms.",
+      "Summarize the QC checkpoints that should gate transcript-level conclusions in an Iso-Seq project."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/long-read-sequencing/isoseq-analysis/SKILL.md"],
+    "match_aliases": ["isoseq-analysis", "Iso-Seq", "iso-seq analysis"],
+    "source_roots": ["long-read-sequencing/isoseq-analysis"]
+  },
+  {
+    "id": "bio-long-read-sequencing-structural-variant-calling",
+    "title": "Long-read structural-variant calling",
+    "skill_type": "atomic",
+    "domain": "long-read-sequencing",
+    "task": "structural-variant-calling",
+    "summary": "Call structural variants from long reads with explicit breakpoint support, reference provenance, and assay-aware caveats.",
+    "tags": ["long-read", "structural variants", "SV", "breakpoints"],
+    "trigger_keywords": ["long-read SV", "structural variant calling", "breakpoint analysis", "SV caller"],
+    "related_skills": ["bio-long-read-sequencing-long-read-qc", "bio-workflows-long-read-pipeline"],
+    "depends_on": ["bio-long-read-sequencing-long-read-qc"],
+    "test_prompts": [
+      "Design a long-read structural-variant calling plan and explain what evidence you need before interpreting breakpoints.",
+      "Tell me how long-read SV analysis changes if the reference build or sample context is unclear."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/long-read-sequencing/structural-variants/SKILL.md"],
+    "match_aliases": ["structural-variants", "long-read sv", "structural variant calling"],
+    "source_roots": ["long-read-sequencing/structural-variants"]
+  },
+  {
+    "id": "bio-long-read-sequencing-consensus-polishing",
+    "title": "Long-read consensus polishing",
+    "skill_type": "atomic",
+    "domain": "long-read-sequencing",
+    "task": "consensus-polishing",
+    "summary": "Polish long-read contigs or draft assemblies with explicit rounds, support evidence, and validation checkpoints.",
+    "tags": ["long-read", "polishing", "assembly", "consensus"],
+    "trigger_keywords": ["Medaka polishing", "assembly polishing", "consensus polishing", "long-read polishing"],
+    "related_skills": ["bio-long-read-sequencing-long-read-qc", "bio-workflows-long-read-pipeline"],
+    "depends_on": ["bio-long-read-sequencing-long-read-qc"],
+    "test_prompts": [
+      "Plan a consensus-polishing stage for a long-read assembly and explain how you would validate the polished output.",
+      "Explain when Medaka-style polishing is appropriate and what would make the result untrustworthy."
+    ],
+    "canonical_of_extra": [
+      "GPTomics/bioSkills:bioSkills-main/long-read-sequencing/medaka-polishing/SKILL.md",
+      "GPTomics/bioSkills:bioSkills-main/genome-assembly/assembly-polishing/SKILL.md"
+    ],
+    "match_aliases": ["medaka-polishing", "assembly-polishing", "consensus polishing"],
+    "source_roots": ["long-read-sequencing/medaka-polishing", "genome-assembly/assembly-polishing"]
+  },
+  {
+    "id": "bio-workflows-long-read-pipeline",
+    "title": "Long-read sequencing workflow",
+    "skill_type": "workflow",
+    "domain": "long-read-sequencing",
+    "task": "workflow",
+    "summary": "Coordinate long-read sequencing analysis from basecalling or QC through polishing, isoform analysis, or structural-variant discovery.",
+    "tags": ["workflow", "long-read", "pipeline", "ONT"],
+    "trigger_keywords": ["long-read workflow", "ONT pipeline", "PacBio pipeline", "long-read end to end"],
+    "related_skills": [],
+    "depends_on": [
+      "bio-long-read-sequencing-long-read-qc",
+      "bio-long-read-sequencing-basecalling",
+      "bio-long-read-sequencing-isoseq-analysis",
+      "bio-long-read-sequencing-structural-variant-calling",
+      "bio-long-read-sequencing-consensus-polishing"
+    ],
+    "test_prompts": [
+      "Outline an end-to-end long-read workflow and show how you would branch between polishing, isoform analysis, and SV calling.",
+      "Adapt a long-read workflow when the project starts from basecalled FASTQ rather than raw signal files."
+    ],
+    "canonical_of_extra": [],
+    "match_aliases": ["long-read workflow", "long read pipeline"],
+    "source_roots": []
+  },
+  {
+    "id": "bio-metagenomics-taxonomic-profiling",
+    "title": "Metagenomic taxonomic profiling",
+    "skill_type": "atomic",
+    "domain": "metagenomics",
+    "task": "taxonomic-profiling",
+    "summary": "Profile microbial community composition with explicit database, resolution, and confidence-threshold provenance.",
+    "tags": ["metagenomics", "taxonomy", "microbiome", "profiling"],
+    "trigger_keywords": ["taxonomic profiling", "Kraken", "MetaPhlAn", "microbiome composition"],
+    "related_skills": ["bio-metagenomics-abundance-estimation", "bio-workflows-metagenomics-pipeline"],
+    "depends_on": [],
+    "test_prompts": [
+      "Choose a metagenomic taxonomic profiling path and explain what database and resolution assumptions you need to lock down.",
+      "Summarize the QC and contamination checks that should gate microbiome profiling results."
+    ],
+    "canonical_of_extra": [
+      "GPTomics/bioSkills:bioSkills-main/metagenomics/kraken-classification/SKILL.md",
+      "GPTomics/bioSkills:bioSkills-main/metagenomics/metaphlan-profiling/SKILL.md"
+    ],
+    "match_aliases": ["kraken-classification", "metaphlan-profiling", "taxonomic profiling"],
+    "source_roots": ["metagenomics/kraken-classification", "metagenomics/metaphlan-profiling"]
+  },
+  {
+    "id": "bio-metagenomics-abundance-estimation",
+    "title": "Metagenomic abundance estimation",
+    "skill_type": "atomic",
+    "domain": "metagenomics",
+    "task": "abundance-estimation",
+    "summary": "Estimate feature or taxon abundance for metagenomic cohorts with explicit normalization and compositional-analysis caveats.",
+    "tags": ["metagenomics", "abundance", "microbiome", "normalization"],
+    "trigger_keywords": ["metagenomic abundance", "feature abundance", "relative abundance", "microbiome normalization"],
+    "related_skills": ["bio-metagenomics-taxonomic-profiling", "bio-workflows-metagenomics-pipeline"],
+    "depends_on": ["bio-metagenomics-taxonomic-profiling"],
+    "test_prompts": [
+      "Plan a metagenomic abundance-estimation stage and explain what makes the output safe for downstream group comparisons.",
+      "Tell me how you would explain compositional caveats when reporting microbiome abundance tables."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/metagenomics/abundance-estimation/SKILL.md"],
+    "match_aliases": ["abundance-estimation", "metagenomic abundance"],
+    "source_roots": ["metagenomics/abundance-estimation"]
+  },
+  {
+    "id": "bio-metagenomics-amr-detection",
+    "title": "Metagenomic AMR detection",
+    "skill_type": "atomic",
+    "domain": "metagenomics",
+    "task": "amr-detection",
+    "summary": "Detect antimicrobial-resistance features from metagenomic data with explicit database and support-evidence provenance.",
+    "tags": ["metagenomics", "AMR", "resistance", "microbiome"],
+    "trigger_keywords": ["AMR detection", "antimicrobial resistance", "resistance genes", "metagenomic AMR"],
+    "related_skills": ["bio-metagenomics-metagenome-assembly", "bio-workflows-metagenomics-pipeline"],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan a metagenomic AMR detection analysis and explain what database and support thresholds you need before reporting hits.",
+      "Summarize the major failure modes that can make AMR calls misleading in mixed microbial samples."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/metagenomics/amr-detection/SKILL.md"],
+    "match_aliases": ["amr-detection", "antimicrobial resistance detection"],
+    "source_roots": ["metagenomics/amr-detection"]
+  },
+  {
+    "id": "bio-metagenomics-strain-tracking",
+    "title": "Metagenomic strain tracking",
+    "skill_type": "atomic",
+    "domain": "metagenomics",
+    "task": "strain-tracking",
+    "summary": "Track strain-level relatedness or persistence in metagenomic cohorts with explicit sample-comparability assumptions.",
+    "tags": ["metagenomics", "strain", "tracking", "microbiome"],
+    "trigger_keywords": ["strain tracking", "strain persistence", "within-host strain", "microbial strain comparison"],
+    "related_skills": ["bio-metagenomics-taxonomic-profiling", "bio-workflows-metagenomics-pipeline"],
+    "depends_on": ["bio-metagenomics-taxonomic-profiling"],
+    "test_prompts": [
+      "Design a strain-tracking analysis for longitudinal metagenomic samples and explain what evidence is needed before claiming persistence.",
+      "Tell me how you would avoid overstating strain-level findings when depth or classification quality is limited."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/metagenomics/strain-tracking/SKILL.md"],
+    "match_aliases": ["strain-tracking", "strain tracking"],
+    "source_roots": ["metagenomics/strain-tracking"]
+  },
+  {
+    "id": "bio-metagenomics-metagenome-assembly",
+    "title": "Metagenome assembly",
+    "skill_type": "atomic",
+    "domain": "metagenomics",
+    "task": "metagenome-assembly",
+    "summary": "Assemble metagenomic reads into contigs with explicit resource, contamination, and downstream-use assumptions.",
+    "tags": ["metagenomics", "assembly", "contigs", "microbial genomes"],
+    "trigger_keywords": ["metagenome assembly", "contig assembly", "microbial contigs", "assembly from metagenomic reads"],
+    "related_skills": ["bio-metagenomics-amr-detection", "bio-workflows-metagenomics-pipeline"],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan a metagenome-assembly stage and explain what QC metrics should gate interpretation of assembled contigs.",
+      "Summarize when metagenome assembly is a better entry point than direct taxonomic profiling."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/metagenomics/metagenome-assembly/SKILL.md"],
+    "match_aliases": ["metagenome-assembly", "metagenome assembly"],
+    "source_roots": ["metagenomics/metagenome-assembly"]
+  },
+  {
+    "id": "bio-workflows-metagenomics-pipeline",
+    "title": "Metagenomics workflow",
+    "skill_type": "workflow",
+    "domain": "metagenomics",
+    "task": "workflow",
+    "summary": "Coordinate metagenomics analysis from taxonomic profiling or assembly through abundance, AMR, and strain-level interpretation.",
+    "tags": ["workflow", "metagenomics", "microbiome", "pipeline"],
+    "trigger_keywords": ["metagenomics workflow", "microbiome pipeline", "metagenomic analysis pipeline", "end-to-end metagenomics"],
+    "related_skills": [],
+    "depends_on": [
+      "bio-metagenomics-taxonomic-profiling",
+      "bio-metagenomics-abundance-estimation",
+      "bio-metagenomics-amr-detection",
+      "bio-metagenomics-strain-tracking",
+      "bio-metagenomics-metagenome-assembly"
+    ],
+    "test_prompts": [
+      "Outline a metagenomics workflow and show how you would branch between profiling, assembly, AMR, and strain-tracking tasks.",
+      "Adapt a metagenomics workflow for a cohort that only needs microbiome profiling and downstream abundance comparisons."
+    ],
+    "canonical_of_extra": ["ClawBio/ClawBio:ClawBio-main/skills/claw-metagenomics/SKILL.md"],
+    "match_aliases": ["claw-metagenomics", "metagenomics workflow", "microbiome pipeline"],
+    "source_roots": ["claw-metagenomics"]
+  },
+  {
+    "id": "bio-proteomics-proteomics-qc",
+    "title": "Proteomics QC",
+    "skill_type": "atomic",
+    "domain": "proteomics",
+    "task": "proteomics-qc",
+    "summary": "Review proteomics assay quality, missingness, and replicate consistency before quantitative interpretation.",
+    "tags": ["proteomics", "qc", "mass spectrometry", "replicates"],
+    "trigger_keywords": ["proteomics QC", "mass-spec QC", "missingness", "protein intensity QC"],
+    "related_skills": ["bio-proteomics-quantification", "bio-workflows-proteomics-differential"],
+    "depends_on": [],
+    "test_prompts": [
+      "Interpret these proteomics QC outputs and decide whether the dataset is ready for differential abundance analysis.",
+      "Summarize the assay-level QC checks that matter most before drawing quantitative protein conclusions."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/proteomics/proteomics-qc/SKILL.md"],
+    "match_aliases": ["proteomics-qc", "proteomics qc"],
+    "source_roots": ["proteomics/proteomics-qc"]
+  },
+  {
+    "id": "bio-proteomics-peptide-identification",
+    "title": "Peptide identification",
+    "skill_type": "atomic",
+    "domain": "proteomics",
+    "task": "peptide-identification",
+    "summary": "Identify peptides with explicit search-space, FDR, and modification assumptions that stay visible downstream.",
+    "tags": ["proteomics", "peptides", "identification", "search"],
+    "trigger_keywords": ["peptide identification", "database search", "PSM", "search FDR"],
+    "related_skills": ["bio-proteomics-quantification", "bio-workflows-proteomics-differential"],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan a peptide-identification stage and explain what search and FDR settings must be fixed before quantification.",
+      "Tell me how you would keep peptide-identification provenance visible for downstream protein-level analysis."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/proteomics/peptide-identification/SKILL.md"],
+    "match_aliases": ["peptide-identification", "peptide identification"],
+    "source_roots": ["proteomics/peptide-identification"]
+  },
+  {
+    "id": "bio-proteomics-quantification",
+    "title": "Proteomics quantification",
+    "skill_type": "atomic",
+    "domain": "proteomics",
+    "task": "protein-quantification",
+    "summary": "Quantify proteins with explicit normalization, rollup, and missing-value handling decisions.",
+    "tags": ["proteomics", "quantification", "protein abundance", "normalization"],
+    "trigger_keywords": ["proteomics quantification", "protein quantification", "label-free quant", "protein abundance"],
+    "related_skills": ["bio-proteomics-differential-abundance", "bio-workflows-proteomics-differential"],
+    "depends_on": ["bio-proteomics-peptide-identification"],
+    "test_prompts": [
+      "Plan a proteomics quantification stage and explain what normalization or rollup choices matter most downstream.",
+      "Summarize how you would prepare protein-level abundance outputs for differential analysis."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/proteomics/quantification/SKILL.md"],
+    "match_aliases": ["quantification", "protein quantification", "proteomics quantification"],
+    "source_roots": ["proteomics/quantification"]
+  },
+  {
+    "id": "bio-proteomics-differential-abundance",
+    "title": "Proteomics differential abundance",
+    "skill_type": "atomic",
+    "domain": "proteomics",
+    "task": "differential-abundance",
+    "summary": "Perform replicate-aware differential-abundance analysis for proteomics data with explicit normalization and missingness caveats.",
+    "tags": ["proteomics", "differential abundance", "protein changes", "statistics"],
+    "trigger_keywords": ["differential abundance", "proteomics differential", "protein changes", "mass-spec differential"],
+    "related_skills": ["bio-proteomics-quantification", "bio-workflows-proteomics-differential"],
+    "depends_on": ["bio-proteomics-proteomics-qc", "bio-proteomics-quantification"],
+    "test_prompts": [
+      "Design a proteomics differential-abundance analysis and explain what QC and normalization assumptions must already be satisfied.",
+      "Tell me how you would explain the main risks when reporting differential protein findings from noisy or sparse data."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/proteomics/differential-abundance/SKILL.md"],
+    "match_aliases": ["differential-abundance", "proteomics differential abundance"],
+    "source_roots": ["proteomics/differential-abundance"]
+  },
+  {
+    "id": "bio-proteomics-affinity-proteomics",
+    "title": "Affinity proteomics",
+    "skill_type": "atomic",
+    "domain": "proteomics",
+    "task": "affinity-proteomics",
+    "summary": "Analyze affinity-based proteomics panels with explicit assay-unit interpretation and platform-specific limitations.",
+    "tags": ["proteomics", "affinity proteomics", "Olink", "SomaScan"],
+    "trigger_keywords": ["affinity proteomics", "Olink", "SomaScan", "NPX"],
+    "related_skills": ["bio-proteomics-differential-abundance", "bio-workflows-proteomics-differential"],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan an affinity-proteomics analysis and explain how platform-specific units affect downstream interpretation.",
+      "Summarize what makes affinity-proteomics results different from mass-spectrometry proteomics in a reporting workflow."
+    ],
+    "canonical_of_extra": ["ClawBio/ClawBio:ClawBio-main/skills/affinity-proteomics/SKILL.md"],
+    "match_aliases": ["affinity-proteomics", "affinity proteomics", "olink", "somascan"],
+    "source_roots": ["affinity-proteomics"]
+  },
+  {
+    "id": "bio-workflows-proteomics-differential",
+    "title": "Proteomics differential workflow",
+    "skill_type": "workflow",
+    "domain": "proteomics",
+    "task": "workflow",
+    "summary": "Coordinate proteomics analysis from peptide identification or panel QC through quantification and differential abundance.",
+    "tags": ["workflow", "proteomics", "differential abundance", "pipeline"],
+    "trigger_keywords": ["proteomics workflow", "protein differential workflow", "mass-spec pipeline", "proteomics end to end"],
+    "related_skills": [],
+    "depends_on": [
+      "bio-proteomics-proteomics-qc",
+      "bio-proteomics-peptide-identification",
+      "bio-proteomics-quantification",
+      "bio-proteomics-differential-abundance",
+      "bio-proteomics-affinity-proteomics"
+    ],
+    "test_prompts": [
+      "Outline a proteomics workflow and show how you would branch between classic mass-spec quantification and affinity-proteomics paths.",
+      "Adapt a proteomics workflow when the user only needs QC and differential abundance from an existing protein matrix."
+    ],
+    "canonical_of_extra": [],
+    "match_aliases": ["proteomics workflow", "proteomics pipeline"],
+    "source_roots": []
+  },
+  {
+    "id": "bio-population-genetics-population-structure",
+    "title": "Population structure analysis",
+    "skill_type": "atomic",
+    "domain": "population-genetics",
+    "task": "population-structure",
+    "summary": "Characterize cohort structure and ancestry-related variation before association or comparative interpretation.",
+    "tags": ["population genetics", "structure", "ancestry", "PCA"],
+    "trigger_keywords": ["population structure", "ancestry PCA", "cohort structure", "genetic PCs"],
+    "related_skills": ["bio-population-genetics-association-testing", "bio-workflows-popgen-association"],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan a population-structure analysis and explain how it should gate downstream association testing.",
+      "Tell me how you would summarize ancestry-related structure without overstating discrete population labels."
+    ],
+    "canonical_of_extra": [
+      "GPTomics/bioSkills:bioSkills-main/population-genetics/population-structure/SKILL.md",
+      "ClawBio/ClawBio:ClawBio-main/skills/claw-ancestry-pca/SKILL.md"
+    ],
+    "match_aliases": ["population-structure", "claw-ancestry-pca", "ancestry pca"],
+    "source_roots": ["population-genetics/population-structure", "claw-ancestry-pca"]
+  },
+  {
+    "id": "bio-population-genetics-association-testing",
+    "title": "Population-genetic association testing",
+    "skill_type": "atomic",
+    "domain": "population-genetics",
+    "task": "association-testing",
+    "summary": "Run cohort-aware association testing with explicit phenotype, covariate, and ancestry-adjustment assumptions.",
+    "tags": ["population genetics", "association", "GWAS", "covariates"],
+    "trigger_keywords": ["association testing", "GWAS analysis", "population association", "genetic association"],
+    "related_skills": ["bio-population-genetics-gwas-prs", "bio-workflows-popgen-association"],
+    "depends_on": ["bio-population-genetics-population-structure"],
+    "test_prompts": [
+      "Design an association-testing workflow and explain what phenotype and covariate definitions must be validated first.",
+      "Summarize the main QC and confounding checks before trusting association results in a mixed-ancestry cohort."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/population-genetics/association-testing/SKILL.md"],
+    "match_aliases": ["association-testing", "gwas analysis", "association testing"],
+    "source_roots": ["population-genetics/association-testing"]
+  },
+  {
+    "id": "bio-population-genetics-gwas-prs",
+    "title": "GWAS to PRS translation",
+    "skill_type": "atomic",
+    "domain": "population-genetics",
+    "task": "gwas-prs",
+    "summary": "Translate association summary statistics into polygenic-risk-score workflows with explicit ancestry and calibration caveats.",
+    "tags": ["population genetics", "PRS", "GWAS", "risk score"],
+    "trigger_keywords": ["GWAS to PRS", "polygenic risk score", "PRS construction", "genetic risk score"],
+    "related_skills": ["bio-population-genetics-fine-mapping", "bio-workflows-popgen-association"],
+    "depends_on": ["bio-population-genetics-association-testing"],
+    "test_prompts": [
+      "Plan a GWAS-to-PRS workflow and explain what ancestry and calibration assumptions must be explicit before reporting scores.",
+      "Tell me how you would explain the portability limits of a PRS across cohorts."
+    ],
+    "canonical_of_extra": ["ClawBio/ClawBio:ClawBio-main/skills/gwas-prs/SKILL.md"],
+    "match_aliases": ["gwas-prs", "polygenic risk score", "prs"],
+    "source_roots": ["gwas-prs"]
+  },
+  {
+    "id": "bio-population-genetics-fine-mapping",
+    "title": "Population-genetic fine mapping",
+    "skill_type": "atomic",
+    "domain": "population-genetics",
+    "task": "fine-mapping",
+    "summary": "Perform locus-level fine mapping with explicit LD-reference and credible-set assumptions.",
+    "tags": ["population genetics", "fine mapping", "credible sets", "LD"],
+    "trigger_keywords": ["fine mapping", "credible set", "causal variants", "LD reference"],
+    "related_skills": ["bio-population-genetics-association-testing", "bio-workflows-popgen-association"],
+    "depends_on": ["bio-population-genetics-association-testing"],
+    "test_prompts": [
+      "Design a fine-mapping analysis and explain how you would validate that the LD reference is compatible with the discovery cohort.",
+      "Summarize what makes a credible set interpretable or misleading in a fine-mapping result."
+    ],
+    "canonical_of_extra": ["ClawBio/ClawBio:ClawBio-main/skills/fine-mapping/SKILL.md"],
+    "match_aliases": ["fine-mapping", "fine mapping", "credible set"],
+    "source_roots": ["fine-mapping"]
+  },
+  {
+    "id": "bio-population-genetics-mendelian-randomisation",
+    "title": "Mendelian randomisation",
+    "skill_type": "atomic",
+    "domain": "population-genetics",
+    "task": "mendelian-randomisation",
+    "summary": "Run Mendelian-randomisation analyses with explicit instrument, harmonization, and sensitivity-analysis assumptions.",
+    "tags": ["population genetics", "Mendelian randomisation", "causal inference", "instruments"],
+    "trigger_keywords": ["Mendelian randomisation", "MR analysis", "genetic instruments", "causal inference"],
+    "related_skills": ["bio-population-genetics-association-testing", "bio-workflows-popgen-association"],
+    "depends_on": ["bio-population-genetics-association-testing"],
+    "test_prompts": [
+      "Plan a Mendelian-randomisation analysis and explain what instrument-validity checks you would require before causal claims.",
+      "Tell me how you would summarize MR sensitivity analyses without overstating causality."
+    ],
+    "canonical_of_extra": ["ClawBio/ClawBio:ClawBio-main/skills/mendelian-randomisation/SKILL.md"],
+    "match_aliases": ["mendelian-randomisation", "mendelian randomisation", "mr analysis"],
+    "source_roots": ["mendelian-randomisation"]
+  },
+  {
+    "id": "bio-population-genetics-archaic-introgression",
+    "title": "Archaic introgression analysis",
+    "skill_type": "atomic",
+    "domain": "population-genetics",
+    "task": "archaic-introgression",
+    "summary": "Detect and summarize archaic-introgressed segments with explicit reference-panel and ancestry-context assumptions.",
+    "tags": ["population genetics", "introgression", "ancestry", "segments"],
+    "trigger_keywords": ["archaic introgression", "Neanderthal DNA", "Denisovan ancestry", "introgressed segments"],
+    "related_skills": ["bio-population-genetics-population-structure", "bio-workflows-phylogenomics"],
+    "depends_on": ["bio-population-genetics-population-structure"],
+    "test_prompts": [
+      "Plan an archaic-introgression analysis and explain what references and cohort context are required before interpreting segments.",
+      "Summarize the main ways introgression inference can be confounded by ancestry structure or reference mismatch."
+    ],
+    "canonical_of_extra": ["ClawBio/ClawBio:ClawBio-main/skills/archaic-introgression/SKILL.md"],
+    "match_aliases": ["archaic-introgression", "archaic introgression", "introgressed segments"],
+    "source_roots": ["archaic-introgression"]
+  },
+  {
+    "id": "bio-phylogenetics-tree-inference",
+    "title": "Phylogenetic tree inference",
+    "skill_type": "atomic",
+    "domain": "phylogenetics",
+    "task": "tree-inference",
+    "summary": "Infer phylogenetic trees with explicit alignment, model, rooting, and branch-support assumptions.",
+    "tags": ["phylogenetics", "trees", "evolution", "topology"],
+    "trigger_keywords": ["tree inference", "phylogenetic tree", "species tree", "topology inference"],
+    "related_skills": ["bio-phylogenetics-divergence-dating", "bio-workflows-phylogenomics"],
+    "depends_on": [],
+    "test_prompts": [
+      "Design a tree-inference analysis and explain what model, rooting, and support assumptions must be stated before interpretation.",
+      "Tell me how you would summarize uncertainty when a phylogenetic topology is only weakly supported."
+    ],
+    "canonical_of_extra": [
+      "GPTomics/bioSkills:bioSkills-main/phylogenetics/species-trees/SKILL.md",
+      "GPTomics/bioSkills:bioSkills-main/phylogenetics/bayesian-inference/SKILL.md"
+    ],
+    "match_aliases": ["species-trees", "bayesian-inference", "tree inference", "species tree"],
+    "source_roots": ["phylogenetics/species-trees", "phylogenetics/bayesian-inference"]
+  },
+  {
+    "id": "bio-phylogenetics-divergence-dating",
+    "title": "Phylogenetic divergence dating",
+    "skill_type": "atomic",
+    "domain": "phylogenetics",
+    "task": "divergence-dating",
+    "summary": "Estimate divergence timing with explicit calibration, temporal-signal, and uncertainty assumptions.",
+    "tags": ["phylogenetics", "dating", "divergence", "calibration"],
+    "trigger_keywords": ["divergence dating", "phylogenetic dating", "time tree", "calibration points"],
+    "related_skills": ["bio-phylogenetics-tree-inference", "bio-workflows-phylogenomics"],
+    "depends_on": ["bio-phylogenetics-tree-inference"],
+    "test_prompts": [
+      "Plan a divergence-dating analysis and explain what calibrations or sampling-time information you need before reporting dates.",
+      "Summarize how you would communicate uncertainty in phylogenetic dating results."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/phylogenetics/divergence-dating/SKILL.md"],
+    "match_aliases": ["divergence-dating", "divergence dating", "time tree"],
+    "source_roots": ["phylogenetics/divergence-dating"]
+  },
+  {
+    "id": "bio-workflows-popgen-association",
+    "title": "Population-genetics association workflow",
+    "skill_type": "workflow",
+    "domain": "population-genetics",
+    "task": "workflow",
+    "summary": "Coordinate cohort structure, association, PRS, fine-mapping, and Mendelian-randomisation tasks in one population-genetics workflow.",
+    "tags": ["workflow", "population genetics", "association", "GWAS"],
+    "trigger_keywords": ["population-genetics workflow", "GWAS pipeline", "association workflow", "PRS workflow"],
+    "related_skills": [],
+    "depends_on": [
+      "bio-population-genetics-population-structure",
+      "bio-population-genetics-association-testing",
+      "bio-population-genetics-gwas-prs",
+      "bio-population-genetics-fine-mapping",
+      "bio-population-genetics-mendelian-randomisation"
+    ],
+    "test_prompts": [
+      "Outline a population-genetics association workflow and show where you would stop for cohort structure, association, PRS, and fine-mapping QC gates.",
+      "Adapt a population-genetics workflow for a project that stops after association testing and does not continue to PRS or MR."
+    ],
+    "canonical_of_extra": [],
+    "match_aliases": ["population genetics workflow", "association workflow", "gwas pipeline"],
+    "source_roots": []
+  },
+  {
+    "id": "bio-workflows-phylogenomics",
+    "title": "Phylogenomics workflow",
+    "skill_type": "workflow",
+    "domain": "phylogenetics",
+    "task": "workflow",
+    "summary": "Coordinate phylogenetic tree inference, divergence dating, and related comparative-evolution interpretation with explicit uncertainty gates.",
+    "tags": ["workflow", "phylogenomics", "phylogenetics", "evolution"],
+    "trigger_keywords": ["phylogenomics workflow", "phylogenetics pipeline", "evolutionary workflow", "tree plus dating workflow"],
+    "related_skills": [],
+    "depends_on": [
+      "bio-phylogenetics-tree-inference",
+      "bio-phylogenetics-divergence-dating",
+      "bio-population-genetics-archaic-introgression"
+    ],
+    "test_prompts": [
+      "Outline a phylogenomics workflow and explain where topology support and dating uncertainty should stop downstream interpretation.",
+      "Adapt a phylogenomics workflow for a project that only needs a support-aware tree and not divergence dating."
+    ],
+    "canonical_of_extra": [],
+    "match_aliases": ["phylogenomics workflow", "phylogenetics workflow", "tree and dating workflow"],
+    "source_roots": []
+  },
+  {
+    "id": "bio-hi-c-analysis-hic-data-io",
+    "title": "Hi-C data IO",
+    "skill_type": "atomic",
+    "domain": "hi-c-analysis",
+    "task": "hic-data-io",
+    "summary": "Prepare Hi-C matrices and related assets for downstream structural analysis with explicit resolution and normalization provenance.",
+    "tags": ["Hi-C", "data IO", "matrices", "cooler"],
+    "trigger_keywords": ["Hi-C IO", "cool file", "contact matrix import", "Hi-C matrix preparation"],
+    "related_skills": ["bio-hi-c-analysis-compartment-analysis", "bio-workflows-hic-pipeline"],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan a Hi-C data-preparation stage and explain what matrix, resolution, and normalization metadata must be preserved for downstream analysis.",
+      "Summarize the compatibility checks you would perform before handing Hi-C matrices to structural-analysis skills."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/hi-c-analysis/hic-data-io/SKILL.md"],
+    "match_aliases": ["hic-data-io", "Hi-C IO", "contact matrix import"],
+    "source_roots": ["hi-c-analysis/hic-data-io"]
+  },
+  {
+    "id": "bio-hi-c-analysis-compartment-analysis",
+    "title": "Hi-C compartment analysis",
+    "skill_type": "atomic",
+    "domain": "hi-c-analysis",
+    "task": "compartment-analysis",
+    "summary": "Infer and compare chromatin compartments from Hi-C data with explicit sign, resolution, and normalization assumptions.",
+    "tags": ["Hi-C", "compartments", "A/B compartments", "chromatin"],
+    "trigger_keywords": ["compartment analysis", "A/B compartments", "Hi-C eigenvectors", "compartment switch"],
+    "related_skills": ["bio-hi-c-analysis-visualization", "bio-workflows-hic-pipeline"],
+    "depends_on": ["bio-hi-c-analysis-hic-data-io"],
+    "test_prompts": [
+      "Design a Hi-C compartment-analysis stage and explain how you would keep sign and annotation choices traceable.",
+      "Tell me what matrix or resolution problems would make compartment calls too unstable to interpret."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/hi-c-analysis/compartment-analysis/SKILL.md"],
+    "match_aliases": ["compartment-analysis", "compartment analysis", "A/B compartments"],
+    "source_roots": ["hi-c-analysis/compartment-analysis"]
+  },
+  {
+    "id": "bio-hi-c-analysis-tad-detection",
+    "title": "Hi-C TAD detection",
+    "skill_type": "atomic",
+    "domain": "hi-c-analysis",
+    "task": "tad-detection",
+    "summary": "Detect topologically associating domains from Hi-C matrices with explicit resolution and stability caveats.",
+    "tags": ["Hi-C", "TADs", "domains", "chromatin structure"],
+    "trigger_keywords": ["TAD detection", "domain calling", "Hi-C domains", "TAD boundaries"],
+    "related_skills": ["bio-hi-c-analysis-visualization", "bio-workflows-hic-pipeline"],
+    "depends_on": ["bio-hi-c-analysis-hic-data-io"],
+    "test_prompts": [
+      "Plan a TAD-detection analysis and explain what resolution and QC assumptions must be met before you trust domain boundaries.",
+      "Summarize how you would communicate uncertainty in TAD boundaries from sparse Hi-C data."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/hi-c-analysis/tad-detection/SKILL.md"],
+    "match_aliases": ["tad-detection", "TAD detection", "domain calling"],
+    "source_roots": ["hi-c-analysis/tad-detection"]
+  },
+  {
+    "id": "bio-hi-c-analysis-loop-calling",
+    "title": "Hi-C loop calling",
+    "skill_type": "atomic",
+    "domain": "hi-c-analysis",
+    "task": "loop-calling",
+    "summary": "Call chromatin loops from Hi-C matrices with explicit support-evidence, resolution, and sparsity assumptions.",
+    "tags": ["Hi-C", "loops", "loop calling", "chromatin interactions"],
+    "trigger_keywords": ["loop calling", "chromatin loops", "Hi-C loops", "interaction peaks"],
+    "related_skills": ["bio-hi-c-analysis-visualization", "bio-workflows-hic-pipeline"],
+    "depends_on": ["bio-hi-c-analysis-hic-data-io"],
+    "test_prompts": [
+      "Design a Hi-C loop-calling stage and explain what matrix properties must be satisfied before reporting loops.",
+      "Tell me how you would avoid overstating loop evidence when matrices are sparse or poorly replicated."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/hi-c-analysis/loop-calling/SKILL.md"],
+    "match_aliases": ["loop-calling", "loop calling", "Hi-C loops"],
+    "source_roots": ["hi-c-analysis/loop-calling"]
+  },
+  {
+    "id": "bio-hi-c-analysis-differential-contact",
+    "title": "Hi-C differential contact analysis",
+    "skill_type": "atomic",
+    "domain": "hi-c-analysis",
+    "task": "differential-contact",
+    "summary": "Compare Hi-C contact structure across groups with explicit resolution, normalization, and matched-sample assumptions.",
+    "tags": ["Hi-C", "differential contacts", "comparison", "contact matrices"],
+    "trigger_keywords": ["differential contacts", "Hi-C comparison", "contact differences", "matrix comparison"],
+    "related_skills": ["bio-hi-c-analysis-visualization", "bio-workflows-hic-pipeline"],
+    "depends_on": ["bio-hi-c-analysis-hic-data-io"],
+    "test_prompts": [
+      "Plan a differential-contact analysis and explain what matrix-normalization and replicate checks must be completed first.",
+      "Summarize the main risks when comparing Hi-C contacts across conditions at the wrong resolution."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/hi-c-analysis/hic-differential/SKILL.md"],
+    "match_aliases": ["hic-differential", "differential contacts", "Hi-C comparison"],
+    "source_roots": ["hi-c-analysis/hic-differential"]
+  },
+  {
+    "id": "bio-hi-c-analysis-visualization",
+    "title": "Hi-C visualization",
+    "skill_type": "atomic",
+    "domain": "hi-c-analysis",
+    "task": "visualization",
+    "summary": "Render Hi-C matrices and structural results in a way that preserves resolution, normalization, and feature provenance.",
+    "tags": ["Hi-C", "visualization", "heatmaps", "chromatin"],
+    "trigger_keywords": ["Hi-C visualization", "contact heatmap", "matrix heatmap", "chromatin structure plots"],
+    "related_skills": ["bio-hi-c-analysis-compartment-analysis", "bio-workflows-hic-pipeline"],
+    "depends_on": ["bio-hi-c-analysis-hic-data-io"],
+    "test_prompts": [
+      "Create a visualization plan for Hi-C matrices and explain what contextual metadata must stay visible in the figure output.",
+      "Tell me how you would present Hi-C structural features without implying more precision than the matrix supports."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/hi-c-analysis/hic-visualization/SKILL.md"],
+    "match_aliases": ["hic-visualization", "Hi-C visualization", "contact heatmap"],
+    "source_roots": ["hi-c-analysis/hic-visualization"]
+  },
+  {
+    "id": "bio-workflows-hic-pipeline",
+    "title": "Hi-C workflow",
+    "skill_type": "workflow",
+    "domain": "hi-c-analysis",
+    "task": "workflow",
+    "summary": "Coordinate Hi-C data preparation, structural feature calling, visualization, and differential-contact interpretation.",
+    "tags": ["workflow", "Hi-C", "chromatin structure", "pipeline"],
+    "trigger_keywords": ["Hi-C workflow", "chromatin interaction pipeline", "Hi-C pipeline", "Hi-C end to end"],
+    "related_skills": [],
+    "depends_on": [
+      "bio-hi-c-analysis-hic-data-io",
+      "bio-hi-c-analysis-compartment-analysis",
+      "bio-hi-c-analysis-tad-detection",
+      "bio-hi-c-analysis-loop-calling",
+      "bio-hi-c-analysis-differential-contact",
+      "bio-hi-c-analysis-visualization"
+    ],
+    "test_prompts": [
+      "Outline a Hi-C workflow and show how you would branch between compartment, TAD, loop, and differential-contact analyses.",
+      "Adapt a Hi-C workflow for a project that only needs matrix visualization and compartment-level interpretation."
+    ],
+    "canonical_of_extra": [],
+    "match_aliases": ["Hi-C workflow", "Hi-C pipeline", "chromatin interaction workflow"],
+    "source_roots": []
+  },
+  {
+    "id": "bio-variant-calling-copy-number-analysis",
+    "title": "Copy-number analysis",
+    "skill_type": "atomic",
+    "domain": "variant-calling",
+    "task": "copy-number-analysis",
+    "summary": "Run copy-number analysis with explicit segmentation, baseline, and sample-context assumptions.",
+    "tags": ["variants", "copy number", "CNV", "segmentation"],
+    "trigger_keywords": ["copy-number analysis", "CNV analysis", "segmentation", "CNVkit"],
+    "related_skills": ["bio-variant-calling-copy-number-visualization", "bio-workflows-fastq-to-variants"],
+    "depends_on": [],
+    "test_prompts": [
+      "Design a copy-number analysis and explain what sample context and segmentation assumptions must be fixed before interpretation.",
+      "Tell me how you would communicate uncertainty in noisy copy-number profiles."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/copy-number/cnvkit-analysis/SKILL.md"],
+    "match_aliases": ["cnvkit-analysis", "copy-number analysis", "cnv analysis"],
+    "source_roots": ["copy-number/cnvkit-analysis"]
+  },
+  {
+    "id": "bio-variant-calling-copy-number-visualization",
+    "title": "Copy-number visualization",
+    "skill_type": "atomic",
+    "domain": "variant-calling",
+    "task": "copy-number-visualization",
+    "summary": "Visualize copy-number events while preserving segmentation, scale, and threshold provenance.",
+    "tags": ["variants", "copy number", "visualization", "CNV"],
+    "trigger_keywords": ["copy-number visualization", "CNV plots", "copy-number heatmap", "segment plot"],
+    "related_skills": ["bio-variant-calling-copy-number-analysis", "bio-workflows-fastq-to-variants"],
+    "depends_on": ["bio-variant-calling-copy-number-analysis"],
+    "test_prompts": [
+      "Create a copy-number visualization plan and explain what plotting choices could mislead interpretation if baselines are unclear.",
+      "Summarize how you would prepare a copy-number figure for review without hiding segmentation assumptions."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/copy-number/cnv-visualization/SKILL.md"],
+    "match_aliases": ["cnv-visualization", "copy-number visualization", "CNV plots"],
+    "source_roots": ["copy-number/cnv-visualization"]
+  },
+  {
+    "id": "bio-variant-calling-hla-typing",
+    "title": "HLA typing",
+    "skill_type": "atomic",
+    "domain": "variant-calling",
+    "task": "hla-typing",
+    "summary": "Call and summarize HLA alleles with explicit assay, resolution, and ambiguity handling.",
+    "tags": ["variants", "HLA", "typing", "immunogenetics"],
+    "trigger_keywords": ["HLA typing", "immunogenetics", "HLA alleles", "HLA calls"],
+    "related_skills": ["bio-variant-calling-clinical-interpretation", "bio-workflows-fastq-to-variants"],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan an HLA-typing analysis and explain what sequencing and reporting assumptions must be fixed before summarizing alleles.",
+      "Tell me how you would communicate ambiguity and confidence in HLA-typing results."
+    ],
+    "canonical_of_extra": [
+      "GPTomics/bioSkills:bioSkills-main/clinical-databases/hla-typing/SKILL.md",
+      "ClawBio/ClawBio:ClawBio-main/skills/hla-typing/SKILL.md"
+    ],
+    "match_aliases": ["hla-typing", "HLA typing", "HLA alleles"],
+    "source_roots": ["clinical-databases/hla-typing", "hla-typing"]
+  },
+  {
+    "id": "bio-crispr-screens-screen-qc",
+    "title": "CRISPR screen QC",
+    "skill_type": "atomic",
+    "domain": "crispr-screens",
+    "task": "screen-qc",
+    "summary": "Review CRISPR-screen library representation, control behavior, and replicate stability before scoring hits.",
+    "tags": ["CRISPR", "screen QC", "guides", "controls"],
+    "trigger_keywords": ["CRISPR screen QC", "guide coverage", "screen controls", "library representation"],
+    "related_skills": ["bio-crispr-screens-hit-calling", "bio-workflows-crispr-screen-pipeline"],
+    "depends_on": [],
+    "test_prompts": [
+      "Interpret these CRISPR-screen QC outputs and decide whether hit calling should proceed.",
+      "Summarize the QC gates that matter most before trusting a pooled CRISPR screen."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/crispr-screens/screen-qc/SKILL.md"],
+    "match_aliases": ["screen-qc", "CRISPR screen QC", "guide coverage"],
+    "source_roots": ["crispr-screens/screen-qc"]
+  },
+  {
+    "id": "bio-crispr-screens-library-design",
+    "title": "CRISPR library design",
+    "skill_type": "atomic",
+    "domain": "crispr-screens",
+    "task": "library-design",
+    "summary": "Plan CRISPR library design with explicit modality, control, and sequence-constraint assumptions.",
+    "tags": ["CRISPR", "library design", "guides", "screen design"],
+    "trigger_keywords": ["CRISPR library design", "guide library", "screen design", "guide controls"],
+    "related_skills": ["bio-crispr-screens-screen-qc", "bio-workflows-crispr-screen-pipeline"],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan a CRISPR library design and explain what target, control, and sequence constraints must be fixed before synthesis.",
+      "Tell me how you would document library-design assumptions so downstream screen analysis stays reproducible."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/crispr-screens/library-design/SKILL.md"],
+    "match_aliases": ["library-design", "CRISPR library design", "guide library"],
+    "source_roots": ["crispr-screens/library-design"]
+  },
+  {
+    "id": "bio-crispr-screens-editing-outcome-analysis",
+    "title": "CRISPR editing outcome analysis",
+    "skill_type": "atomic",
+    "domain": "crispr-screens",
+    "task": "editing-outcome-analysis",
+    "summary": "Analyze CRISPR editing outcomes with explicit amplicon, alignment, and modality-aware assumptions.",
+    "tags": ["CRISPR", "editing outcomes", "amplicons", "base editing"],
+    "trigger_keywords": ["editing outcome analysis", "CRISPResso", "base editing analysis", "indel spectrum"],
+    "related_skills": ["bio-crispr-screens-library-design", "bio-workflows-crispr-screen-pipeline"],
+    "depends_on": [],
+    "test_prompts": [
+      "Design an editing-outcome analysis and explain what amplicon or reference information is required before interpreting the result.",
+      "Summarize how you would analyze CRISPR editing outcomes without overstating noisy or low-depth calls."
+    ],
+    "canonical_of_extra": [
+      "GPTomics/bioSkills:bioSkills-main/crispr-screens/crispresso-editing/SKILL.md",
+      "GPTomics/bioSkills:bioSkills-main/crispr-screens/base-editing-analysis/SKILL.md"
+    ],
+    "match_aliases": ["crispresso-editing", "base-editing-analysis", "editing outcome analysis"],
+    "source_roots": ["crispr-screens/crispresso-editing", "crispr-screens/base-editing-analysis"]
+  },
+  {
+    "id": "bio-crispr-screens-hit-calling",
+    "title": "CRISPR screen hit calling",
+    "skill_type": "atomic",
+    "domain": "crispr-screens",
+    "task": "hit-calling",
+    "summary": "Call CRISPR screen hits with explicit control, replicate, and scoring assumptions.",
+    "tags": ["CRISPR", "hit calling", "screen hits", "guides"],
+    "trigger_keywords": ["CRISPR hit calling", "screen hits", "guide ranking", "screen scoring"],
+    "related_skills": ["bio-crispr-screens-gene-level-scoring", "bio-workflows-crispr-screen-pipeline"],
+    "depends_on": ["bio-crispr-screens-screen-qc"],
+    "test_prompts": [
+      "Plan a CRISPR screen hit-calling stage and explain what controls and replicate checks must already be satisfied.",
+      "Tell me how you would explain the main failure modes that make a screen-hit list unreliable."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/crispr-screens/hit-calling/SKILL.md"],
+    "match_aliases": ["hit-calling", "CRISPR hit calling", "screen hits"],
+    "source_roots": ["crispr-screens/hit-calling"]
+  },
+  {
+    "id": "bio-crispr-screens-gene-level-scoring",
+    "title": "CRISPR gene-level scoring",
+    "skill_type": "atomic",
+    "domain": "crispr-screens",
+    "task": "gene-level-scoring",
+    "summary": "Aggregate guide-level evidence into gene-level screen scores with explicit model and concordance assumptions.",
+    "tags": ["CRISPR", "gene-level scoring", "guides", "JACKS"],
+    "trigger_keywords": ["gene-level scoring", "JACKS", "guide aggregation", "gene screen scores"],
+    "related_skills": ["bio-crispr-screens-hit-calling", "bio-workflows-crispr-screen-pipeline"],
+    "depends_on": ["bio-crispr-screens-hit-calling"],
+    "test_prompts": [
+      "Plan a gene-level scoring step for a CRISPR screen and explain how you would validate guide concordance before trusting gene scores.",
+      "Summarize how gene-level scoring differs from simple guide ranking in a pooled CRISPR screen."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/crispr-screens/jacks-analysis/SKILL.md"],
+    "match_aliases": ["jacks-analysis", "gene-level scoring", "guide aggregation"],
+    "source_roots": ["crispr-screens/jacks-analysis"]
+  },
+  {
+    "id": "bio-workflows-crispr-screen-pipeline",
+    "title": "CRISPR screen workflow",
+    "skill_type": "workflow",
+    "domain": "crispr-screens",
+    "task": "workflow",
+    "summary": "Coordinate CRISPR screen design, QC, editing-outcome review, hit calling, and gene-level scoring.",
+    "tags": ["workflow", "CRISPR", "screens", "pipeline"],
+    "trigger_keywords": ["CRISPR screen workflow", "screen pipeline", "pooled screen workflow", "CRISPR end to end"],
+    "related_skills": [],
+    "depends_on": [
+      "bio-crispr-screens-screen-qc",
+      "bio-crispr-screens-library-design",
+      "bio-crispr-screens-editing-outcome-analysis",
+      "bio-crispr-screens-hit-calling",
+      "bio-crispr-screens-gene-level-scoring"
+    ],
+    "test_prompts": [
+      "Outline a CRISPR-screen workflow and show where you would stop for library, QC, editing-outcome, and hit-calling gates.",
+      "Adapt a CRISPR-screen workflow for a project that only needs QC and hit calling from an existing guide-count matrix."
+    ],
+    "canonical_of_extra": [],
+    "match_aliases": ["CRISPR workflow", "screen workflow", "pooled screen pipeline"],
+    "source_roots": []
+  },
+  {
+    "id": "bio-multiomics-data-harmonization",
+    "title": "Multi-omics data harmonization",
+    "skill_type": "atomic",
+    "domain": "multiomics",
+    "task": "data-harmonization",
+    "summary": "Harmonize identifiers, metadata, and modality-ready inputs before multi-omic integration or reporting.",
+    "tags": ["multiomics", "harmonization", "integration", "metadata"],
+    "trigger_keywords": ["data harmonization", "multi-omics harmonization", "identifier mapping", "modality alignment"],
+    "related_skills": ["bio-multiomics-integration", "bio-workflows-multiomics-integration"],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan a multi-omics data-harmonization stage and explain what must align before integration can begin safely.",
+      "Summarize the main failure modes that appear when modalities are linked at the wrong unit of analysis."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/multi-omics-integration/data-harmonization/SKILL.md"],
+    "match_aliases": ["data-harmonization", "multi-omics harmonization", "identifier mapping"],
+    "source_roots": ["multi-omics-integration/data-harmonization"]
+  },
+  {
+    "id": "bio-multiomics-integration",
+    "title": "Multi-omics integration",
+    "skill_type": "atomic",
+    "domain": "multiomics",
+    "task": "integration",
+    "summary": "Integrate multiple omics modalities with explicit shared-structure assumptions and modality-balance checks.",
+    "tags": ["multiomics", "integration", "latent factors", "cross-modal"],
+    "trigger_keywords": ["multi-omics integration", "mixOmics", "cross-modal integration", "joint embedding"],
+    "related_skills": ["bio-multiomics-data-harmonization", "bio-workflows-multiomics-integration"],
+    "depends_on": ["bio-multiomics-data-harmonization"],
+    "test_prompts": [
+      "Plan a multi-omics integration analysis and explain how you would validate that the integration preserves rather than erases biology.",
+      "Tell me how you would explain the major risks when one modality dominates a joint multi-omic embedding."
+    ],
+    "canonical_of_extra": [
+      "GPTomics/bioSkills:bioSkills-main/multi-omics-integration/mixomics-analysis/SKILL.md",
+      "GPTomics/bioSkills:bioSkills-main/multi-omics-integration/similarity-network/SKILL.md"
+    ],
+    "match_aliases": ["mixomics-analysis", "similarity-network", "multi-omics integration"],
+    "source_roots": ["multi-omics-integration/mixomics-analysis", "multi-omics-integration/similarity-network"]
+  },
+  {
+    "id": "bio-spatial-transcriptomics-preprocessing",
+    "title": "Spatial transcriptomics preprocessing",
+    "skill_type": "atomic",
+    "domain": "spatial-transcriptomics",
+    "task": "spatial-preprocessing",
+    "summary": "Prepare spatial-transcriptomics inputs with explicit coordinate, image, and spot-level QC provenance.",
+    "tags": ["spatial transcriptomics", "preprocessing", "coordinates", "spots"],
+    "trigger_keywords": ["spatial preprocessing", "Visium preprocessing", "spatial QC", "spot filtering"],
+    "related_skills": ["bio-spatial-transcriptomics-multiomics", "bio-workflows-multiomics-integration"],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan a spatial-transcriptomics preprocessing stage and explain what image and coordinate assets must remain linked.",
+      "Summarize the QC checks that should gate downstream spatial interpretation."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/spatial-transcriptomics/spatial-preprocessing/SKILL.md"],
+    "match_aliases": ["spatial-preprocessing", "spatial preprocessing", "spot filtering"],
+    "source_roots": ["spatial-transcriptomics/spatial-preprocessing"]
+  },
+  {
+    "id": "bio-spatial-transcriptomics-multiomics",
+    "title": "Spatial multi-omics interpretation",
+    "skill_type": "atomic",
+    "domain": "spatial-transcriptomics",
+    "task": "spatial-multiomics",
+    "summary": "Interpret spatial-transcriptomics together with linked modalities while keeping resolution and image-context caveats explicit.",
+    "tags": ["spatial transcriptomics", "multiomics", "coordinates", "images"],
+    "trigger_keywords": ["spatial multiomics", "spatial co-analysis", "spatial plus omics", "image-linked omics"],
+    "related_skills": ["bio-multiomics-integration", "bio-workflows-multiomics-integration"],
+    "depends_on": ["bio-spatial-transcriptomics-preprocessing"],
+    "test_prompts": [
+      "Plan a spatial multi-omics analysis and explain how you would prevent spot-level data from being over-interpreted as single-cell biology.",
+      "Tell me how you would keep image, coordinate, and auxiliary-omic context visible in a spatial co-analysis report."
+    ],
+    "canonical_of_extra": ["GPTomics/bioSkills:bioSkills-main/spatial-transcriptomics/spatial-multiomics/SKILL.md"],
+    "match_aliases": ["spatial-multiomics", "spatial multiomics", "image-linked omics"],
+    "source_roots": ["spatial-transcriptomics/spatial-multiomics"]
+  },
+  {
+    "id": "bio-workflows-multiomics-integration",
+    "title": "Multi-omics integration workflow",
+    "skill_type": "workflow",
+    "domain": "multiomics",
+    "task": "workflow",
+    "summary": "Coordinate data harmonization, multi-omic integration, and spatially linked interpretation across modalities.",
+    "tags": ["workflow", "multiomics", "integration", "spatial"],
+    "trigger_keywords": ["multi-omics workflow", "integration workflow", "cross-modal pipeline", "spatial multiomics workflow"],
+    "related_skills": [],
+    "depends_on": [
+      "bio-multiomics-data-harmonization",
+      "bio-multiomics-integration",
+      "bio-spatial-transcriptomics-preprocessing",
+      "bio-spatial-transcriptomics-multiomics"
+    ],
+    "test_prompts": [
+      "Outline a multi-omics integration workflow and show where harmonization, integration, and spatial interpretation should be gated.",
+      "Adapt a multi-omics workflow for a project that links spatial transcriptomics to one additional modality but stops before formal joint modeling."
+    ],
+    "canonical_of_extra": [],
+    "match_aliases": ["multiomics workflow", "multi-omics workflow", "integration workflow"],
+    "source_roots": []
+  }
+]

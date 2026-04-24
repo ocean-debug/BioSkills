@@ -1,0 +1,17 @@
+{
+  "skill": "bio-reporting-multi-sample-qc-reporting",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a multi-sample QC reporting step and explain how you would keep incompatible metrics from being mixed together."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize the main signals that should appear in an aggregate QC report before downstream analysis continues."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for multi-sample qc reporting before the user treats the result as final."
+    }
+  ]
+}

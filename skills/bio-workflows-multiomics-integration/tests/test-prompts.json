@@ -1,0 +1,13 @@
+{
+  "skill": "bio-workflows-multiomics-integration",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Outline a multi-omics integration workflow and show where harmonization, integration, and spatial interpretation should be gated."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Adapt a multi-omics workflow for a project that links spatial transcriptomics to one additional modality but stops before formal joint modeling."
+    }
+  ]
+}

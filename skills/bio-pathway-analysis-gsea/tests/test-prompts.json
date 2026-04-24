@@ -1,0 +1,13 @@
+{
+  "skill": "bio-pathway-analysis-gsea",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Explain how you would set up GSEA from a full differential-expression ranking."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Tell me what can go wrong if a user gives you only a short thresholded list and asks for GSEA."
+    }
+  ]
+}

@@ -1,0 +1,255 @@
+timestamp	commit	skill	old_score	new_score	status	dimension	note	eval_mode
+2026-04-23T17:09:35+00:00	baseline	bio-alignment-files-alignment-indexing	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-alignment-files-bam-statistics	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-alignment-files-sam-bam-basics	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-alignment-files-short-read-alignment	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-alternative-splicing-differential-splicing	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-atac-seq-atac-qc	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-atac-seq-differential-accessibility	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-atac-seq-motif-analysis	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-atac-seq-peak-calling	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-bulk-rna-seq-batch-correction	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-bulk-rna-seq-count-matrix-qc	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-bulk-rna-seq-differential-expression	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-bulk-rna-seq-quantification	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-bulk-rna-seq-read-qc	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-bulk-rna-seq-visualization	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-chemoinformatics-molecular-descriptors	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-chemoinformatics-similarity-searching	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-chemoinformatics-substructure-search	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-chip-seq-chip-qc	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-chip-seq-differential-binding	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-chip-seq-peak-annotation	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-chip-seq-peak-calling	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-clinical-biostatistics-categorical-tests	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-clinical-biostatistics-cdisc-data-handling	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-clinical-biostatistics-effect-measures	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-clinical-biostatistics-logistic-regression	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-clinical-biostatistics-subgroup-analysis	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-comparative-genomics-ancestral-reconstruction	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-comparative-genomics-hgt-detection	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-comparative-genomics-positive-selection	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-comparative-genomics-synteny-analysis	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-crispr-screens-editing-outcome-analysis	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-crispr-screens-gene-level-scoring	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-crispr-screens-hit-calling	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-crispr-screens-library-design	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-crispr-screens-screen-qc	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-experimental-design-batch-design	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-experimental-design-multiple-testing	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-genome-intervals-coverage-analysis	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-genome-intervals-interval-arithmetic	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-genome-intervals-proximity-operations	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-hi-c-analysis-compartment-analysis	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-hi-c-analysis-differential-contact	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-hi-c-analysis-hic-data-io	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-hi-c-analysis-loop-calling	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-hi-c-analysis-tad-detection	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-hi-c-analysis-visualization	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-literature-research-biomedical-semantic-search	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-literature-research-literature-synthesis	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-literature-research-omics-evidence-mapping	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-literature-research-protocol-discovery	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-literature-research-public-data-discovery	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-literature-research-pubmed-search-and-fetch	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-literature-research-sequence-database-search	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-long-read-sequencing-basecalling	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-long-read-sequencing-consensus-polishing	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-long-read-sequencing-isoseq-analysis	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-long-read-sequencing-long-read-qc	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-long-read-sequencing-structural-variant-calling	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-machine-learning-model-validation	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-machine-learning-prediction-explanation	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-metagenomics-abundance-estimation	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-metagenomics-amr-detection	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-metagenomics-metagenome-assembly	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-metagenomics-strain-tracking	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-metagenomics-taxonomic-profiling	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-methylation-bismark-alignment	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-methylation-calling	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-methylation-dmr-detection	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-methylation-qc	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-multiomics-data-harmonization	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-multiomics-integration	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-pathway-analysis-go-enrichment	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-pathway-analysis-gsea	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-pathway-analysis-reactome-enrichment	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-pathway-analysis-visualization	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-phylogenetics-divergence-dating	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-phylogenetics-tree-inference	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-population-genetics-archaic-introgression	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-population-genetics-association-testing	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-population-genetics-fine-mapping	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-population-genetics-gwas-prs	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-population-genetics-mendelian-randomisation	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-population-genetics-population-structure	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-proteomics-affinity-proteomics	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-proteomics-differential-abundance	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-proteomics-peptide-identification	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-proteomics-proteomics-qc	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-proteomics-quantification	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-reference-resources-cohort-variable-discovery	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-reference-resources-public-dataset-query	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-reference-resources-reference-panels	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-reporting-circos-plots	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-reporting-differential-expression-summary	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-reporting-figure-export	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:35+00:00	baseline	bio-reporting-heatmaps-and-clustering	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-reporting-multi-sample-qc-reporting	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-reporting-multipanel-figures	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-reporting-notebook-reports	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-reporting-rmarkdown-reports	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-reporting-statistical-graphics	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-ribo-seq-orf-detection	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-ribo-seq-riboseq-preprocessing	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-ribo-seq-ribosome-stalling	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-ribo-seq-translation-efficiency	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-sequence-io-batch-processing	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-sequence-io-compressed-sequence-handling	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-sequence-io-fastq-quality	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-sequence-io-format-conversion	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-sequence-io-paired-end-validation	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-sequence-io-read-and-write-sequences	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-sequence-io-sequence-filtering	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-sequence-io-sequence-statistics	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-single-cell-batch-integration	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-single-cell-cell-annotation	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-single-cell-clustering	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-single-cell-differential-expression	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-single-cell-preprocessing	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-single-cell-trajectory-inference	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-spatial-transcriptomics-multiomics	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-spatial-transcriptomics-preprocessing	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-systems-biology-differential-networks	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-variant-calling-clinical-interpretation	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-variant-calling-copy-number-analysis	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-variant-calling-copy-number-visualization	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-variant-calling-hla-typing	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-variant-calling-small-variant-calling	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-variant-calling-structural-variant-calling	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-variant-calling-variant-annotation	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-variant-calling-variant-filtering	-	90	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-workflows-alignment-qc-and-coverage	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-workflows-analysis-reporting	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-workflows-atacseq-pipeline	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-workflows-bio-orchestrator	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-workflows-biomedical-model-evaluation	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-workflows-chemoinformatics-screening	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-workflows-chipseq-pipeline	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-workflows-clinical-biostatistics-analysis	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-workflows-comparative-genomics	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-workflows-crispr-screen-pipeline	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-workflows-expression-to-pathways	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-workflows-fastq-to-variants	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-workflows-hic-pipeline	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-workflows-literature-to-hypothesis	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-workflows-long-read-pipeline	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-workflows-metagenomics-pipeline	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-workflows-methylation-pipeline	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-workflows-multiomics-integration	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-workflows-phylogenomics	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-workflows-popgen-association	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-workflows-proteomics-differential	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-workflows-reference-and-cohort-access	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-workflows-riboseq-pipeline	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-workflows-rnaseq-to-de	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-workflows-scrnaseq-pipeline	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-workflows-sequence-io-preparation	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:36+00:00	baseline	bio-workflows-variant-to-report	-	95	baseline	structure+dry_run	canonical catalog baseline	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-alignment-files-alignment-indexing	90	95	keep	test-prompts	added a third wave-4 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-alignment-files-bam-statistics	90	95	keep	test-prompts	added a third wave-4 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-alignment-files-sam-bam-basics	90	95	keep	test-prompts	added a third wave-4 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-alignment-files-short-read-alignment	90	95	keep	test-prompts	added a third wave-4 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-alternative-splicing-differential-splicing	90	95	keep	test-prompts	added a third wave-4 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-chemoinformatics-molecular-descriptors	90	95	keep	test-prompts	added a third wave-4 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-chemoinformatics-similarity-searching	90	95	keep	test-prompts	added a third wave-4 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-chemoinformatics-substructure-search	90	95	keep	test-prompts	added a third wave-4 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-clinical-biostatistics-categorical-tests	90	95	keep	test-prompts	added a third wave-4 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-clinical-biostatistics-cdisc-data-handling	90	95	keep	test-prompts	added a third wave-4 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-clinical-biostatistics-effect-measures	90	95	keep	test-prompts	added a third wave-4 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-clinical-biostatistics-logistic-regression	90	95	keep	test-prompts	added a third wave-4 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-clinical-biostatistics-subgroup-analysis	90	95	keep	test-prompts	added a third wave-4 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-comparative-genomics-ancestral-reconstruction	90	95	keep	test-prompts	added a third wave-3 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-comparative-genomics-hgt-detection	90	95	keep	test-prompts	added a third wave-3 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-comparative-genomics-positive-selection	90	95	keep	test-prompts	added a third wave-3 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-comparative-genomics-synteny-analysis	90	95	keep	test-prompts	added a third wave-3 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-crispr-screens-editing-outcome-analysis	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-crispr-screens-gene-level-scoring	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-crispr-screens-hit-calling	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-crispr-screens-library-design	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-crispr-screens-screen-qc	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-experimental-design-batch-design	90	95	keep	test-prompts	added a third wave-4 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-experimental-design-multiple-testing	90	95	keep	test-prompts	added a third wave-4 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-genome-intervals-coverage-analysis	90	95	keep	test-prompts	added a third wave-4 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-genome-intervals-interval-arithmetic	90	95	keep	test-prompts	added a third wave-4 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-genome-intervals-proximity-operations	90	95	keep	test-prompts	added a third wave-4 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-hi-c-analysis-compartment-analysis	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-hi-c-analysis-differential-contact	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-hi-c-analysis-hic-data-io	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-hi-c-analysis-loop-calling	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-hi-c-analysis-tad-detection	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-hi-c-analysis-visualization	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-literature-research-biomedical-semantic-search	90	95	keep	test-prompts	added a third wave-3 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-literature-research-literature-synthesis	90	95	keep	test-prompts	added a third wave-3 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-literature-research-omics-evidence-mapping	90	95	keep	test-prompts	added a third wave-3 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-literature-research-protocol-discovery	90	95	keep	test-prompts	added a third wave-3 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-literature-research-public-data-discovery	90	95	keep	test-prompts	added a third wave-3 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-literature-research-pubmed-search-and-fetch	90	95	keep	test-prompts	added a third wave-3 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-literature-research-sequence-database-search	90	95	keep	test-prompts	added a third wave-3 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-long-read-sequencing-basecalling	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-long-read-sequencing-consensus-polishing	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-long-read-sequencing-isoseq-analysis	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-long-read-sequencing-long-read-qc	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-long-read-sequencing-structural-variant-calling	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-machine-learning-model-validation	90	95	keep	test-prompts	added a third wave-4 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-machine-learning-prediction-explanation	90	95	keep	test-prompts	added a third wave-4 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-metagenomics-abundance-estimation	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-metagenomics-amr-detection	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-metagenomics-metagenome-assembly	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-metagenomics-strain-tracking	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-metagenomics-taxonomic-profiling	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-multiomics-data-harmonization	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-multiomics-integration	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-phylogenetics-divergence-dating	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-phylogenetics-tree-inference	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-population-genetics-archaic-introgression	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-population-genetics-association-testing	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-population-genetics-fine-mapping	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-population-genetics-gwas-prs	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-population-genetics-mendelian-randomisation	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-population-genetics-population-structure	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-proteomics-affinity-proteomics	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-proteomics-differential-abundance	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-proteomics-peptide-identification	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-proteomics-proteomics-qc	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-proteomics-quantification	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-reference-resources-cohort-variable-discovery	90	95	keep	test-prompts	added a third wave-5 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-reference-resources-public-dataset-query	90	95	keep	test-prompts	added a third wave-5 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-reference-resources-reference-panels	90	95	keep	test-prompts	added a third wave-5 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-reporting-circos-plots	90	95	keep	test-prompts	added a third wave-4 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-reporting-differential-expression-summary	90	95	keep	test-prompts	added a third wave-4 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-reporting-figure-export	90	95	keep	test-prompts	added a third wave-4 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-reporting-heatmaps-and-clustering	90	95	keep	test-prompts	added a third wave-4 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-reporting-multi-sample-qc-reporting	90	95	keep	test-prompts	added a third wave-4 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-reporting-multipanel-figures	90	95	keep	test-prompts	added a third wave-4 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-reporting-notebook-reports	90	95	keep	test-prompts	added a third wave-4 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-reporting-rmarkdown-reports	90	95	keep	test-prompts	added a third wave-4 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-reporting-statistical-graphics	90	95	keep	test-prompts	added a third wave-4 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-ribo-seq-orf-detection	90	95	keep	test-prompts	added a third wave-3 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-ribo-seq-riboseq-preprocessing	90	95	keep	test-prompts	added a third wave-3 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-ribo-seq-ribosome-stalling	90	95	keep	test-prompts	added a third wave-3 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-ribo-seq-translation-efficiency	90	95	keep	test-prompts	added a third wave-3 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-sequence-io-batch-processing	90	95	keep	test-prompts	added a third wave-3 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-sequence-io-compressed-sequence-handling	90	95	keep	test-prompts	added a third wave-3 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-sequence-io-fastq-quality	90	95	keep	test-prompts	added a third wave-3 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-sequence-io-format-conversion	90	95	keep	test-prompts	added a third wave-3 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-sequence-io-paired-end-validation	90	95	keep	test-prompts	added a third wave-3 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-sequence-io-read-and-write-sequences	90	95	keep	test-prompts	added a third wave-3 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-sequence-io-sequence-filtering	90	95	keep	test-prompts	added a third wave-3 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-sequence-io-sequence-statistics	90	95	keep	test-prompts	added a third wave-3 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-spatial-transcriptomics-multiomics	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-spatial-transcriptomics-preprocessing	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-systems-biology-differential-networks	90	95	keep	test-prompts	added a third wave-5 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-variant-calling-copy-number-analysis	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-variant-calling-copy-number-visualization	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run
+2026-04-23T17:09:43+00:00	darwin-dry-run	bio-variant-calling-hla-typing	90	95	keep	test-prompts	added a third wave-2 atomic dry-run prompt	dry_run

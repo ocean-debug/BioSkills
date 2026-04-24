@@ -1,0 +1,13 @@
+{
+  "skill": "bio-pathway-analysis-go-enrichment",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan GO enrichment for a thresholded DEG set and tell me what background universe you need."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Explain why identifier mapping can distort GO enrichment results."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "skill": "bio-workflows-crispr-screen-pipeline",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Outline a CRISPR-screen workflow and show where you would stop for library, QC, editing-outcome, and hit-calling gates."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Adapt a CRISPR-screen workflow for a project that only needs QC and hit calling from an existing guide-count matrix."
+    }
+  ]
+}

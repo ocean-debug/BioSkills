@@ -1,0 +1,13 @@
+{
+  "skill": "bio-workflows-chemoinformatics-screening",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Outline a chemoinformatics workflow that standardizes molecules, computes features, and then performs similarity and substructure screening."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Adapt a compound-screening workflow for a project that starts from SMILES and ends with a shortlist of interpretable hits."
+    }
+  ]
+}

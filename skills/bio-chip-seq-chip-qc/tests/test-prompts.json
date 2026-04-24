@@ -1,0 +1,13 @@
+{
+  "skill": "bio-chip-seq-chip-qc",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Interpret these ChIP-seq QC summaries and tell me whether peak calling should proceed."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Explain what QC metrics matter most for histone marks versus transcription-factor ChIP."
+    }
+  ]
+}

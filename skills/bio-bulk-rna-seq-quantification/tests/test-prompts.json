@@ -1,0 +1,13 @@
+{
+  "skill": "bio-bulk-rna-seq-quantification",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Choose an appropriate bulk RNA-seq quantification path for paired-end stranded reads and explain the assumptions."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "I have trimmed RNA-seq reads and metadata; prepare the expression quantification stage so DE can follow."
+    }
+  ]
+}

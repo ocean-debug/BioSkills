@@ -1,0 +1,17 @@
+{
+  "skill": "bio-variant-calling-copy-number-analysis",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Design a copy-number analysis and explain what sample context and segmentation assumptions must be fixed before interpretation."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Tell me how you would communicate uncertainty in noisy copy-number profiles."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for copy-number analysis before the user treats the result as final."
+    }
+  ]
+}

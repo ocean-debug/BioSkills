@@ -1,0 +1,13 @@
+{
+  "skill": "bio-workflows-comparative-genomics",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Outline a comparative-genomics workflow and show where alignment, orthology, and topology checks should gate downstream interpretation."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Adapt a comparative-genomics workflow for a project that only needs synteny and positive-selection analysis."
+    }
+  ]
+}

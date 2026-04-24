@@ -1,0 +1,17 @@
+{
+  "skill": "bio-metagenomics-abundance-estimation",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a metagenomic abundance-estimation stage and explain what makes the output safe for downstream group comparisons."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Tell me how you would explain compositional caveats when reporting microbiome abundance tables."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for metagenomic abundance estimation before the user treats the result as final."
+    }
+  ]
+}

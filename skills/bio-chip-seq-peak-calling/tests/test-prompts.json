@@ -1,0 +1,13 @@
+{
+  "skill": "bio-chip-seq-peak-calling",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan ChIP-seq peak calling for H3K27me3 and explain what changes compared with TF ChIP."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Tell me what you need from the user before ChIP peak calling if input controls are missing."
+    }
+  ]
+}

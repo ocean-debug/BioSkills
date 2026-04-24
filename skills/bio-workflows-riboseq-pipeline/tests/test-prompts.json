@@ -1,0 +1,13 @@
+{
+  "skill": "bio-workflows-riboseq-pipeline",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Outline a Ribo-seq workflow and show where preprocessing, translation-efficiency, ORF, and stalling checkpoints should gate interpretation."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Adapt a Ribo-seq workflow for a project that only needs preprocessing plus translation-efficiency analysis and stops there."
+    }
+  ]
+}

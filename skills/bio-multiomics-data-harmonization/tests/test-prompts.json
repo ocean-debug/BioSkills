@@ -1,0 +1,17 @@
+{
+  "skill": "bio-multiomics-data-harmonization",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a multi-omics data-harmonization stage and explain what must align before integration can begin safely."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize the main failure modes that appear when modalities are linked at the wrong unit of analysis."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for multi-omics data harmonization before the user treats the result as final."
+    }
+  ]
+}

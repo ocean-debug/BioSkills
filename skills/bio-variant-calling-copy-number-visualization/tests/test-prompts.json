@@ -1,0 +1,17 @@
+{
+  "skill": "bio-variant-calling-copy-number-visualization",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Create a copy-number visualization plan and explain what plotting choices could mislead interpretation if baselines are unclear."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize how you would prepare a copy-number figure for review without hiding segmentation assumptions."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for copy-number visualization before the user treats the result as final."
+    }
+  ]
+}

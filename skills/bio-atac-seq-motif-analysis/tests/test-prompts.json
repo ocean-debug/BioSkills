@@ -1,0 +1,13 @@
+{
+  "skill": "bio-atac-seq-motif-analysis",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan motif enrichment on differential ATAC peaks and explain the background requirements."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize what could make ATAC motif results misleading even when peak calling succeeded."
+    }
+  ]
+}

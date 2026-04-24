@@ -1,0 +1,13 @@
+{
+  "skill": "bio-variant-calling-structural-variant-calling",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan structural-variant calling and tell me which support metrics you would inspect before trusting a call."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Explain how SV detection changes between short-read and long-read settings."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "skill": "bio-workflows-popgen-association",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Outline a population-genetics association workflow and show where you would stop for cohort structure, association, PRS, and fine-mapping QC gates."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Adapt a population-genetics workflow for a project that stops after association testing and does not continue to PRS or MR."
+    }
+  ]
+}

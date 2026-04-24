@@ -1,0 +1,17 @@
+{
+  "skill": "bio-proteomics-proteomics-qc",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Interpret these proteomics QC outputs and decide whether the dataset is ready for differential abundance analysis."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize the assay-level QC checks that matter most before drawing quantitative protein conclusions."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for proteomics qc before the user treats the result as final."
+    }
+  ]
+}

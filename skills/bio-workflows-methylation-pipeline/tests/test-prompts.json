@@ -1,0 +1,13 @@
+{
+  "skill": "bio-workflows-methylation-pipeline",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a methylation workflow from bisulfite reads to DMR detection with explicit QC gates."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Adapt a methylation workflow when the user only has methylation call tables instead of raw reads."
+    }
+  ]
+}

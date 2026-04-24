@@ -1,0 +1,13 @@
+{
+  "skill": "bio-bulk-rna-seq-batch-correction",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "A PCA plot shows batch dominating condition. Explain whether I should adjust in the model or transform the matrix."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Plan a safe batch-correction strategy for bulk RNA-seq with two conditions and one known confounder."
+    }
+  ]
+}

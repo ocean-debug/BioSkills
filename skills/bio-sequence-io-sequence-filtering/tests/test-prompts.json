@@ -1,0 +1,17 @@
+{
+  "skill": "bio-sequence-io-sequence-filtering",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a sequence-filtering step and explain how you would record filtering rules so downstream analysis stays reproducible."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize what makes a filtering strategy too aggressive to trust without further review."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for sequence filtering before the user treats the result as final."
+    }
+  ]
+}

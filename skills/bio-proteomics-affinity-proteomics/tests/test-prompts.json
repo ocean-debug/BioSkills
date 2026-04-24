@@ -1,0 +1,17 @@
+{
+  "skill": "bio-proteomics-affinity-proteomics",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan an affinity-proteomics analysis and explain how platform-specific units affect downstream interpretation."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize what makes affinity-proteomics results different from mass-spectrometry proteomics in a reporting workflow."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for affinity proteomics before the user treats the result as final."
+    }
+  ]
+}

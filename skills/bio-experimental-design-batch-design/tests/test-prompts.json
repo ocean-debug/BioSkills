@@ -1,0 +1,17 @@
+{
+  "skill": "bio-experimental-design-batch-design",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a batch-aware study design and explain how you would keep biology from being confounded with technical structure."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize the checks you would run before approving a multi-batch experimental layout."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for batch-aware study design before the user treats the result as final."
+    }
+  ]
+}

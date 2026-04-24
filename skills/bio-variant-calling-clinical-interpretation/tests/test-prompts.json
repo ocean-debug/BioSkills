@@ -1,0 +1,13 @@
+{
+  "skill": "bio-variant-calling-clinical-interpretation",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Interpret a candidate variant for a report and spell out the evidence and uncertainty clearly."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Explain why a clinical variant interpretation should not be written until the reporting framework is fixed."
+    }
+  ]
+}

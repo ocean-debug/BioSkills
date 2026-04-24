@@ -1,0 +1,13 @@
+{
+  "skill": "bio-single-cell-preprocessing",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Outline a single-cell preprocessing plan and explain which thresholds should be justified rather than copied blindly."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Review a single-cell QC summary and decide whether filtering thresholds are too aggressive."
+    }
+  ]
+}

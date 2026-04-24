@@ -1,0 +1,17 @@
+{
+  "skill": "bio-crispr-screens-screen-qc",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Interpret these CRISPR-screen QC outputs and decide whether hit calling should proceed."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize the QC gates that matter most before trusting a pooled CRISPR screen."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for crispr screen qc before the user treats the result as final."
+    }
+  ]
+}

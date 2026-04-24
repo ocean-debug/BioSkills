@@ -1,0 +1,17 @@
+{
+  "skill": "bio-literature-research-pubmed-search-and-fetch",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a PubMed search-and-fetch workflow and explain how you would keep the query focused on the biological claim the user actually cares about."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Tell me how you would retrieve biomedical papers without mixing loosely related studies into the evidence set."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for pubmed search and fetch before the user treats the result as final."
+    }
+  ]
+}

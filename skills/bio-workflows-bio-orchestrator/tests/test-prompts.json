@@ -1,0 +1,13 @@
+{
+  "skill": "bio-workflows-bio-orchestrator",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Route a complex project that spans RNA-seq differential expression and pathway interpretation through canonical skills."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Break a multi-assay request into safe sub-skills and define the QC gates between them."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "skill": "bio-reporting-heatmaps-and-clustering",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a clustered heatmap and explain what normalization and annotation choices must be explicit before interpretation."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize the main reasons a heatmap can look convincing while still being analytically misleading."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for heatmaps and clustering visualization before the user treats the result as final."
+    }
+  ]
+}

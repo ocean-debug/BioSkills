@@ -1,0 +1,13 @@
+{
+  "skill": "bio-pathway-analysis-reactome-enrichment",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan Reactome enrichment from differential-expression results and explain how you would handle redundant pathways."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize why Reactome results need hierarchy-aware interpretation instead of flat ranking."
+    }
+  ]
+}

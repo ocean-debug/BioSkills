@@ -1,0 +1,17 @@
+{
+  "skill": "bio-population-genetics-mendelian-randomisation",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a Mendelian-randomisation analysis and explain what instrument-validity checks you would require before causal claims."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Tell me how you would summarize MR sensitivity analyses without overstating causality."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for mendelian randomisation before the user treats the result as final."
+    }
+  ]
+}

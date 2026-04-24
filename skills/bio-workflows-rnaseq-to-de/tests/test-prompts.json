@@ -1,0 +1,13 @@
+{
+  "skill": "bio-workflows-rnaseq-to-de",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan an end-to-end bulk RNA-seq workflow from FASTQ files to differential expression."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "My RNA-seq project starts from counts instead of FASTQ. Adapt the workflow and keep QC gates explicit."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "skill": "bio-population-genetics-fine-mapping",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Design a fine-mapping analysis and explain how you would validate that the LD reference is compatible with the discovery cohort."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize what makes a credible set interpretable or misleading in a fine-mapping result."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for population-genetic fine mapping before the user treats the result as final."
+    }
+  ]
+}

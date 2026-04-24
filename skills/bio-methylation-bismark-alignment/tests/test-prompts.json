@@ -1,0 +1,13 @@
+{
+  "skill": "bio-methylation-bismark-alignment",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan methylation alignment from bisulfite reads and explain which protocol details change the setup."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Tell me what alignment QC you need before calling methylation."
+    }
+  ]
+}

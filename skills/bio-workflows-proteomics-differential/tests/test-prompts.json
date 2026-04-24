@@ -1,0 +1,13 @@
+{
+  "skill": "bio-workflows-proteomics-differential",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Outline a proteomics workflow and show how you would branch between classic mass-spec quantification and affinity-proteomics paths."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Adapt a proteomics workflow when the user only needs QC and differential abundance from an existing protein matrix."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "skill": "bio-workflows-hic-pipeline",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Outline a Hi-C workflow and show how you would branch between compartment, TAD, loop, and differential-contact analyses."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Adapt a Hi-C workflow for a project that only needs matrix visualization and compartment-level interpretation."
+    }
+  ]
+}

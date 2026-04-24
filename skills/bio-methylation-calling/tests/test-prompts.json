@@ -1,0 +1,13 @@
+{
+  "skill": "bio-methylation-calling",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan methylation call extraction after bisulfite alignment and explain what the main outputs mean."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize the assumptions behind per-CpG methylation calling for downstream DMR work."
+    }
+  ]
+}

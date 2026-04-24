@@ -1,0 +1,13 @@
+{
+  "skill": "bio-bulk-rna-seq-differential-expression",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Run a bulk RNA-seq differential-expression plan for treated versus control with batch in the design."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Check whether this contrast setup is safe before I fit a DE model."
+    }
+  ]
+}

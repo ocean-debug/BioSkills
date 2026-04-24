@@ -1,0 +1,731 @@
+[
+  {
+    "id": "bio-bulk-rna-seq-read-qc",
+    "title": "Bulk RNA-seq read QC",
+    "skill_type": "atomic",
+    "domain": "bulk-rna-seq",
+    "task": "read-qc",
+    "summary": "Assess FASTQ-level quality, adapter burden, and sample readiness before bulk RNA-seq quantification.",
+    "tags": ["rna-seq", "qc", "fastq", "bulk"],
+    "trigger_keywords": ["bulk RNA QC", "fastq qc", "adapter trimming", "read quality"],
+    "related_skills": ["bio-bulk-rna-seq-quantification", "bio-workflows-rnaseq-to-de"],
+    "depends_on": [],
+    "test_prompts": [
+      "Review these bulk RNA-seq FASTQ quality reports and tell me whether any sample should be trimmed or excluded.",
+      "Summarize the key pass/fail findings from a multi-sample RNA-seq QC run before quantification."
+    ]
+  },
+  {
+    "id": "bio-bulk-rna-seq-quantification",
+    "title": "Bulk RNA-seq quantification",
+    "skill_type": "atomic",
+    "domain": "bulk-rna-seq",
+    "task": "quantification",
+    "summary": "Quantify bulk RNA-seq expression with a reproducible path from trimmed reads to gene- or transcript-level abundance.",
+    "tags": ["rna-seq", "quantification", "salmon", "featureCounts"],
+    "trigger_keywords": ["rna quantification", "salmon", "featureCounts", "tximport"],
+    "related_skills": ["bio-bulk-rna-seq-count-matrix-qc", "bio-bulk-rna-seq-differential-expression"],
+    "depends_on": ["bio-bulk-rna-seq-read-qc"],
+    "test_prompts": [
+      "Choose an appropriate bulk RNA-seq quantification path for paired-end stranded reads and explain the assumptions.",
+      "I have trimmed RNA-seq reads and metadata; prepare the expression quantification stage so DE can follow."
+    ]
+  },
+  {
+    "id": "bio-bulk-rna-seq-count-matrix-qc",
+    "title": "Bulk RNA-seq count-matrix QC",
+    "skill_type": "atomic",
+    "domain": "bulk-rna-seq",
+    "task": "count-matrix-qc",
+    "summary": "Inspect count-matrix quality, replicate concordance, and sample-level outliers before differential testing.",
+    "tags": ["rna-seq", "qc", "counts", "pca"],
+    "trigger_keywords": ["count matrix QC", "library size", "PCA", "replicate concordance"],
+    "related_skills": ["bio-bulk-rna-seq-batch-correction", "bio-bulk-rna-seq-differential-expression"],
+    "depends_on": ["bio-bulk-rna-seq-quantification"],
+    "test_prompts": [
+      "Check whether this bulk RNA-seq count matrix is ready for differential expression.",
+      "Use sample metadata and counts to identify outliers or metadata mismatches before modeling."
+    ]
+  },
+  {
+    "id": "bio-bulk-rna-seq-batch-correction",
+    "title": "Bulk RNA-seq batch correction",
+    "skill_type": "atomic",
+    "domain": "bulk-rna-seq",
+    "task": "batch-correction",
+    "summary": "Handle batch effects in bulk RNA-seq while preserving the biological factor of interest.",
+    "tags": ["rna-seq", "batch", "combat", "design"],
+    "trigger_keywords": ["batch correction", "ComBat", "remove batch effect", "confounding"],
+    "related_skills": ["bio-bulk-rna-seq-count-matrix-qc", "bio-bulk-rna-seq-differential-expression"],
+    "depends_on": ["bio-bulk-rna-seq-count-matrix-qc"],
+    "test_prompts": [
+      "A PCA plot shows batch dominating condition. Explain whether I should adjust in the model or transform the matrix.",
+      "Plan a safe batch-correction strategy for bulk RNA-seq with two conditions and one known confounder."
+    ]
+  },
+  {
+    "id": "bio-bulk-rna-seq-differential-expression",
+    "title": "Bulk RNA-seq differential expression",
+    "skill_type": "atomic",
+    "domain": "bulk-rna-seq",
+    "task": "differential-expression",
+    "summary": "Perform contrast-aware differential expression for bulk RNA-seq with explicit design validation and QC-aware reporting.",
+    "tags": ["rna-seq", "differential expression", "DESeq2", "bulk"],
+    "trigger_keywords": ["DESeq2", "bulk differential expression", "contrast", "log2 fold change"],
+    "related_skills": ["bio-bulk-rna-seq-visualization", "bio-workflows-expression-to-pathways"],
+    "depends_on": ["bio-bulk-rna-seq-count-matrix-qc"],
+    "test_prompts": [
+      "Run a bulk RNA-seq differential-expression plan for treated versus control with batch in the design.",
+      "Check whether this contrast setup is safe before I fit a DE model."
+    ]
+  },
+  {
+    "id": "bio-bulk-rna-seq-visualization",
+    "title": "Bulk RNA-seq DE visualization",
+    "skill_type": "atomic",
+    "domain": "bulk-rna-seq",
+    "task": "visualization",
+    "summary": "Generate interpretable RNA-seq differential-expression plots that preserve thresholds, directions, and provenance.",
+    "tags": ["rna-seq", "visualization", "volcano", "heatmap"],
+    "trigger_keywords": ["volcano plot", "MA plot", "RNA-seq heatmap", "DE visualization"],
+    "related_skills": ["bio-bulk-rna-seq-differential-expression", "bio-workflows-expression-to-pathways"],
+    "depends_on": ["bio-bulk-rna-seq-differential-expression"],
+    "test_prompts": [
+      "Create a plotting plan for bulk RNA-seq differential-expression results without overstating significance.",
+      "Summarize which visualizations belong in an RNA-seq DE report and what each one should show."
+    ]
+  },
+  {
+    "id": "bio-workflows-rnaseq-to-de",
+    "title": "RNA-seq to differential expression workflow",
+    "skill_type": "workflow",
+    "domain": "bulk-rna-seq",
+    "task": "workflow",
+    "summary": "Coordinate the full bulk RNA-seq path from raw reads or quantification outputs to differential-expression results.",
+    "tags": ["workflow", "rna-seq", "differential expression", "pipeline"],
+    "trigger_keywords": ["RNA-seq workflow", "FASTQ to DE", "bulk pipeline", "expression workflow"],
+    "related_skills": ["bio-workflows-expression-to-pathways"],
+    "depends_on": [
+      "bio-bulk-rna-seq-read-qc",
+      "bio-bulk-rna-seq-quantification",
+      "bio-bulk-rna-seq-count-matrix-qc",
+      "bio-bulk-rna-seq-differential-expression",
+      "bio-bulk-rna-seq-visualization"
+    ],
+    "test_prompts": [
+      "Plan an end-to-end bulk RNA-seq workflow from FASTQ files to differential expression.",
+      "My RNA-seq project starts from counts instead of FASTQ. Adapt the workflow and keep QC gates explicit."
+    ]
+  },
+  {
+    "id": "bio-atac-seq-atac-qc",
+    "title": "ATAC-seq QC",
+    "skill_type": "atomic",
+    "domain": "atac-seq",
+    "task": "assay-qc",
+    "summary": "Review ATAC-seq quality metrics and determine whether a library is suitable for peak-level downstream analysis.",
+    "tags": ["ATAC-seq", "qc", "TSS enrichment", "FRiP"],
+    "trigger_keywords": ["ATAC QC", "TSS enrichment", "FRiP", "fragment periodicity"],
+    "related_skills": ["bio-atac-seq-peak-calling", "bio-atac-seq-differential-accessibility"],
+    "depends_on": [],
+    "test_prompts": [
+      "Interpret ATAC-seq QC metrics and decide whether these libraries should proceed to peak calling.",
+      "Summarize TSS enrichment, FRiP, and fragment periodicity findings for an ATAC project."
+    ]
+  },
+  {
+    "id": "bio-atac-seq-peak-calling",
+    "title": "ATAC-seq peak calling",
+    "skill_type": "atomic",
+    "domain": "atac-seq",
+    "task": "peak-calling",
+    "summary": "Call ATAC-seq peaks with explicit control of genome build, sequencing mode, and ATAC-specific caller parameters.",
+    "tags": ["ATAC-seq", "peak calling", "MACS3", "open chromatin"],
+    "trigger_keywords": ["ATAC peak calling", "MACS3", "open chromatin peaks", "summits"],
+    "related_skills": ["bio-atac-seq-motif-analysis", "bio-atac-seq-differential-accessibility"],
+    "depends_on": ["bio-atac-seq-atac-qc"],
+    "test_prompts": [
+      "Plan ATAC-seq peak calling from aligned BAM files and explain the key parameters.",
+      "Tell me what you still need before ATAC peak calling if genome build or sequencing mode is unclear."
+    ]
+  },
+  {
+    "id": "bio-atac-seq-differential-accessibility",
+    "title": "ATAC-seq differential accessibility",
+    "skill_type": "atomic",
+    "domain": "atac-seq",
+    "task": "differential-accessibility",
+    "summary": "Compare chromatin accessibility across groups using a consistent peak universe and replicate-aware modeling.",
+    "tags": ["ATAC-seq", "differential accessibility", "consensus peaks", "contrast"],
+    "trigger_keywords": ["differential accessibility", "consensus peaks", "ATAC contrast", "accessible regions"],
+    "related_skills": ["bio-atac-seq-motif-analysis", "bio-workflows-atacseq-pipeline"],
+    "depends_on": ["bio-atac-seq-peak-calling"],
+    "test_prompts": [
+      "Design a differential-accessibility analysis after ATAC peak calling with three replicates per group.",
+      "Explain how to avoid comparing incompatible peak sets in an ATAC-seq contrast."
+    ]
+  },
+  {
+    "id": "bio-atac-seq-motif-analysis",
+    "title": "ATAC-seq motif analysis",
+    "skill_type": "atomic",
+    "domain": "atac-seq",
+    "task": "motif-analysis",
+    "summary": "Interpret regulatory motif content from ATAC-seq peaks with an explicit background strategy and assay-aware caveats.",
+    "tags": ["ATAC-seq", "motif", "regulatory analysis", "TF binding"],
+    "trigger_keywords": ["motif enrichment", "ATAC motif", "TF motifs", "regulatory motifs"],
+    "related_skills": ["bio-atac-seq-differential-accessibility", "bio-workflows-atacseq-pipeline"],
+    "depends_on": ["bio-atac-seq-peak-calling"],
+    "test_prompts": [
+      "Plan motif enrichment on differential ATAC peaks and explain the background requirements.",
+      "Summarize what could make ATAC motif results misleading even when peak calling succeeded."
+    ]
+  },
+  {
+    "id": "bio-workflows-atacseq-pipeline",
+    "title": "ATAC-seq workflow",
+    "skill_type": "workflow",
+    "domain": "atac-seq",
+    "task": "workflow",
+    "summary": "Coordinate ATAC-seq analysis from QC and peak calling through differential accessibility and motif interpretation.",
+    "tags": ["workflow", "ATAC-seq", "pipeline", "chromatin accessibility"],
+    "trigger_keywords": ["ATAC workflow", "ATAC pipeline", "chromatin accessibility workflow", "ATAC end to end"],
+    "related_skills": ["bio-workflows-expression-to-pathways"],
+    "depends_on": [
+      "bio-atac-seq-atac-qc",
+      "bio-atac-seq-peak-calling",
+      "bio-atac-seq-differential-accessibility",
+      "bio-atac-seq-motif-analysis"
+    ],
+    "test_prompts": [
+      "Outline a complete ATAC-seq workflow with explicit QC gates and downstream branching.",
+      "Adapt an ATAC-seq workflow for a project that stops after peak calling instead of differential analysis."
+    ]
+  },
+  {
+    "id": "bio-chip-seq-chip-qc",
+    "title": "ChIP-seq QC",
+    "skill_type": "atomic",
+    "domain": "chip-seq",
+    "task": "assay-qc",
+    "summary": "Review ChIP-seq assay quality, control adequacy, and replicate consistency before peak interpretation.",
+    "tags": ["ChIP-seq", "qc", "FRiP", "cross-correlation"],
+    "trigger_keywords": ["ChIP QC", "FRiP", "NSC", "RSC", "control quality"],
+    "related_skills": ["bio-chip-seq-peak-calling", "bio-chip-seq-differential-binding"],
+    "depends_on": [],
+    "test_prompts": [
+      "Interpret these ChIP-seq QC summaries and tell me whether peak calling should proceed.",
+      "Explain what QC metrics matter most for histone marks versus transcription-factor ChIP."
+    ]
+  },
+  {
+    "id": "bio-chip-seq-peak-calling",
+    "title": "ChIP-seq peak calling",
+    "skill_type": "atomic",
+    "domain": "chip-seq",
+    "task": "peak-calling",
+    "summary": "Call ChIP-seq peaks with explicit control handling and mark-aware narrow or broad parameter choices.",
+    "tags": ["ChIP-seq", "peak calling", "MACS3", "broad peaks"],
+    "trigger_keywords": ["ChIP peak calling", "broad peaks", "MACS3", "input control"],
+    "related_skills": ["bio-chip-seq-peak-annotation", "bio-chip-seq-differential-binding"],
+    "depends_on": ["bio-chip-seq-chip-qc"],
+    "test_prompts": [
+      "Plan ChIP-seq peak calling for H3K27me3 and explain what changes compared with TF ChIP.",
+      "Tell me what you need from the user before ChIP peak calling if input controls are missing."
+    ]
+  },
+  {
+    "id": "bio-chip-seq-differential-binding",
+    "title": "ChIP-seq differential binding",
+    "skill_type": "atomic",
+    "domain": "chip-seq",
+    "task": "differential-binding",
+    "summary": "Compare ChIP-seq occupancy across groups using a stable region universe and replicate-aware contrasts.",
+    "tags": ["ChIP-seq", "differential binding", "contrast", "region counts"],
+    "trigger_keywords": ["differential binding", "occupancy analysis", "DiffBind", "ChIP contrast"],
+    "related_skills": ["bio-chip-seq-peak-annotation", "bio-workflows-chipseq-pipeline"],
+    "depends_on": ["bio-chip-seq-peak-calling"],
+    "test_prompts": [
+      "Design a differential-binding analysis for ChIP-seq with two conditions and biological replicates.",
+      "Explain how you would construct a stable binding matrix before statistical testing."
+    ]
+  },
+  {
+    "id": "bio-chip-seq-peak-annotation",
+    "title": "ChIP-seq peak annotation",
+    "skill_type": "atomic",
+    "domain": "chip-seq",
+    "task": "peak-annotation",
+    "summary": "Annotate ChIP-seq peaks against genes and genomic features while keeping coordinate and build provenance explicit.",
+    "tags": ["ChIP-seq", "annotation", "genomic features", "promoters"],
+    "trigger_keywords": ["peak annotation", "nearest gene", "promoter annotation", "genomic feature"],
+    "related_skills": ["bio-chip-seq-differential-binding", "bio-workflows-chipseq-pipeline"],
+    "depends_on": ["bio-chip-seq-peak-calling"],
+    "test_prompts": [
+      "Annotate ChIP-seq peaks to nearby genes and explain how genome-build mismatches would break the result.",
+      "Tell me which annotation choices materially change the biological interpretation of ChIP peaks."
+    ]
+  },
+  {
+    "id": "bio-workflows-chipseq-pipeline",
+    "title": "ChIP-seq workflow",
+    "skill_type": "workflow",
+    "domain": "chip-seq",
+    "task": "workflow",
+    "summary": "Coordinate ChIP-seq analysis from assay QC and peak calling through annotation and differential binding.",
+    "tags": ["workflow", "ChIP-seq", "pipeline", "chromatin"],
+    "trigger_keywords": ["ChIP workflow", "ChIP pipeline", "TF ChIP workflow", "histone ChIP workflow"],
+    "related_skills": ["bio-workflows-expression-to-pathways"],
+    "depends_on": [
+      "bio-chip-seq-chip-qc",
+      "bio-chip-seq-peak-calling",
+      "bio-chip-seq-peak-annotation",
+      "bio-chip-seq-differential-binding"
+    ],
+    "test_prompts": [
+      "Plan a ChIP-seq workflow for a transcription-factor study with input controls and replicates.",
+      "Adapt the ChIP workflow for a broad histone mark and keep the stage gates explicit."
+    ]
+  },
+  {
+    "id": "bio-variant-calling-small-variant-calling",
+    "title": "Small-variant calling",
+    "skill_type": "atomic",
+    "domain": "variant-calling",
+    "task": "small-variant-calling",
+    "summary": "Prepare and assess germline or somatic small-variant calling with explicit caller assumptions and QC gates.",
+    "tags": ["variants", "SNV", "indel", "calling"],
+    "trigger_keywords": ["small variant calling", "SNV", "indel", "DeepVariant", "GATK"],
+    "related_skills": ["bio-variant-calling-variant-filtering", "bio-workflows-fastq-to-variants"],
+    "depends_on": [],
+    "test_prompts": [
+      "Outline a small-variant calling strategy from aligned reads and explain what assumptions must be fixed first.",
+      "Tell me how germline and somatic variant-calling plans diverge before filtering."
+    ]
+  },
+  {
+    "id": "bio-variant-calling-variant-filtering",
+    "title": "Variant filtering",
+    "skill_type": "atomic",
+    "domain": "variant-calling",
+    "task": "variant-filtering",
+    "summary": "Filter small variants with explicit thresholds, provenance, and protection against over-aggressive exclusion.",
+    "tags": ["variants", "filtering", "depth", "quality"],
+    "trigger_keywords": ["variant filtering", "allele balance", "quality filters", "hard filtering"],
+    "related_skills": ["bio-variant-calling-variant-annotation", "bio-variant-calling-clinical-interpretation"],
+    "depends_on": ["bio-variant-calling-small-variant-calling"],
+    "test_prompts": [
+      "Design a safe variant-filtering plan and explain how each threshold changes sensitivity versus specificity.",
+      "I need to filter a VCF for downstream clinical review without hiding plausible candidates."
+    ]
+  },
+  {
+    "id": "bio-variant-calling-variant-annotation",
+    "title": "Variant annotation",
+    "skill_type": "atomic",
+    "domain": "variant-calling",
+    "task": "variant-annotation",
+    "summary": "Annotate variants with consequence, frequency, pathogenicity, and evidence-source provenance.",
+    "tags": ["variants", "annotation", "ClinVar", "population frequency"],
+    "trigger_keywords": ["variant annotation", "ClinVar", "gnomAD", "effect prediction"],
+    "related_skills": ["bio-variant-calling-clinical-interpretation", "bio-workflows-variant-to-report"],
+    "depends_on": ["bio-variant-calling-variant-filtering"],
+    "test_prompts": [
+      "Annotate a filtered variant set and explain which evidence layers matter most for prioritization.",
+      "Show how transcript choice can materially change a variant annotation result."
+    ]
+  },
+  {
+    "id": "bio-variant-calling-clinical-interpretation",
+    "title": "Variant clinical interpretation",
+    "skill_type": "atomic",
+    "domain": "variant-calling",
+    "task": "clinical-interpretation",
+    "summary": "Interpret annotated variants for reporting with explicit evidence boundaries and audience-aware caveats.",
+    "tags": ["variants", "clinical", "interpretation", "ACMG"],
+    "trigger_keywords": ["clinical variant interpretation", "ACMG", "pathogenicity", "reporting"],
+    "related_skills": ["bio-workflows-variant-to-report"],
+    "depends_on": ["bio-variant-calling-variant-annotation"],
+    "test_prompts": [
+      "Interpret a candidate variant for a report and spell out the evidence and uncertainty clearly.",
+      "Explain why a clinical variant interpretation should not be written until the reporting framework is fixed."
+    ]
+  },
+  {
+    "id": "bio-variant-calling-structural-variant-calling",
+    "title": "Structural-variant calling",
+    "skill_type": "atomic",
+    "domain": "variant-calling",
+    "task": "structural-variant-calling",
+    "summary": "Assess structural-variant detection with explicit breakpoint support, SV class expectations, and QC limits.",
+    "tags": ["variants", "SV", "breakpoints", "structural variants"],
+    "trigger_keywords": ["structural variants", "SV calling", "breakpoints", "long-read SV"],
+    "related_skills": ["bio-variant-calling-variant-annotation", "bio-workflows-fastq-to-variants"],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan structural-variant calling and tell me which support metrics you would inspect before trusting a call.",
+      "Explain how SV detection changes between short-read and long-read settings."
+    ]
+  },
+  {
+    "id": "bio-workflows-fastq-to-variants",
+    "title": "FASTQ to variants workflow",
+    "skill_type": "workflow",
+    "domain": "variant-calling",
+    "task": "workflow",
+    "summary": "Coordinate the variant-analysis path from raw sequencing data through calls, filters, annotation, and handoff-ready results.",
+    "tags": ["workflow", "variants", "pipeline", "VCF"],
+    "trigger_keywords": ["FASTQ to VCF", "variant pipeline", "variant workflow", "end-to-end variant analysis"],
+    "related_skills": ["bio-workflows-variant-to-report"],
+    "depends_on": [
+      "bio-variant-calling-small-variant-calling",
+      "bio-variant-calling-variant-filtering",
+      "bio-variant-calling-variant-annotation",
+      "bio-variant-calling-structural-variant-calling"
+    ],
+    "test_prompts": [
+      "Plan an end-to-end variant workflow from sequencing reads to an analysis-ready annotated VCF.",
+      "Adapt the workflow when the project needs both small variants and structural variants."
+    ]
+  },
+  {
+    "id": "bio-single-cell-preprocessing",
+    "title": "Single-cell preprocessing",
+    "skill_type": "atomic",
+    "domain": "single-cell",
+    "task": "preprocessing",
+    "summary": "Preprocess single-cell data with explicit thresholds for cells, features, mitochondrial burden, and doublets.",
+    "tags": ["single-cell", "preprocessing", "qc", "filtering"],
+    "trigger_keywords": ["single-cell preprocessing", "mitochondrial fraction", "doublets", "cell filtering"],
+    "related_skills": ["bio-single-cell-batch-integration", "bio-single-cell-clustering"],
+    "depends_on": [],
+    "test_prompts": [
+      "Outline a single-cell preprocessing plan and explain which thresholds should be justified rather than copied blindly.",
+      "Review a single-cell QC summary and decide whether filtering thresholds are too aggressive."
+    ]
+  },
+  {
+    "id": "bio-single-cell-batch-integration",
+    "title": "Single-cell batch integration",
+    "skill_type": "atomic",
+    "domain": "single-cell",
+    "task": "batch-integration",
+    "summary": "Integrate single-cell datasets while preserving biological structure and avoiding over-correction.",
+    "tags": ["single-cell", "integration", "batch", "harmonization"],
+    "trigger_keywords": ["single-cell integration", "batch correction", "Harmony", "Seurat integration"],
+    "related_skills": ["bio-single-cell-clustering", "bio-workflows-scrnaseq-pipeline"],
+    "depends_on": ["bio-single-cell-preprocessing"],
+    "test_prompts": [
+      "Choose an integration strategy for multi-batch single-cell RNA-seq and explain the over-correction risk.",
+      "Tell me how you would verify that single-cell batch integration preserved the biology of interest."
+    ]
+  },
+  {
+    "id": "bio-single-cell-clustering",
+    "title": "Single-cell clustering",
+    "skill_type": "atomic",
+    "domain": "single-cell",
+    "task": "clustering",
+    "summary": "Cluster single-cell data with interpretable resolution choices and cluster-stability checks.",
+    "tags": ["single-cell", "clustering", "UMAP", "resolution"],
+    "trigger_keywords": ["single-cell clustering", "UMAP", "Leiden", "resolution"],
+    "related_skills": ["bio-single-cell-cell-annotation", "bio-single-cell-trajectory-inference"],
+    "depends_on": ["bio-single-cell-batch-integration"],
+    "test_prompts": [
+      "Plan clustering for an integrated single-cell dataset and explain how you would choose resolution.",
+      "Summarize what cluster diagnostics should be reviewed before labeling cell states."
+    ]
+  },
+  {
+    "id": "bio-single-cell-cell-annotation",
+    "title": "Single-cell cell annotation",
+    "skill_type": "atomic",
+    "domain": "single-cell",
+    "task": "cell-annotation",
+    "summary": "Assign cell identities with explicit evidence, uncertainty, and reference-awareness.",
+    "tags": ["single-cell", "annotation", "cell type", "reference mapping"],
+    "trigger_keywords": ["cell annotation", "label transfer", "cell types", "marker genes"],
+    "related_skills": ["bio-single-cell-differential-expression", "bio-workflows-scrnaseq-pipeline"],
+    "depends_on": ["bio-single-cell-clustering"],
+    "test_prompts": [
+      "Explain how you would annotate clusters in a single-cell dataset without overstating confidence.",
+      "I have marker genes and a reference atlas. Plan a cell-annotation workflow that keeps ambiguity visible."
+    ]
+  },
+  {
+    "id": "bio-single-cell-differential-expression",
+    "title": "Single-cell differential expression",
+    "skill_type": "atomic",
+    "domain": "single-cell",
+    "task": "differential-expression",
+    "summary": "Perform single-cell differential testing with attention to donor structure, pseudo-bulk options, and cluster context.",
+    "tags": ["single-cell", "differential expression", "pseudo-bulk", "markers"],
+    "trigger_keywords": ["single-cell DE", "pseudo-bulk", "marker testing", "cluster DE"],
+    "related_skills": ["bio-single-cell-cell-annotation", "bio-workflows-expression-to-pathways"],
+    "depends_on": ["bio-single-cell-cell-annotation"],
+    "test_prompts": [
+      "Plan single-cell differential expression between conditions while respecting donor structure.",
+      "Explain when pseudo-bulk is preferable to cell-level DE for single-cell RNA-seq."
+    ]
+  },
+  {
+    "id": "bio-single-cell-trajectory-inference",
+    "title": "Single-cell trajectory inference",
+    "skill_type": "atomic",
+    "domain": "single-cell",
+    "task": "trajectory-inference",
+    "summary": "Infer single-cell trajectories only when the data support a biologically defensible progression structure.",
+    "tags": ["single-cell", "trajectory", "pseudotime", "lineage"],
+    "trigger_keywords": ["trajectory inference", "pseudotime", "lineage", "Monocle"],
+    "related_skills": ["bio-workflows-scrnaseq-pipeline"],
+    "depends_on": ["bio-single-cell-clustering"],
+    "test_prompts": [
+      "Assess whether this single-cell project is suitable for trajectory inference before suggesting pseudotime.",
+      "Describe a careful trajectory-analysis path for a developmental single-cell dataset."
+    ]
+  },
+  {
+    "id": "bio-workflows-scrnaseq-pipeline",
+    "title": "Single-cell RNA-seq workflow",
+    "skill_type": "workflow",
+    "domain": "single-cell",
+    "task": "workflow",
+    "summary": "Coordinate single-cell RNA-seq analysis from preprocessing through integration, clustering, annotation, and downstream interpretation.",
+    "tags": ["workflow", "single-cell", "pipeline", "scRNA-seq"],
+    "trigger_keywords": ["single-cell workflow", "scRNA-seq pipeline", "single-cell end to end", "cell atlas workflow"],
+    "related_skills": ["bio-workflows-expression-to-pathways"],
+    "depends_on": [
+      "bio-single-cell-preprocessing",
+      "bio-single-cell-batch-integration",
+      "bio-single-cell-clustering",
+      "bio-single-cell-cell-annotation",
+      "bio-single-cell-differential-expression"
+    ],
+    "test_prompts": [
+      "Plan a complete single-cell RNA-seq workflow and highlight where QC should stop the pipeline.",
+      "Adapt the workflow when the goal is atlas building rather than condition-level DE."
+    ]
+  },
+  {
+    "id": "bio-methylation-bismark-alignment",
+    "title": "Methylation alignment",
+    "skill_type": "atomic",
+    "domain": "methylation",
+    "task": "alignment",
+    "summary": "Prepare bisulfite-aware alignment outputs that are valid inputs for methylation extraction and DMR analysis.",
+    "tags": ["methylation", "alignment", "Bismark", "bisulfite"],
+    "trigger_keywords": ["Bismark alignment", "bisulfite alignment", "WGBS alignment", "methylation mapping"],
+    "related_skills": ["bio-methylation-calling", "bio-workflows-methylation-pipeline"],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan methylation alignment from bisulfite reads and explain which protocol details change the setup.",
+      "Tell me what alignment QC you need before calling methylation."
+    ]
+  },
+  {
+    "id": "bio-methylation-calling",
+    "title": "Methylation calling",
+    "skill_type": "atomic",
+    "domain": "methylation",
+    "task": "methylation-calling",
+    "summary": "Extract and summarize methylation calls with explicit coverage thresholds and protocol-aware caveats.",
+    "tags": ["methylation", "calling", "CpG", "WGBS"],
+    "trigger_keywords": ["methylation calling", "CpG calls", "Bismark extraction", "cytosine report"],
+    "related_skills": ["bio-methylation-qc", "bio-methylation-dmr-detection"],
+    "depends_on": ["bio-methylation-bismark-alignment"],
+    "test_prompts": [
+      "Plan methylation call extraction after bisulfite alignment and explain what the main outputs mean.",
+      "Summarize the assumptions behind per-CpG methylation calling for downstream DMR work."
+    ]
+  },
+  {
+    "id": "bio-methylation-qc",
+    "title": "Methylation QC",
+    "skill_type": "atomic",
+    "domain": "methylation",
+    "task": "assay-qc",
+    "summary": "Review methylation-specific QC such as conversion efficiency, M-bias, and coverage before downstream comparisons.",
+    "tags": ["methylation", "qc", "M-bias", "coverage"],
+    "trigger_keywords": ["M-bias", "bisulfite conversion", "methylation QC", "coverage QC"],
+    "related_skills": ["bio-methylation-dmr-detection", "bio-workflows-methylation-pipeline"],
+    "depends_on": ["bio-methylation-calling"],
+    "test_prompts": [
+      "Interpret methylation QC outputs and tell me whether the sample should proceed to DMR analysis.",
+      "Explain how M-bias and conversion efficiency affect trust in methylation results."
+    ]
+  },
+  {
+    "id": "bio-methylation-dmr-detection",
+    "title": "Differential methylation region detection",
+    "skill_type": "atomic",
+    "domain": "methylation",
+    "task": "dmr-detection",
+    "summary": "Detect differential methylation regions with explicit replicate handling, coverage thresholds, and region-level reporting.",
+    "tags": ["methylation", "DMR", "differential methylation", "regions"],
+    "trigger_keywords": ["DMR", "differential methylation", "methylKit", "region testing"],
+    "related_skills": ["bio-workflows-methylation-pipeline", "bio-workflows-expression-to-pathways"],
+    "depends_on": ["bio-methylation-qc"],
+    "test_prompts": [
+      "Design a DMR analysis for two groups with biological replicates and uneven coverage.",
+      "Explain when methylation coverage is too sparse to trust DMR results."
+    ]
+  },
+  {
+    "id": "bio-workflows-methylation-pipeline",
+    "title": "Methylation workflow",
+    "skill_type": "workflow",
+    "domain": "methylation",
+    "task": "workflow",
+    "summary": "Coordinate methylation analysis from alignment and call extraction through QC and DMR detection.",
+    "tags": ["workflow", "methylation", "pipeline", "WGBS"],
+    "trigger_keywords": ["methylation workflow", "WGBS pipeline", "bisulfite workflow", "DMR pipeline"],
+    "related_skills": ["bio-workflows-expression-to-pathways"],
+    "depends_on": [
+      "bio-methylation-bismark-alignment",
+      "bio-methylation-calling",
+      "bio-methylation-qc",
+      "bio-methylation-dmr-detection"
+    ],
+    "test_prompts": [
+      "Plan a methylation workflow from bisulfite reads to DMR detection with explicit QC gates.",
+      "Adapt a methylation workflow when the user only has methylation call tables instead of raw reads."
+    ]
+  },
+  {
+    "id": "bio-pathway-analysis-go-enrichment",
+    "title": "GO enrichment",
+    "skill_type": "atomic",
+    "domain": "pathway-analysis",
+    "task": "enrichment",
+    "summary": "Run GO over-representation analysis with explicit background-universe and identifier-handling decisions.",
+    "tags": ["pathway", "GO", "enrichment", "ORA"],
+    "trigger_keywords": ["GO enrichment", "gene ontology", "ORA", "background universe"],
+    "related_skills": ["bio-pathway-analysis-visualization", "bio-workflows-expression-to-pathways"],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan GO enrichment for a thresholded DEG set and tell me what background universe you need.",
+      "Explain why identifier mapping can distort GO enrichment results."
+    ]
+  },
+  {
+    "id": "bio-pathway-analysis-gsea",
+    "title": "GSEA",
+    "skill_type": "atomic",
+    "domain": "pathway-analysis",
+    "task": "gsea",
+    "summary": "Perform ranked-list enrichment with explicit metric choice, directional interpretation, and leading-edge handling.",
+    "tags": ["pathway", "GSEA", "ranked list", "enrichment"],
+    "trigger_keywords": ["GSEA", "ranked enrichment", "preranked", "leading edge"],
+    "related_skills": ["bio-pathway-analysis-visualization", "bio-workflows-expression-to-pathways"],
+    "depends_on": [],
+    "test_prompts": [
+      "Explain how you would set up GSEA from a full differential-expression ranking.",
+      "Tell me what can go wrong if a user gives you only a short thresholded list and asks for GSEA."
+    ]
+  },
+  {
+    "id": "bio-pathway-analysis-reactome-enrichment",
+    "title": "Reactome enrichment",
+    "skill_type": "atomic",
+    "domain": "pathway-analysis",
+    "task": "reactome-enrichment",
+    "summary": "Run Reactome-focused enrichment while preserving pathway hierarchy and mechanistic context.",
+    "tags": ["pathway", "Reactome", "enrichment", "mechanism"],
+    "trigger_keywords": ["Reactome enrichment", "mechanistic pathways", "Reactome", "pathway hierarchy"],
+    "related_skills": ["bio-pathway-analysis-visualization", "bio-workflows-expression-to-pathways"],
+    "depends_on": [],
+    "test_prompts": [
+      "Plan Reactome enrichment from differential-expression results and explain how you would handle redundant pathways.",
+      "Summarize why Reactome results need hierarchy-aware interpretation instead of flat ranking."
+    ]
+  },
+  {
+    "id": "bio-pathway-analysis-visualization",
+    "title": "Pathway visualization",
+    "skill_type": "atomic",
+    "domain": "pathway-analysis",
+    "task": "pathway-visualization",
+    "summary": "Turn enrichment outputs into pathway figures that preserve direction, magnitude, and evidence context.",
+    "tags": ["pathway", "visualization", "enrichment plots", "networks"],
+    "trigger_keywords": ["pathway plot", "enrichment visualization", "pathway network", "GSEA plot"],
+    "related_skills": ["bio-workflows-expression-to-pathways"],
+    "depends_on": ["bio-pathway-analysis-go-enrichment", "bio-pathway-analysis-gsea"],
+    "test_prompts": [
+      "Design a pathway-visualization set for an RNA-seq project that includes ORA and GSEA results.",
+      "Explain how to visualize enrichment without hiding thresholds or directionality."
+    ]
+  },
+  {
+    "id": "bio-workflows-expression-to-pathways",
+    "title": "Expression to pathways workflow",
+    "skill_type": "workflow",
+    "domain": "pathway-analysis",
+    "task": "workflow",
+    "summary": "Coordinate the handoff from expression or region-level differential results into enrichment, visualization, and biological interpretation.",
+    "tags": ["workflow", "pathway", "enrichment", "interpretation"],
+    "trigger_keywords": ["expression to pathways", "DE to enrichment", "pathway workflow", "functional interpretation"],
+    "related_skills": ["bio-workflows-rnaseq-to-de", "bio-workflows-scrnaseq-pipeline", "bio-workflows-methylation-pipeline"],
+    "depends_on": [
+      "bio-pathway-analysis-go-enrichment",
+      "bio-pathway-analysis-gsea",
+      "bio-pathway-analysis-reactome-enrichment",
+      "bio-pathway-analysis-visualization"
+    ],
+    "test_prompts": [
+      "Plan a workflow that starts from differential-expression results and ends in pathway interpretation.",
+      "Adapt the workflow when the user has ranked genes but no thresholded DEG list."
+    ]
+  },
+  {
+    "id": "bio-workflows-variant-to-report",
+    "title": "Variant to report workflow",
+    "skill_type": "workflow",
+    "domain": "variant-calling",
+    "task": "workflow",
+    "summary": "Coordinate variant filtering, annotation, and reporting-oriented interpretation into a traceable reporting workflow.",
+    "tags": ["workflow", "variants", "reporting", "clinical"],
+    "trigger_keywords": ["variant to report", "variant reporting workflow", "clinical variant workflow", "annotated VCF to report"],
+    "related_skills": ["bio-workflows-fastq-to-variants"],
+    "depends_on": [
+      "bio-variant-calling-variant-filtering",
+      "bio-variant-calling-variant-annotation",
+      "bio-variant-calling-clinical-interpretation"
+    ],
+    "test_prompts": [
+      "Plan a workflow from filtered variants to a reporting-ready interpretation package.",
+      "Explain how the reporting workflow should change when the audience is research-only rather than clinical."
+    ]
+  },
+  {
+    "id": "bio-workflows-bio-orchestrator",
+    "title": "Bioinformatics orchestrator",
+    "skill_type": "workflow",
+    "domain": "workflow-orchestration",
+    "task": "orchestrator",
+    "summary": "Orchestrate multi-stage bioinformatics analysis across canonical skills while preserving handoff artifacts and QC gates.",
+    "tags": ["workflow", "orchestrator", "bioinformatics", "multi-stage"],
+    "trigger_keywords": ["bio orchestrator", "analysis orchestrator", "multi-stage workflow", "skill routing"],
+    "related_skills": [
+      "bio-workflows-rnaseq-to-de",
+      "bio-workflows-atacseq-pipeline",
+      "bio-workflows-chipseq-pipeline",
+      "bio-workflows-fastq-to-variants",
+      "bio-workflows-scrnaseq-pipeline",
+      "bio-workflows-methylation-pipeline",
+      "bio-workflows-expression-to-pathways"
+    ],
+    "depends_on": [
+      "bio-workflows-rnaseq-to-de",
+      "bio-workflows-atacseq-pipeline",
+      "bio-workflows-chipseq-pipeline",
+      "bio-workflows-fastq-to-variants",
+      "bio-workflows-scrnaseq-pipeline",
+      "bio-workflows-methylation-pipeline",
+      "bio-workflows-expression-to-pathways"
+    ],
+    "test_prompts": [
+      "Route a complex project that spans RNA-seq differential expression and pathway interpretation through canonical skills.",
+      "Break a multi-assay request into safe sub-skills and define the QC gates between them."
+    ]
+  }
+]

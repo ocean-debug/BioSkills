@@ -1,0 +1,17 @@
+{
+  "skill": "bio-literature-research-protocol-discovery",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a protocol-discovery search and explain how you would separate reusable method leads from fully validated SOPs."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Tell me how you would look for experimental or computational protocols without overstating their fitness for a specific lab setup."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for protocol discovery before the user treats the result as final."
+    }
+  ]
+}

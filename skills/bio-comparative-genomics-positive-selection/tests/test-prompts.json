@@ -1,0 +1,17 @@
+{
+  "skill": "bio-comparative-genomics-positive-selection",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Design a positive-selection analysis and explain what alignment and phylogenetic checks must be satisfied before trusting the result."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize the main ways poor alignment or model mismatch can create misleading positive-selection signals."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for positive-selection analysis before the user treats the result as final."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "skill": "bio-metagenomics-strain-tracking",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Design a strain-tracking analysis for longitudinal metagenomic samples and explain what evidence is needed before claiming persistence."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Tell me how you would avoid overstating strain-level findings when depth or classification quality is limited."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for metagenomic strain tracking before the user treats the result as final."
+    }
+  ]
+}

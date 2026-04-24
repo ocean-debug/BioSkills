@@ -1,0 +1,13 @@
+{
+  "skill": "bio-workflows-sequence-io-preparation",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Outline a sequence-file preparation workflow and show where quality, pairing, filtering, and conversion checks should stop downstream analysis."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Adapt a sequence-preparation workflow for a project that starts from compressed paired-end FASTQ files and ends at an analysis-ready handoff."
+    }
+  ]
+}

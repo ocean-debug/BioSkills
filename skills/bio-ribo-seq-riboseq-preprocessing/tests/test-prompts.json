@@ -1,0 +1,17 @@
+{
+  "skill": "bio-ribo-seq-riboseq-preprocessing",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Plan a Ribo-seq preprocessing stage and explain what periodicity or frame-related checks must pass before downstream interpretation."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Tell me how you would prepare ribosome-profiling data without losing the information needed for translation-aware analysis."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for ribo-seq preprocessing before the user treats the result as final."
+    }
+  ]
+}

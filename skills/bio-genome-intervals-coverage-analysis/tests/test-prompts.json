@@ -1,0 +1,17 @@
+{
+  "skill": "bio-genome-intervals-coverage-analysis",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Explain how you would run interval-level coverage analysis and keep the target definition explicit."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize the checks that matter before treating coverage summaries as biologically meaningful."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for genome-interval coverage analysis before the user treats the result as final."
+    }
+  ]
+}

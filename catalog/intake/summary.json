@@ -1,0 +1,82 @@
+{
+  "generated_at": "2026-04-23T17:08:03+00:00",
+  "sources": [
+    {
+      "repo": "GPTomics/bioSkills",
+      "role": "primary",
+      "layout": "domain-root",
+      "license_spdx": "MIT",
+      "default_branch": "main",
+      "skill_count": 439,
+      "analysis_in_scope": 349,
+      "restricted_count": 0,
+      "generated_at": "2026-04-23T17:08:01+00:00"
+    },
+    {
+      "repo": "TongjiZhanglab/ChromSkills",
+      "role": "primary",
+      "layout": "topic-root",
+      "license_spdx": "NONE",
+      "default_branch": "master",
+      "skill_count": 33,
+      "analysis_in_scope": 28,
+      "restricted_count": 33,
+      "generated_at": "2026-04-23T17:08:01+00:00"
+    },
+    {
+      "repo": "ClawBio/ClawBio",
+      "role": "primary",
+      "layout": "skills-dir",
+      "license_spdx": "MIT",
+      "default_branch": "main",
+      "skill_count": 56,
+      "analysis_in_scope": 49,
+      "restricted_count": 2,
+      "generated_at": "2026-04-23T17:08:02+00:00"
+    },
+    {
+      "repo": "FreedomIntelligence/OpenClaw-Medical-Skills",
+      "role": "primary",
+      "layout": "skills-dir",
+      "license_spdx": "NONE",
+      "default_branch": "main",
+      "skill_count": 896,
+      "analysis_in_scope": 625,
+      "restricted_count": 896,
+      "generated_at": "2026-04-23T17:08:02+00:00"
+    },
+    {
+      "repo": "wu-yc/LabClaw",
+      "role": "secondary",
+      "layout": "skills-dir",
+      "license_spdx": "NONE",
+      "default_branch": "main",
+      "skill_count": 240,
+      "analysis_in_scope": 137,
+      "restricted_count": 240,
+      "generated_at": "2026-04-23T17:08:03+00:00"
+    },
+    {
+      "repo": "xjtulyc/MedgeClaw",
+      "role": "secondary",
+      "layout": "skills-dir",
+      "license_spdx": "NONE",
+      "default_branch": "main",
+      "skill_count": 7,
+      "analysis_in_scope": 3,
+      "restricted_count": 7,
+      "generated_at": "2026-04-23T17:08:03+00:00"
+    },
+    {
+      "repo": "Runchuan-BU/BioClaw",
+      "role": "secondary",
+      "layout": "mixed",
+      "license_spdx": "NOASSERTION",
+      "default_branch": "main",
+      "skill_count": 51,
+      "analysis_in_scope": 35,
+      "restricted_count": 51,
+      "generated_at": "2026-04-23T17:08:03+00:00"
+    }
+  ]
+}

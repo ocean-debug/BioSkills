@@ -1,0 +1,13 @@
+{
+  "skill": "bio-workflows-literature-to-hypothesis",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Outline a literature-to-hypothesis workflow and show how retrieval, synthesis, protocol discovery, and public-data review should gate a final research briefing."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Adapt a literature workflow for a project that only needs evidence synthesis plus public-data discovery and does not require protocol leads."
+    }
+  ]
+}

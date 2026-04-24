@@ -1,0 +1,13 @@
+{
+  "skill": "bio-variant-calling-variant-annotation",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Annotate a filtered variant set and explain which evidence layers matter most for prioritization."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Show how transcript choice can materially change a variant annotation result."
+    }
+  ]
+}

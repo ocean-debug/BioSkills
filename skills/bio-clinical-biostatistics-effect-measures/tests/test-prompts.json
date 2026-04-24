@@ -1,0 +1,17 @@
+{
+  "skill": "bio-clinical-biostatistics-effect-measures",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Explain how you would choose between odds ratio, risk ratio, and related effect measures for a clinical endpoint."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Tell me what must be explicit before interpreting treatment effect measures across clinical groups."
+    },
+    {
+      "id": "prompt-3",
+      "prompt": "Explain the main QC gates, failure modes, and downstream handoff for clinical effect measures before the user treats the result as final."
+    }
+  ]
+}

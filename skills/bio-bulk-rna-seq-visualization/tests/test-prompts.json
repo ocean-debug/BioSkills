@@ -1,0 +1,13 @@
+{
+  "skill": "bio-bulk-rna-seq-visualization",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Create a plotting plan for bulk RNA-seq differential-expression results without overstating significance."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Summarize which visualizations belong in an RNA-seq DE report and what each one should show."
+    }
+  ]
+}

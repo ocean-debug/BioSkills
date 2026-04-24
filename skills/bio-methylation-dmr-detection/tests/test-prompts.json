@@ -1,0 +1,13 @@
+{
+  "skill": "bio-methylation-dmr-detection",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Design a DMR analysis for two groups with biological replicates and uneven coverage."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Explain when methylation coverage is too sparse to trust DMR results."
+    }
+  ]
+}

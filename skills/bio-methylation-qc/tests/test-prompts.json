@@ -1,0 +1,13 @@
+{
+  "skill": "bio-methylation-qc",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Interpret methylation QC outputs and tell me whether the sample should proceed to DMR analysis."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Explain how M-bias and conversion efficiency affect trust in methylation results."
+    }
+  ]
+}

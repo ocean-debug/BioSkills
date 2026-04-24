@@ -1,0 +1,13 @@
+{
+  "skill": "bio-workflows-alignment-qc-and-coverage",
+  "prompts": [
+    {
+      "id": "prompt-1",
+      "prompt": "Outline an alignment-to-coverage workflow and show where sort, index, and BAM QC should stop downstream analysis."
+    },
+    {
+      "id": "prompt-2",
+      "prompt": "Adapt an alignment QC workflow for a project that starts from FASTQ and ends at interval-level coverage summaries."
+    }
+  ]
+}
