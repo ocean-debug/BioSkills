@@ -1,0 +1,75 @@
+name: Validate BioSkills
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate manifest
+        run: python scripts/validate_skill.py openclaw.plugin.json
+
+      - name: Validate all canonical skills
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import subprocess
+          import sys
+
+          root = Path("skills")
+          failures = []
+          for skill_dir in sorted(root.iterdir()):
+              if not skill_dir.is_dir():
+                  continue
+              result = subprocess.run(
+                  [sys.executable, "scripts/validate_skill.py", str(skill_dir)],
+                  capture_output=True,
+                  text=True,
+              )
+              if result.returncode != 0:
+                  failures.append((skill_dir.name, result.stderr.strip() or result.stdout.strip()))
+
+          if failures:
+              for name, message in failures:
+                  print(f"{name}: {message}", file=sys.stderr)
+              raise SystemExit(1)
+
+          print("All canonical skills validated")
+          PY
+
+      - name: Validate catalog and manifest consistency
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path(".")
+          manifest = json.loads((root / "openclaw.plugin.json").read_text(encoding="utf-8"))
+          catalog = json.loads((root / "skills" / "catalog.json").read_text(encoding="utf-8"))
+
+          skill_dirs = sorted(
+              p.name for p in (root / "skills").iterdir()
+              if p.is_dir() and (p / "SKILL.md").exists()
+          )
+          manifest_names = sorted(Path(p).name for p in manifest["skills"])
+          catalog_names = sorted(item["name"] for item in catalog["skills"])
+
+          if skill_dirs != manifest_names:
+              raise SystemExit("Manifest entries do not match skill directories")
+          if skill_dirs != catalog_names:
+              raise SystemExit("Catalog entries do not match skill directories")
+
+          print(f"Validated {len(skill_dirs)} skills against manifest and catalog")
+          PY

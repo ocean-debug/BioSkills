@@ -4,6 +4,16 @@ Canonical large-scale bioinformatics and biomedical skills library for OpenClaw-
 
 BioSkills merges, rewrites, and de-duplicates skills from multiple agent ecosystems into one normalized repository. The goal is not to mirror source repositories verbatim, but to produce a single canonical skill library with stable naming, auditable provenance, and reusable workflow structure.
 
+> Release: `v1.0.0` | Skills: `157` | Atomic: `130` | Workflow: `27` | Domains: `31`
+
+Quick links:
+
+- [Latest release](https://github.com/ocean-debug/BioSkills/releases/tag/v1.0.0)
+- [Changelog](./CHANGELOG.md)
+- [Contribution guide](./CONTRIBUTING.md)
+- [Canonical catalog](./skills/catalog.json)
+- [OpenClaw manifest](./openclaw.plugin.json)
+
 ## What This Repository Contains
 
 | Item | Value |
@@ -197,3 +207,14 @@ The repository also includes generated overview diagrams, including:
 - The generated plugin manifest currently reports version `1.0.0`.
 - Release history is tracked in [CHANGELOG.md](./CHANGELOG.md).
 - Git tags follow the `v<version>` format.
+
+## Contributing
+
+Contributions are welcome, especially for:
+
+- new canonical waves
+- tighter dedupe rules
+- clearer provenance handling
+- better validation and release automation
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for the expected workflow.
